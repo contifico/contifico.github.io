@@ -52,7 +52,7 @@
 
 <h1 id="autenticación">Autenticación</h1>
 
-<p>Contífico usa dos claves de acceso para sus servicios (API Key y API Token), para obtenerlas debes tener una cuenta en <a href="https://www.contifico.com">contífico</a> y solicitarlas por soporte al cliente. </p>
+<p>Contífico usa dos claves de acceso para sus servicios (API Key y API Token), para obtenerlas debes tener una cuenta en <a href="http://www.contifico.com">contífico</a> y solicitarlas por soporte al cliente. </p>
 
 <p>Estan claves serán agregadas y enviadas como parámetros en cada servicio que se consuma.</p>
 
@@ -70,7 +70,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/caja</code></p>
+<p><code class="prettyprint">POST https://contifico.com/api/caja/</code></p>
 
 <h3 id="caja">Caja</h3>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -169,20 +169,71 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/documento</code></p>
+<p><code class="prettyprint">POST https://contifico.com/api/documento/</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUK8mS5AVzyPZ1QCbKNAFVLvp9n3egWug2HyrfKPOII"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"api_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b5c5b5cd-36fd-4494-9589-9935b22ccfdb"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"personas"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-    </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUK8mS7AVzyPZ1QCbKNAFVLvp8n3egWug2HyrfKPOII"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"api_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b1c7b7cd-36fd-4494-9589-5535b22ccfdb"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"fecha_emision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-24"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tipo_documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAC"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001-001-000008040"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"estado"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"cliente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0904728680"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"vendedor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0922054366"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FACTURA 8040"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.23</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"autorizacion"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"subtotal_12"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.10</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"subtotal_0"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"iva"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.13</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"adicional1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"adicional2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total_servicio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"detalles"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"id_contifico"</span><span class="p">:</span><span class="w"> </span><span class="mi">133555</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"cantidad"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.00</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"unidad_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">507</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"precio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"porcentaje_iva"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_cero"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_no_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"descripcion adicional"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id_contifico"</span><span class="p">:</span><span class="w"> </span><span class="mi">10449</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"cantidad"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"unidad_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">507</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"precio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"porcentaje_iva"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"base_cero"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"base_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"base_no_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"descripcion factura"</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"cobros"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"forma_cobro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EF"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"monto"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.23</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"numero_cheque"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"banco"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"numero_tarjeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tipo_tarjeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"numero_retencion"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tipo_ping"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+       </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
 
 <blockquote>
-<p>Los atributos personas y documento son explicados posteriormente</p>
+<p>Los atributos personas y documento son explicados a continuación</p>
 </blockquote>
 
 <table><thead>
@@ -308,19 +359,19 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 </tr>
 <tr>
 <td>es_empleado</td>
-<td>Boolean</td>
+<td>boolean</td>
 <td>-</td>
 <td>Identifica si una persona es empleado</td>
 </tr>
 <tr>
 <td>es_vendedor</td>
-<td>Boolean</td>
+<td>boolean</td>
 <td>-</td>
 <td>Identifica si una persona es vendedor</td>
 </tr>
 <tr>
 <td>es_extranjero</td>
-<td>Boolean</td>
+<td>boolean</td>
 <td>-</td>
 <td>Identifica si una persona es extranjera</td>
 </tr>
@@ -483,7 +534,7 @@ El tag personas no es obligatorio, posteriormente se puede enviar sólo el id de
 </tr>
 </tbody></table>
 
-<h2 id="detalles">Detalles</h2>
+<h3 id="detalles">Detalles</h3>
 <pre class="highlight json"><code><span class="w">
 </span><span class="s2">"detalles"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
     </span><span class="nt">"id_contifico"</span><span class="p">:</span><span class="w"> </span><span class="mi">10449</span><span class="p">,</span><span class="w">
@@ -512,12 +563,6 @@ El tag personas no es obligatorio, posteriormente se puede enviar sólo el id de
 <td>int</td>
 <td>11</td>
 <td>Identificador del producto</td>
-</tr>
-<tr>
-<td>unidad_id</td>
-<td>int</td>
-<td>11</td>
-<td>Identificador de la unidad</td>
 </tr>
 <tr>
 <td>cantidad</td>
@@ -563,7 +608,7 @@ El tag personas no es obligatorio, posteriormente se puede enviar sólo el id de
 </tr>
 </tbody></table>
 
-<h2 id="cobros">Cobros</h2>
+<h3 id="cobros">Cobros</h3>
 <pre class="highlight json"><code><span class="w">
 </span><span class="s2">"cobros"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
     </span><span class="nt">"forma_cobro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EF"</span><span class="p">,</span><span class="w">
