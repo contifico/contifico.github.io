@@ -1,0 +1,619 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Contífico</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["json"]);
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+	<div style="background-color:white;">
+      <img src="images/logo.png" />
+	</div>
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">Ejemplo</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://www.contifico.com'>Solicita una cuenta Contífico</a></li>
+            <li><a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="introducción">Introducción</h1>
+
+<p>API integración Contífico</p>
+
+<h1 id="autenticación">Autenticación</h1>
+
+<p>Contífico usa dos claves de acceso para sus servicios (API Key y API Token), para obtenerlas debes tener una cuenta en <a href="https://www.contifico.com">contífico</a> y solicitarlas por soporte al cliente. </p>
+
+<p>Estan claves serán agregadas y enviadas como parámetros en cada servicio que se consuma.</p>
+
+<p>Ejemplo claves:</p>
+
+<p><code class="prettyprint">api_key: GUK8mS5AVzyPZ1QCbKNAFVLvp9n3egWug2HyrfKPOII</code></p>
+
+<p><code class="prettyprint">api_token: b5c5b5cd-36fd-4494-9589-9935b22ccfdb</code></p>
+
+<h1 id="caja">Caja</h1>
+
+<h2 id="agregar">Agregar</h2>
+
+<p>Este servicio permite agregar una nueva Caja a Contifico. La Caja es utilizada para agrupar los documentos que serán enviados y representa un turno en el punto de venta.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://contifico.com/api/caja</code></p>
+
+<h3 id="caja">Caja</h3>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"api_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"GUK8mS5AVzyPZ1QCbKNAFVLvp9n3egWug2HyrfKPOII"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"api_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"b5c5b5cd-36fd-4494-9589-9935b22ccfdb"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"caja"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"fecha_apertura"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-07"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"fecha_cierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"efectivo"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.97</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"cheque"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tarjeta"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total_facturado"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.87</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total_cobrado"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.97</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"saldo_final"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.97</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>11</td>
+<td>Identificador de la caja en punto de venta</td>
+</tr>
+<tr>
+<td>fecha_apertura</td>
+<td>char</td>
+<td>10</td>
+<td>Fecha de Apertura de la caja</td>
+</tr>
+<tr>
+<td>fecha_cierre</td>
+<td>char</td>
+<td>10</td>
+<td>Fecha de Cierre de la caja</td>
+</tr>
+<tr>
+<td>efectivo</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor cobrado en Efectivo</td>
+</tr>
+<tr>
+<td>cheque</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor cobrado en Cheque</td>
+</tr>
+<tr>
+<td>tarjeta</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor cobrado en Tarjeta</td>
+</tr>
+<tr>
+<td>total_facturado</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Total Facturado</td>
+</tr>
+<tr>
+<td>total_cobrado</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Total Cobrado</td>
+</tr>
+<tr>
+<td>saldo_final</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Saldo por cobrar</td>
+</tr>
+</tbody></table>
+
+<p><code class="prettyprint">El formato para fechas es yyyy-mm-dd</code></p>
+
+<aside class="info">
+La caja no es obligatoria para sincronizar documentos pero facilita el filtrado de información
+</aside>
+
+<h1 id="documento">Documento</h1>
+
+<h2 id="agregar">Agregar</h2>
+
+<p>Este servicio permite agregar un nuevo documento a Contifico.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://contifico.com/api/documento</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUK8mS5AVzyPZ1QCbKNAFVLvp9n3egWug2HyrfKPOII"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"api_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b5c5b5cd-36fd-4494-9589-9935b22ccfdb"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"personas"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<blockquote>
+<p>Los atributos personas y documento son explicados posteriormente</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api_key</td>
+<td>char</td>
+<td>-</td>
+<td>Api Key Sincronización</td>
+</tr>
+<tr>
+<td>api_token</td>
+<td>char</td>
+<td>-</td>
+<td>Api Token Sincronización</td>
+</tr>
+<tr>
+<td>personas</td>
+<td>Lista Personas</td>
+<td>-</td>
+<td>Listado de personas involucradas en el documento</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>Objeto Documento</td>
+<td>-</td>
+<td>Datos del Documento</td>
+</tr>
+</tbody></table>
+
+<h2 id="personas">Personas</h2>
+<pre class="highlight json"><code><span class="w">
+</span><span class="s2">"personas"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0922054366001"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cedula"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0922054366"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"razon_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Razon Social Empleado"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"telefonos"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5104910"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"direccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direccion persona"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@contifico.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_empleado"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0904728680001"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cedula"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0904728680"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"razon_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Razon Social Cliente"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"telefonos"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0988845001"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"direccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Direccion cliente"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cliente@contifico.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_empleado"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+
+</span></code></pre>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>11</td>
+<td>Identificador de la persona</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cédula de la persona</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>300</td>
+<td>Razón social o nombre de la persona</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>100</td>
+<td>Teléfonos de la persona</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dirección de la persona</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de Persona N: Natural, J: Jurídica</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>75</td>
+<td>Email de la persona</td>
+</tr>
+<tr>
+<td>es_empleado</td>
+<td>Boolean</td>
+<td>-</td>
+<td>Identifica si una persona es empleado</td>
+</tr>
+<tr>
+<td>es_vendedor</td>
+<td>Boolean</td>
+<td>-</td>
+<td>Identifica si una persona es vendedor</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>Boolean</td>
+<td>-</td>
+<td>Identifica si una persona es extranjera</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>Decimal</td>
+<td>10,2</td>
+<td>Porcentaje de descuento de una persona en el POS</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+El tag personas no es obligatorio, posteriormente se puede enviar sólo el id de la persona dentro del documento.
+</aside>
+
+<h2 id="documento">Documento</h2>
+<pre class="highlight json"><code><span class="w">
+</span><span class="s2">"documento"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"fecha_emision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-24"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tipo_documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAC"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001-001-000008040"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"estado"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id_caja"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id_cliente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FACTURA 8040"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.23</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"autorizacion"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"subtotal_12"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.10</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"subtotal_0"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"iva"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.13</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"adicional1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"adicional2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total_servicio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"detalles"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="nt">"cobros"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<blockquote>
+<p>Los atributos detalles y cobros son explicados posteriormente</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fecha_emision</td>
+<td>char</td>
+<td>10</td>
+<td>Fecha de emisión de la factura</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>char</td>
+<td>3</td>
+<td>Tipo de Documento. FAC: Factura, NVE: Nota de Venta</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>char</td>
+<td>17</td>
+<td>Número de documento. Ej: 001-001-000000123</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>char</td>
+<td>1</td>
+<td>Estado de la Factura. P: Pendiente, C: Cobrada, A: Anulada</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>37</td>
+<td>Número de autorización de la factura</td>
+</tr>
+<tr>
+<td>id_caja</td>
+<td>varchar</td>
+<td>11</td>
+<td>Identificador de la caja</td>
+</tr>
+<tr>
+<td>id_cliente</td>
+<td>varchar</td>
+<td>11</td>
+<td>Identificador del cliente</td>
+</tr>
+<tr>
+<td>id_vendedor</td>
+<td>varchar</td>
+<td>11</td>
+<td>Identificador del vendedor</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>varchar</td>
+<td>300</td>
+<td>Descripción de la factura</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Base Cero de la factura</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Base Gravable de la factura</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor del IVA en la factura</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor del servicio en la factura</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Valor total de la factura</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo libre</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo libre</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>Lista Detalle</td>
+<td>-</td>
+<td>Listado de productos/servicios</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>Lista Cobro</td>
+<td>-</td>
+<td>Listado de cobros</td>
+</tr>
+</tbody></table>
+
+<h2 id="detalles">Detalles</h2>
+<pre class="highlight json"><code><span class="w">
+</span><span class="s2">"detalles"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nt">"id_contifico"</span><span class="p">:</span><span class="w"> </span><span class="mi">10449</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"unidad_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">507</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cantidad"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.00</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"precio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"porcentaje_iva"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"base_cero"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"base_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"base_no_gravable"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+
+</span></code></pre>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_contifico</td>
+<td>int</td>
+<td>11</td>
+<td>Identificador del producto</td>
+</tr>
+<tr>
+<td>unidad_id</td>
+<td>int</td>
+<td>11</td>
+<td>Identificador de la unidad</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>10,2</td>
+<td>Cantidad de items vendidos</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13,5</td>
+<td>Precio unitario del item</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>INT</td>
+<td>2</td>
+<td>Porcentaje IVA que se aplica al item: 0 o 12</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>5,2</td>
+<td>Porcentaje IVA que se aplica al item: 0 o 12</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10,2</td>
+<td>Valor de base 0% para cada item</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10,2</td>
+<td>Valor de base 12% para cada item</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10,2</td>
+<td>Valor de la base no gravable</td>
+</tr>
+</tbody></table>
+
+<h2 id="cobros">Cobros</h2>
+<pre class="highlight json"><code><span class="w">
+</span><span class="s2">"cobros"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nt">"forma_cobro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EF"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"monto"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.23</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"numero_cheque"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tipo_ping"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+
+</span></code></pre>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>forma_cobro</td>
+<td>CHAR</td>
+<td>2</td>
+<td>Forma de Cobro del documento: EF: Efectivo, TC: Tarjeta de Crédito, CH: Cheque</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de Documento. FAC: Factura, NVE: Nota de Venta</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Número de documento. Ej: 001-001-000000123</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>CHAR</td>
+<td>1</td>
+<td>Tipo de red usada: D: Datafast, M: Medianet, R: Red de Apoyo</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">Ejemplo</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
