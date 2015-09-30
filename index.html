@@ -62,7 +62,7 @@
 
 <p><code class="prettyprint">api_token: b5c5b5cd-36fd-4494-9589-9935b22ccfdb</code></p>
 
-<h1 id="caja">Caja</h1>
+          <h1 id="caja">Caja</h1>
 
 <h2 id="agregar">Agregar</h2>
 
@@ -70,7 +70,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/caja/</code></p>
+<p><code class="prettyprint">POST https://contifico.com/sistema/api/caja/</code></p>
 
 <h3 id="caja">Caja</h3>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -161,7 +161,7 @@
 La caja no es obligatoria para sincronizar documentos pero facilita el filtrado de información.
 </aside>
 
-<h1 id="documento">Documento</h1>
+          <h1 id="documento">Documento</h1>
 
 <h2 id="agregar">Agregar</h2>
 
@@ -169,7 +169,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/documento/</code></p>
+<p><code class="prettyprint">POST https://contifico.com/sistema/api/documento/</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -230,9 +230,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
     </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@contifico.com"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"tipo_contrato"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sueldo"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="w">
+    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">},</span><span class="w">
 </span><span class="p">{</span><span class="w">
     </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0904728680001"</span><span class="p">,</span><span class="w">
@@ -243,9 +241,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
     </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cliente@contifico.com"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"tipo_contrato"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sueldo"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}]</span><span class="w">
 
 </span></code></pre>
@@ -311,18 +307,6 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 <td>boolean</td>
 <td>-</td>
 <td>Identifica si una persona es vendedor</td>
-</tr>
-<tr>
-<td>tipo_contrato</td>
-<td>char</td>
-<td>1</td>
-<td>Tipo de contrato del empleado. A: Afiliado, S: Serivicios Prestados</td>
-</tr>
-<tr>
-<td>sueldo</td>
-<td>decimal</td>
-<td>10,2</td>
-<td>Sueldo del empleado</td>
 </tr>
 </tbody></table>
 
@@ -628,9 +612,7 @@ Sólo es necesario enviar una sóla vez los datos de cada persona a contífico, 
         </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@contifico.com"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"tipo_contrato"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sueldo"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="w">
+        </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0904728680001"</span><span class="p">,</span><span class="w">
@@ -641,9 +623,7 @@ Sólo es necesario enviar una sóla vez los datos de cada persona a contífico, 
         </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cliente@contifico.com"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"tipo_contrato"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sueldo"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
     </span><span class="p">}],</span><span class="w">
     </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="p">,</span><span class="w">
