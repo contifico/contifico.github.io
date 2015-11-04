@@ -300,73 +300,70 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 <blockquote>
 <p>A continuacion la respuesta al consultar un documento</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"iva"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1200.0"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"fecha_vencimiento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/06/2013"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"pos"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"subtotal_0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prueba"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11200.0"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdjcbjsydhcsjd"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"servicio"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"electronico"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cobros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"forma_cobro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"monto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"fecha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01/07/2013"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"numero_tarjeta"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"numero_cheque"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201307000001"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"tipo_ping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nt">"detalles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"porcentaje_iva"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"cantidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"base_no_gravable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"precio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"producto_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MRYWb4kJoHz0aZ1m"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"base_cero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"base_gravable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nt">"fecha_emision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/06/2013"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"221-321-321321321"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"adicional2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"adicional1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"estado"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"tipo_documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAC"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"autorizacion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5454654546"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"id_caja"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"subtotal_12"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cliente"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"telefonos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2745486"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0990004196001"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"razon_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CORPORACION EL ROSADO S.A."</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"direccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"es_cliente"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"es_empleado"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agomez@contifico.com"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"cedula"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"iva"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1200.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fecha_vencimiento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/06/2013"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"pos"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subtotal_0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prueba"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11200.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdjcbjsydhcsjd"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"servicio"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"electronico"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cobros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"forma_cobro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"monto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"fecha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01/07/2013"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"numero_tarjeta"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"numero_cheque"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201307000001"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"tipo_ping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-</span><span class="p">]</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"detalles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"porcentaje_iva"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"cantidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_no_gravable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"precio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"producto_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MRYWb4kJoHz0aZ1m"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_cero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"base_gravable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"fecha_emision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/06/2013"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"221-321-321321321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"adicional2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"adicional1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"estado"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tipo_documento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"autorizacion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5454654546"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id_caja"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subtotal_12"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cliente"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"telefonos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2745486"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ruc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0990004196001"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"razon_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CORPORACION EL ROSADO S.A."</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"direccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"es_extranjero"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"porcentaje_descuento"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"es_cliente"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"es_empleado"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agomez@contifico.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"cedula"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"es_vendedor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/caja/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://contifico.com/api/v1/documento/&lt;ID&gt;</code></p>
 
 <p>Devuelve un documento con el <code class="prettyprint">&lt;ID&gt;</code> solicitado.</p>
 
@@ -491,11 +488,11 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 </thead><tbody>
 <tr>
 <td>&ldquo;cliente&rdquo;: { .. }</td>
-<td>El cliente que esta asignado al documento. Si no existe, lo crea.</td>
+<td>El cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
 </tr>
 <tr>
 <td>&ldquo;vendedor&rdquo;: { .. }</td>
-<td>El vendedor que esta asignado al documento. Si no existe, lo crea.</td>
+<td>El vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
 </tr>
 <tr>
 <td>&ldquo;detalles&rdquo;: [{ .. }]</td>
@@ -503,7 +500,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 </tr>
 <tr>
 <td>&ldquo;cobros&rdquo;: [{ .. }]</td>
-<td>Contiene los cobros realizados en el documento.</td>
+<td>Contiene los cobros realizados en el documento. Se crean los cobros</td>
 </tr>
 </tbody></table>
 
