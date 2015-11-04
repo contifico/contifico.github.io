@@ -132,13 +132,13 @@
 <td><code class="prettyprint">GET</code></td>
 </tr>
 <tr>
-<td>Producto</td>
-<td>https://contifico.com/sistema/api/v1/producto/</td>
+<td>Documento</td>
+<td>https://contifico.com/sistema/api/v1/documento/</td>
 <td><code class="prettyprint">GET</code>, <code class="prettyprint">POST</code></td>
 </tr>
 <tr>
-<td>Documento</td>
-<td>https://contifico.com/sistema/api/v1/documento/</td>
+<td>Producto</td>
+<td>https://contifico.com/sistema/api/v1/producto/</td>
 <td><code class="prettyprint">GET</code>, <code class="prettyprint">POST</code></td>
 </tr>
 </tbody></table>
@@ -292,6 +292,64 @@
 <aside class="info">
 La caja no es obligatoria para sincronizar documentos pero facilita el filtrado de información.
 </aside>
+
+<h1 id="categoria">Categoria</h1>
+
+<h2 id="consultar">Consultar</h2>
+
+<blockquote>
+<p>A continuacion la respuesta al consultar categorias</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"padre_id"</span><span class="p">:</span><span class="w"> </span><span class="err">P</span><span class="mi">0023</span><span class="err">xkBKULMe</span><span class="mi">5</span><span class="err">GB</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIESTA EUROPA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7DkPb3333kWd5Y9L"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"agrupar"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"padre_id"</span><span class="p">:</span><span class="w"> </span><span class="err">P</span><span class="mi">0023</span><span class="err">xkBKULMe</span><span class="mi">5</span><span class="err">GB</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIESTA CASUAL"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8J0ye266I1neER7O"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"agrupar"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"padre_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIESTA AMAZON"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PxBleXJwu0000NOR"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"agrupar"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/categoria/</code></p>
+
+<p>Devuelve un listado con todas las categorias creadas en el sistema</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/categoria/&lt;ID&gt;</code></p>
+
+<p>Devuelve una categoria con el <code class="prettyprint">&lt;ID&gt;</code> solicitado.</p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria en el sistema</td>
+</tr>
+</tbody></table>
 
 <h1 id="documento">Documento</h1>
 
