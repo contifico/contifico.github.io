@@ -123,22 +123,22 @@
 </thead><tbody>
 <tr>
 <td>Caja</td>
-<td>https://contifico.com/api/v1/caja/</td>
+<td>https://contifico.com/sistema/api/v1/caja/</td>
 <td><code class="prettyprint">GET</code>, <code class="prettyprint">POST</code></td>
 </tr>
 <tr>
 <td>Categoria</td>
-<td>https://contifico.com/api/v1/categoria/</td>
+<td>https://contifico.com/sistema/api/v1/categoria/</td>
 <td><code class="prettyprint">GET</code></td>
 </tr>
 <tr>
 <td>Producto</td>
-<td>https://contifico.com/api/v1/producto/</td>
+<td>https://contifico.com/sistema/api/v1/producto/</td>
 <td><code class="prettyprint">GET</code>, <code class="prettyprint">POST</code></td>
 </tr>
 <tr>
 <td>Documento</td>
-<td>https://contifico.com/api/v1/documento/</td>
+<td>https://contifico.com/sistema/api/v1/documento/</td>
 <td><code class="prettyprint">GET</code>, <code class="prettyprint">POST</code></td>
 </tr>
 </tbody></table>
@@ -170,13 +170,13 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/caja/</code></p>
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/caja/</code></p>
 
 <p>Devuelve un listado con todas las cajas creadas en el sistema</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/caja/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/caja/&lt;ID&gt;</code></p>
 
 <p>Devuelve una caja con el <code class="prettyprint">&lt;ID&gt;</code> solicitado.</p>
 
@@ -202,7 +202,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/v1/caja/</code></p>
+<p><code class="prettyprint">POST https://contifico.com/sistema/api/v1/caja/</code></p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"fecha_apertura"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28/10/2015"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"fecha_cierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28/10/2015"</span><span class="p">,</span><span class="w">
@@ -363,7 +363,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/documento/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;</code></p>
 
 <p>Devuelve un documento con el <code class="prettyprint">&lt;ID&gt;</code> solicitado.</p>
 
@@ -476,7 +476,7 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://contifico.com/api/documento/</code></p>
+<p><code class="prettyprint">POST https://contifico.com/sistema/api/documento/</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -535,13 +535,13 @@ La caja no es obligatoria para sincronizar documentos pero facilita el filtrado 
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/producto/</code></p>
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/producto/</code></p>
 
 <p>Devuelve un listado con todos los productos creados en el sistema</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://contifico.com/api/v1/producto/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://contifico.com/sistema/api/v1/producto/&lt;ID&gt;</code></p>
 
 <p>Devuelve un producto con el <code class="prettyprint">&lt;ID&gt;</code> solicitado.</p>
 
