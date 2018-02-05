@@ -1,0 +1,224 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "ContificoApi\n\n\nAutenticaci\u00f3n\n\n\nCont\u00edfico usa una clave de acceso para sus servicios (API Key), para obtenerla debes tener una cuenta en cont\u00edfico y solicitarla por soporte al cliente.\nEsta clave deber\u00e1 ser agregada y enviada como par\u00e1metro en el header AUTHORIZATION en cada servicio que se consuma. Un ejemplo:\n\n\nAuthorization: SECRETKEY\n\n\nSECRETKEY\n debe ser reemplazado con el \nAPI_KEY\n proporcionado por contifico.\n\n\nM\u00e9todos Soportados\n\n\nTodos los endpoints disponibles deben ser invocados por alguno de los siguientes m\u00e9todos Http.\nDependiende del endpoint que se desea utilizar acepta uno u otro m\u00e9todo.\n\n\n\n\n\n\n\n\nMETODOS\n\n\nUSO\n\n\n\n\n\n\n\n\n\n\nGET\n\n\nConsulta\n\n\n\n\n\n\nPOST\n\n\nInserci\u00f3n\n\n\n\n\n\n\nPUT\n\n\nActualizaci\u00f3n, Ejecuci\u00f3n\n\n\n\n\n\n\nDELETE\n\n\nEliminaci\u00f3n\n\n\n\n\n\n\nOPTIONS\n\n\nDevuelve M\u00e9todos Disponibles\n\n\n\n\n\n\n\n\nC\u00f3digos de respuesta\n\n\n\n\n\n\n\n\nCODIGO\n\n\nNOMBRE\n\n\nUSO\n\n\n\n\n\n\n\n\n\n\n200\n\n\nEjecuci\u00f3n Correcta\n\n\nDevuelto al ejectuar correctamente una consulta\n\n\n\n\n\n\n201\n\n\nObjeto Creado\n\n\nDevuelto al crear un objeto nuevo\n\n\n\n\n\n\n400\n\n\nSolicitud Incorrecta\n\n\nEl requerimiento es incorrecto\n\n\n\n\n\n\n404\n\n\nNo Encontrado\n\n\nEL objeto que se trata de consultar no existe\n\n\n\n\n\n\n401\n\n\nNo Autorizado\n\n\nNo se ha proporcionado las credenciales o son incorrectas\n\n\n\n\n\n\n403\n\n\nAcceso Denegado\n\n\nNo se tiene permiso para entrar al recurso\n\n\n\n\n\n\n500\n\n\nError Interno\n\n\nError interno del sistema\n\n\n\n\n\n\n\n\nURL's\n\n\nLas siguientes son url's v\u00e1lidas para uso del api:\n\n\nURL's Inventario\n\n\n\n\n\n\n\n\nSERVICIO\n\n\nURL\n\n\nMETODOS\n\n\n\n\n\n\n\n\n\n\nCategoria\n\n\nhttps://contifico.com/sistema/api/v1/categoria/\n\n\nGET\n\n\n\n\n\n\nCategoria\n\n\nhttps://contifico.com/sistema/api/v1/categoria/ID/\n\n\nGET\n\n\n\n\n\n\nBodega\n\n\nhttps://contifico.com/sistema/api/v1/bodega/\n\n\nGET\n\n\n\n\n\n\nBodega\n\n\nhttps://contifico.com/sistema/api/v1/bodega/ID/\n\n\nGET\n\n\n\n\n\n\nProducto\n\n\nhttps://contifico.com/sistema/api/v1/producto/\n\n\nGET\n, \nPOST\n\n\n\n\n\n\nProducto\n\n\nhttps://contifico.com/sistema/api/v1/producto/ID/\n\n\nGET\n\n\n\n\n\n\nProducto Stock\n\n\nhttps://contifico.com/sistema/api/v1/producto/ID/stock/\n\n\nGET\n\n\n\n\n\n\nMovimiento Inventario\n\n\nhttps://contifico.com/sistema/api/v1/movimiento-inventario/\n\n\nGET\n,\nPOST\n\n\n\n\n\n\nMovimiento Inventario\n\n\nhttps://contifico.com/sistema/api/v1/movimiento-inventario/ID/\n\n\nGET\n\n\n\n\n\n\n\n\nURL's Transaccion\n\n\n\n\n\n\n\n\nSERVICIO\n\n\nURL\n\n\nMETODOS\n\n\n\n\n\n\n\n\n\n\nDocumento\n\n\nhttps://contifico.com/sistema/api/v1/documento/\n\n\nGET\n, \nPOST\n, \nPUT\n\n\n\n\n\n\nDocumento\n\n\nhttps://contifico.com/sistema/api/v1/documento/ID/\n\n\nGET\n\n\n\n\n\n\nEnvio Documento SRI\n\n\nhttps://contifico.com/sistema/api/v1/documento/ID/sri/\n\n\nPUT\n\n\n\n\n\n\nDocumento Cobro\n\n\nhttps://contifico.com/sistema/api/v1/documento/ID/cobro/\n\n\nGET\n, \nPOST\n, \nDELETE\n\n\n\n\n\n\nDocumento Cruce\n\n\nhttps://contifico.com/sistema/api/v1/documento/ID/cruce/\n\n\nPOST\n\n\n\n\n\n\nRetenci\u00f3n\n\n\nhttps://contifico.com/sistema/api/v1/documento/ID/retencion/\n\n\nGET\n\n\n\n\n\n\nTransacci\u00f3n\n\n\nhttps://contifico.com/sistema/api/v1/registro/transaccion/\n\n\nGET\n\n\n\n\n\n\nTransacci\u00f3n\n\n\nhttps://contifico.com/sistema/api/v1/registro/transaccion/ID/\n\n\nGET\n\n\n\n\n\n\n\n\nURL's Persona\n\n\n\n\n\n\n\n\nSERVICIO\n\n\nURL\n\n\nMETODOS\n\n\n\n\n\n\n\n\n\n\nPersona\n\n\nhttps://contifico.com/sistema/api/v1/persona/\n\n\nGET\n, \nPOST\n, \nPUT\n\n\n\n\n\n\nPersona\n\n\nhttps://contifico.com/sistema/api/v1/ID/\n\n\nGET", 
+            "title": "Introducci\u00f3n"
+        }, 
+        {
+            "location": "/#contificoapi", 
+            "text": "", 
+            "title": "ContificoApi"
+        }, 
+        {
+            "location": "/#autenticacion", 
+            "text": "Cont\u00edfico usa una clave de acceso para sus servicios (API Key), para obtenerla debes tener una cuenta en cont\u00edfico y solicitarla por soporte al cliente.\nEsta clave deber\u00e1 ser agregada y enviada como par\u00e1metro en el header AUTHORIZATION en cada servicio que se consuma. Un ejemplo:  Authorization: SECRETKEY  SECRETKEY  debe ser reemplazado con el  API_KEY  proporcionado por contifico.", 
+            "title": "Autenticaci\u00f3n"
+        }, 
+        {
+            "location": "/#metodos-soportados", 
+            "text": "Todos los endpoints disponibles deben ser invocados por alguno de los siguientes m\u00e9todos Http.\nDependiende del endpoint que se desea utilizar acepta uno u otro m\u00e9todo.     METODOS  USO      GET  Consulta    POST  Inserci\u00f3n    PUT  Actualizaci\u00f3n, Ejecuci\u00f3n    DELETE  Eliminaci\u00f3n    OPTIONS  Devuelve M\u00e9todos Disponibles", 
+            "title": "M\u00e9todos Soportados"
+        }, 
+        {
+            "location": "/#codigos-de-respuesta", 
+            "text": "CODIGO  NOMBRE  USO      200  Ejecuci\u00f3n Correcta  Devuelto al ejectuar correctamente una consulta    201  Objeto Creado  Devuelto al crear un objeto nuevo    400  Solicitud Incorrecta  El requerimiento es incorrecto    404  No Encontrado  EL objeto que se trata de consultar no existe    401  No Autorizado  No se ha proporcionado las credenciales o son incorrectas    403  Acceso Denegado  No se tiene permiso para entrar al recurso    500  Error Interno  Error interno del sistema", 
+            "title": "C\u00f3digos de respuesta"
+        }, 
+        {
+            "location": "/#urls", 
+            "text": "Las siguientes son url's v\u00e1lidas para uso del api:", 
+            "title": "URL's"
+        }, 
+        {
+            "location": "/#urls-inventario", 
+            "text": "SERVICIO  URL  METODOS      Categoria  https://contifico.com/sistema/api/v1/categoria/  GET    Categoria  https://contifico.com/sistema/api/v1/categoria/ID/  GET    Bodega  https://contifico.com/sistema/api/v1/bodega/  GET    Bodega  https://contifico.com/sistema/api/v1/bodega/ID/  GET    Producto  https://contifico.com/sistema/api/v1/producto/  GET ,  POST    Producto  https://contifico.com/sistema/api/v1/producto/ID/  GET    Producto Stock  https://contifico.com/sistema/api/v1/producto/ID/stock/  GET    Movimiento Inventario  https://contifico.com/sistema/api/v1/movimiento-inventario/  GET , POST    Movimiento Inventario  https://contifico.com/sistema/api/v1/movimiento-inventario/ID/  GET", 
+            "title": "URL's Inventario"
+        }, 
+        {
+            "location": "/#urls-transaccion", 
+            "text": "SERVICIO  URL  METODOS      Documento  https://contifico.com/sistema/api/v1/documento/  GET ,  POST ,  PUT    Documento  https://contifico.com/sistema/api/v1/documento/ID/  GET    Envio Documento SRI  https://contifico.com/sistema/api/v1/documento/ID/sri/  PUT    Documento Cobro  https://contifico.com/sistema/api/v1/documento/ID/cobro/  GET ,  POST ,  DELETE    Documento Cruce  https://contifico.com/sistema/api/v1/documento/ID/cruce/  POST    Retenci\u00f3n  https://contifico.com/sistema/api/v1/documento/ID/retencion/  GET    Transacci\u00f3n  https://contifico.com/sistema/api/v1/registro/transaccion/  GET    Transacci\u00f3n  https://contifico.com/sistema/api/v1/registro/transaccion/ID/  GET", 
+            "title": "URL's Transaccion"
+        }, 
+        {
+            "location": "/#urls-persona", 
+            "text": "SERVICIO  URL  METODOS      Persona  https://contifico.com/sistema/api/v1/persona/  GET ,  POST ,  PUT    Persona  https://contifico.com/sistema/api/v1/ID/  GET", 
+            "title": "URL's Persona"
+        }, 
+        {
+            "location": "/inventario/categoria/", 
+            "text": "Categoria\n\n\nConsulta\n\n\nObtener listado de Categor\u00edas\n\n\nGET https://contifico.com/sistema/api/v1/categoria/\n\n\nDevuelve un listado con todas las categorias creadas en el sistema\n\n\n\n\nRespuesta al consultar todas las categor\u00edas\n\n\n\n\n[\n\n    \n{\n\n        \npadre_id\n:\n \nP0023xkBKULMe5GB\n,\n\n        \nnombre\n:\n \nFIESTA EUROPA\n,\n\n        \nid\n:\n \n7DkPb3333kWd5Y9L\n,\n\n        \nagrupar\n:\n \nfalse\n\n    \n},\n\n    \n{\n\n        \npadre_id\n:\n \nP0023xkBKULMe5GB\n,\n\n        \nnombre\n:\n \nFIESTA CASUAL\n,\n\n        \nid\n:\n \n8J0ye266I1neER7O\n,\n\n        \nagrupar\n:\n \nfalse\n\n    \n},\n\n    \n{\n\n        \npadre_id\n:\n \nnull\n,\n\n        \nnombre\n:\n \nFIESTA AMAZON\n,\n\n        \nid\n:\n \nPxBleXJwu0000NOR\n,\n\n        \nagrupar\n:\n \ntrue\n\n    \n},\n\n    \n...\n\n\n]\n\n\n\n\n\n\nObtener una Categor\u00eda\n\n\nGET https://contifico.com/sistema/api/v1/categoria/\nID\n/\n\n\nDevuelve una categoria con el \nID\n solicitado.\n\n\n\n\nEjemplo:\n\n\n\n\n    \n{\n\n        \npadre_id\n:\n \nnull\n,\n\n        \nnombre\n:\n \nFIESTA AMAZON\n,\n\n        \nid\n:\n \nPxBleXJwu0000NOR\n,\n\n        \nagrupar\n:\n \ntrue\n\n    \n}\n\n\n\n\n\n\n\n\n\n\n\n\nPar\u00e1metro\n\n\nTipo\n\n\nLongitud\n\n\nDescripci\u00f3n\n\n\n\n\n\n\n\n\n\n\nid\n\n\nvarchar\n\n\n16\n\n\nIdentificador de la categoria en el sistema\n\n\n\n\n\n\npadre_id\n\n\nvarchar\n\n\n16\n\n\nIdentificador de la categor\u00eda padre\n\n\n\n\n\n\nnombre\n\n\nvarchar\n\n\n16\n\n\nNombre de la categor\u00eda", 
+            "title": "Categor\u00eda"
+        }, 
+        {
+            "location": "/inventario/categoria/#categoria", 
+            "text": "", 
+            "title": "Categoria"
+        }, 
+        {
+            "location": "/inventario/categoria/#consulta", 
+            "text": "", 
+            "title": "Consulta"
+        }, 
+        {
+            "location": "/inventario/categoria/#obtener-listado-de-categorias", 
+            "text": "GET https://contifico.com/sistema/api/v1/categoria/  Devuelve un listado con todas las categorias creadas en el sistema   Respuesta al consultar todas las categor\u00edas   [ \n     { \n         padre_id :   P0023xkBKULMe5GB , \n         nombre :   FIESTA EUROPA , \n         id :   7DkPb3333kWd5Y9L , \n         agrupar :   false \n     }, \n     { \n         padre_id :   P0023xkBKULMe5GB , \n         nombre :   FIESTA CASUAL , \n         id :   8J0ye266I1neER7O , \n         agrupar :   false \n     }, \n     { \n         padre_id :   null , \n         nombre :   FIESTA AMAZON , \n         id :   PxBleXJwu0000NOR , \n         agrupar :   true \n     }, \n     ...  ]", 
+            "title": "Obtener listado de Categor\u00edas"
+        }, 
+        {
+            "location": "/inventario/categoria/#obtener-una-categoria", 
+            "text": "GET https://contifico.com/sistema/api/v1/categoria/ ID /  Devuelve una categoria con el  ID  solicitado.   Ejemplo:        { \n         padre_id :   null , \n         nombre :   FIESTA AMAZON , \n         id :   PxBleXJwu0000NOR , \n         agrupar :   true \n     }      Par\u00e1metro  Tipo  Longitud  Descripci\u00f3n      id  varchar  16  Identificador de la categoria en el sistema    padre_id  varchar  16  Identificador de la categor\u00eda padre    nombre  varchar  16  Nombre de la categor\u00eda", 
+            "title": "Obtener una Categor\u00eda"
+        }, 
+        {
+            "location": "/inventario/bodega/", 
+            "text": "Bodega\n\n\nConsulta\n\n\nObtener listado de Bodegas\n\n\nGET https://contifico.com/sistema/api/v1/bodega/\n\n\nDevuelve un listado con todas las bodegas creadas en el sistema\n\n\n\n\nEjemplo:\n\n\n\n\n[\n\n    \n{\n\n        \nventa\n:\n \ntrue\n,\n\n        \nproduccion\n:\n \ntrue\n,\n\n        \ncompra\n:\n \ntrue\n,\n\n        \nnombre\n:\n \nBodega Principal\n,\n\n        \ncodigo\n:\n \nBOD001\n,\n\n        \nid\n:\n \nnRMdROzqhvDZel6Y\n\n    \n},\n\n    \n{\n\n        \nventa\n:\n \ntrue\n,\n\n        \nproduccion\n:\n \ntrue\n,\n\n        \ncompra\n:\n \ntrue\n,\n\n        \nnombre\n:\n \nMercaderia en Transito\n,\n\n        \ncodigo\n:\n \nBOD002\n,\n\n        \nid\n:\n \n0pZeVAEMhxnQdGWX\n\n    \n}\n\n\n]\n]\n\n\n\n\n\n\nObtener una Bodega\n\n\nGET https://contifico.com/sistema/api/v1/bodega/\nID\n/\n\n\nDevuelve una bodega con el \nID\n solicitado.\n\n\n\n\nEjemplo:\n\n\n\n\n    \n{\n\n        \nventa\n:\n \ntrue\n,\n\n        \nproduccion\n:\n \ntrue\n,\n\n        \ncompra\n:\n \ntrue\n,\n\n        \nnombre\n:\n \nBodega Principal\n,\n\n        \ncodigo\n:\n \nBOD001\n,\n\n        \nid\n:\n \nnRMdROzqhvDZel6Y\n\n    \n}\n\n\n\n\n\n\n\n\n\n\n\n\nPar\u00e1metro\n\n\nTipo\n\n\nLongitud\n\n\nDescripci\u00f3n\n\n\n\n\n\n\n\n\n\n\nid\n\n\nvarchar\n\n\n16\n\n\nIdentificador de la bodega en el sistema\n\n\n\n\n\n\ncodigo\n\n\nvarchar\n\n\n16\n\n\nC\u00f3digo de la bodega\n\n\n\n\n\n\nnombre\n\n\nvarchar\n\n\n16\n\n\nNombre de la bodega\n\n\n\n\n\n\ncompra\n\n\nboolean\n\n\n-\n\n\nIndica si la bodega est\u00e1 marcada para la compra\n\n\n\n\n\n\nventa\n\n\nboolean\n\n\n-\n\n\nIndica si la bodega est\u00e1 marcada para la venta\n\n\n\n\n\n\nproduccion\n\n\nboolean\n\n\n-\n\n\nIndica si la bodega est\u00e1 marcada para producci\u00f3n", 
+            "title": "Bodega"
+        }, 
+        {
+            "location": "/inventario/bodega/#bodega", 
+            "text": "", 
+            "title": "Bodega"
+        }, 
+        {
+            "location": "/inventario/bodega/#consulta", 
+            "text": "", 
+            "title": "Consulta"
+        }, 
+        {
+            "location": "/inventario/bodega/#obtener-listado-de-bodegas", 
+            "text": "GET https://contifico.com/sistema/api/v1/bodega/  Devuelve un listado con todas las bodegas creadas en el sistema   Ejemplo:   [ \n     { \n         venta :   true , \n         produccion :   true , \n         compra :   true , \n         nombre :   Bodega Principal , \n         codigo :   BOD001 , \n         id :   nRMdROzqhvDZel6Y \n     }, \n     { \n         venta :   true , \n         produccion :   true , \n         compra :   true , \n         nombre :   Mercaderia en Transito , \n         codigo :   BOD002 , \n         id :   0pZeVAEMhxnQdGWX \n     }  ] ]", 
+            "title": "Obtener listado de Bodegas"
+        }, 
+        {
+            "location": "/inventario/bodega/#obtener-una-bodega", 
+            "text": "GET https://contifico.com/sistema/api/v1/bodega/ ID /  Devuelve una bodega con el  ID  solicitado.   Ejemplo:        { \n         venta :   true , \n         produccion :   true , \n         compra :   true , \n         nombre :   Bodega Principal , \n         codigo :   BOD001 , \n         id :   nRMdROzqhvDZel6Y \n     }      Par\u00e1metro  Tipo  Longitud  Descripci\u00f3n      id  varchar  16  Identificador de la bodega en el sistema    codigo  varchar  16  C\u00f3digo de la bodega    nombre  varchar  16  Nombre de la bodega    compra  boolean  -  Indica si la bodega est\u00e1 marcada para la compra    venta  boolean  -  Indica si la bodega est\u00e1 marcada para la venta    produccion  boolean  -  Indica si la bodega est\u00e1 marcada para producci\u00f3n", 
+            "title": "Obtener una Bodega"
+        }, 
+        {
+            "location": "/inventario/producto/", 
+            "text": "Producto\n\n\nConsulta\n\n\nObtener Listado de Productos\n\n\nGET https://contifico.com/sistema/api/v1/producto/\n\n\nDevuelve un listado con todos los productos creados en el sistema\n\n\n\n\nEjemplo:\n\n\n\n\n[\n\n    \n{\n\n        \ncodigo_barra\n:\n \n000000011114\n,\n\n        \nporcentaje_iva\n:\n \n12\n,\n\n        \ncategoria_id\n:\n \n5onPeR2nBil9ep1v\n,\n\n        \nminimo\n:\n \n3.0\n,\n\n        \npvp2\n:\n \n250.0\n,\n\n        \npvp3\n:\n \n300.0\n,\n\n        \npvp1\n:\n \n200.0\n,\n\n        \npvp_manual\n:\n \nfalse\n,\n\n        \ndescripcion\n:\n \nCOMPUTADORA 11\\\n,\n\n        \nnombre\n:\n \nLAPTOP DELL SRS PREMIUM SOUND\n,\n\n        \ncodigo\n:\n \n00001\n,\n\n        \nestado\n:\n \nA\n,\n\n        \nid\n:\n \nlY4erkB4vtrVa2Lz\n,\n\n        \ncantidad_stock\n:\n \n-5.0\n\n    \n},\n\n    \n...\n\n\n]\n\n\n\n\n\n\nObtener un Producto\n\n\nGET https://contifico.com/sistema/api/v1/producto/\nID\n\n\nDevuelve un producto con el \nID\n solicitado.\n\n\n\n\n\n\n\n\nPar\u00e1metro\n\n\nTipo\n\n\nLongitud\n\n\nDescripci\u00f3n\n\n\n\n\n\n\n\n\n\n\nid\n\n\nvarchar\n\n\n16\n\n\nIdentificador del producto en el sistema.\n\n\n\n\n\n\n\n\nCrear un Producto\n\n\nPara crear un producto se debe hacer uso de la url:\n\n\nPOST https://contifico.com/sistema/api/v1/producto/\n\n\npor medio del m\u00e9todo POST enviando en el cuerpo del requerimiento los datos del producto:\n\n\n\n\nEjemplo:\n\n\n\n\n    \n{\n\n        \ncodigo_barra\n:\n \n000000011115\n,\n\n        \nporcentaje_iva\n:\n \n12\n,\n\n        \ncategoria_id\n:\n \nxgArb6B7wsPObyR4\n,\n\n        \nminimo\n:\n \n3.0\n,\n\n        \npvp2\n:\n \n250.0\n,\n\n        \npvp3\n:\n \n300.0\n,\n\n        \npvp1\n:\n \n200.0\n,\n\n        \npvp_manual\n:\n \nfalse\n,\n\n        \ndescripcion\n:\n \nCOMPUTADORA 11\\\n,\n\n        \nnombre\n:\n \nLAPTOP DELL SRS PREMIUM SOUND 3333\n,\n\n        \ncodigo\n:\n \n00024\n,\n\n        \nestado\n:\n \nA\n\n    \n}\n\n\n\n\n\n\nPara obtener el id de la categor\u00eda se debe hacer uso del \"Servicio de consulta de categor\u00edas\".\n\n\n\n\n\n\n\n\nPar\u00e1metro\n\n\nTipo\n\n\nLongitud\n\n\nDescripci\u00f3n\n\n\n\n\n\n\n\n\n\n\ncategoria_id\n\n\nvarchar\n\n\n16\n\n\nIdentificador de la categoria en el sistema.", 
+            "title": "Producto"
+        }, 
+        {
+            "location": "/inventario/producto/#producto", 
+            "text": "", 
+            "title": "Producto"
+        }, 
+        {
+            "location": "/inventario/producto/#consulta", 
+            "text": "", 
+            "title": "Consulta"
+        }, 
+        {
+            "location": "/inventario/producto/#obtener-listado-de-productos", 
+            "text": "GET https://contifico.com/sistema/api/v1/producto/  Devuelve un listado con todos los productos creados en el sistema   Ejemplo:   [ \n     { \n         codigo_barra :   000000011114 , \n         porcentaje_iva :   12 , \n         categoria_id :   5onPeR2nBil9ep1v , \n         minimo :   3.0 , \n         pvp2 :   250.0 , \n         pvp3 :   300.0 , \n         pvp1 :   200.0 , \n         pvp_manual :   false , \n         descripcion :   COMPUTADORA 11\\ , \n         nombre :   LAPTOP DELL SRS PREMIUM SOUND , \n         codigo :   00001 , \n         estado :   A , \n         id :   lY4erkB4vtrVa2Lz , \n         cantidad_stock :   -5.0 \n     }, \n     ...  ]", 
+            "title": "Obtener Listado de Productos"
+        }, 
+        {
+            "location": "/inventario/producto/#obtener-un-producto", 
+            "text": "GET https://contifico.com/sistema/api/v1/producto/ ID  Devuelve un producto con el  ID  solicitado.     Par\u00e1metro  Tipo  Longitud  Descripci\u00f3n      id  varchar  16  Identificador del producto en el sistema.", 
+            "title": "Obtener un Producto"
+        }, 
+        {
+            "location": "/inventario/producto/#crear-un-producto", 
+            "text": "Para crear un producto se debe hacer uso de la url:  POST https://contifico.com/sistema/api/v1/producto/  por medio del m\u00e9todo POST enviando en el cuerpo del requerimiento los datos del producto:   Ejemplo:        { \n         codigo_barra :   000000011115 , \n         porcentaje_iva :   12 , \n         categoria_id :   xgArb6B7wsPObyR4 , \n         minimo :   3.0 , \n         pvp2 :   250.0 , \n         pvp3 :   300.0 , \n         pvp1 :   200.0 , \n         pvp_manual :   false , \n         descripcion :   COMPUTADORA 11\\ , \n         nombre :   LAPTOP DELL SRS PREMIUM SOUND 3333 , \n         codigo :   00024 , \n         estado :   A \n     }   Para obtener el id de la categor\u00eda se debe hacer uso del \"Servicio de consulta de categor\u00edas\".     Par\u00e1metro  Tipo  Longitud  Descripci\u00f3n      categoria_id  varchar  16  Identificador de la categoria en el sistema.", 
+            "title": "Crear un Producto"
+        }, 
+        {
+            "location": "/inventario/movimientos/", 
+            "text": "Movimientos de Inventario\n\n\nServicios para la interacci\u00f3n con movimientos de Inventario dentro de Cont\u00edfico\n\n\nM\u00e9todos Disponibles: \nGET\n, \nPOST\n\n\nConsulta\n\n\nObtener Listado de Movimientos\n\n\nGET https://contifico.com/sistema/api/v1/movimiento-inventario/\n\n\nDevuelve un listado con todos los movimientos de inventario creados en el sistema.\n\n\n\n\nEjemplo:\n\n\n\n\n[\n\n\n\n]\n\n\n\n\n\n\nObtener un Movimiento de Inventario\n\n\nGET https://contifico.com/sistema/api/v1/movimiento-inventario/\nID\n\n\nDevuelve el movimiento de inventario con el \nID\n solicitado.\n\n\nCreaci\u00f3n\n\n\nCrear un Ingreso de Inventario\n\n\nPOST https://contifico.com/sistema/api/v1/movimiento-inventario/\n\n\n{\n\n    \ntipo\n:\n \nING\n,\n\n    \nfecha\n:\n \n01/01/2019\n,\n\n    \nbodega_id\n:\n \nljMEegJAHq0dQ5g3\n,\n\n    \ndetalles\n:\n \n[\n\n        \n{\n\n            \nproducto_id\n:\n \nRYWb4xYKNhz0bZ1m\n,\n\n            \nprecio\n:\n \n10.0\n,\n\n            \ncantidad\n:\n \n1.0\n\n        \n},\n\n        \n{\n\n            \nproducto_id\n:\n \nRYWb4xYKNhz0bZ1m\n,\n\n            \nprecio\n:\n \n1.0\n,\n\n            \ncantidad\n:\n \n15.0\n\n        \n}\n\n    \n],\n\n    \ndescripcion\n:\n \ndetalle ingreso\n\n\n}\n\n\n\n\n\n\nCrear un Egreso de Inventario\n\n\nPOST https://contifico.com/sistema/api/v1/movimiento-inventario/\n  \n\n\n{\n\n    \ntipo\n:\n \nEGR\n,\n\n    \nfecha\n:\n \n08/02/2017\n,\n\n    \nbodega_id\n:\n \nlLPEegJAHq0dQty8\n,\n\n    \ndetalles\n:\n \n[\n\n        \n{\n\n            \nproducto_id\n:\n \n2vj6e9pm5Uz3dWBV\n,\n\n            \ncantidad\n:\n \n30.0\n\n        \n}\n\n    \n],\n\n    \ndescripcion\n:\n \ndetalle egreso\n\n\n}", 
+            "title": "Movimientos"
+        }, 
+        {
+            "location": "/inventario/movimientos/#movimientos-de-inventario", 
+            "text": "Servicios para la interacci\u00f3n con movimientos de Inventario dentro de Cont\u00edfico  M\u00e9todos Disponibles:  GET ,  POST", 
+            "title": "Movimientos de Inventario"
+        }, 
+        {
+            "location": "/inventario/movimientos/#consulta", 
+            "text": "", 
+            "title": "Consulta"
+        }, 
+        {
+            "location": "/inventario/movimientos/#obtener-listado-de-movimientos", 
+            "text": "GET https://contifico.com/sistema/api/v1/movimiento-inventario/  Devuelve un listado con todos los movimientos de inventario creados en el sistema.   Ejemplo:   [  ]", 
+            "title": "Obtener Listado de Movimientos"
+        }, 
+        {
+            "location": "/inventario/movimientos/#obtener-un-movimiento-de-inventario", 
+            "text": "GET https://contifico.com/sistema/api/v1/movimiento-inventario/ ID  Devuelve el movimiento de inventario con el  ID  solicitado.", 
+            "title": "Obtener un Movimiento de Inventario"
+        }, 
+        {
+            "location": "/inventario/movimientos/#creacion", 
+            "text": "", 
+            "title": "Creaci\u00f3n"
+        }, 
+        {
+            "location": "/inventario/movimientos/#crear-un-ingreso-de-inventario", 
+            "text": "POST https://contifico.com/sistema/api/v1/movimiento-inventario/  { \n     tipo :   ING , \n     fecha :   01/01/2019 , \n     bodega_id :   ljMEegJAHq0dQ5g3 , \n     detalles :   [ \n         { \n             producto_id :   RYWb4xYKNhz0bZ1m , \n             precio :   10.0 , \n             cantidad :   1.0 \n         }, \n         { \n             producto_id :   RYWb4xYKNhz0bZ1m , \n             precio :   1.0 , \n             cantidad :   15.0 \n         } \n     ], \n     descripcion :   detalle ingreso  }", 
+            "title": "Crear un Ingreso de Inventario"
+        }, 
+        {
+            "location": "/inventario/movimientos/#crear-un-egreso-de-inventario", 
+            "text": "POST https://contifico.com/sistema/api/v1/movimiento-inventario/     { \n     tipo :   EGR , \n     fecha :   08/02/2017 , \n     bodega_id :   lLPEegJAHq0dQty8 , \n     detalles :   [ \n         { \n             producto_id :   2vj6e9pm5Uz3dWBV , \n             cantidad :   30.0 \n         } \n     ], \n     descripcion :   detalle egreso  }", 
+            "title": "Crear un Egreso de Inventario"
+        }, 
+        {
+            "location": "/registro/documento/", 
+            "text": "Documento\n\n\nConsultar\n\n\n\n\nA continuacion la respuesta al consultar un documento\n\n\n\n\n{\n\n    \niva\n:\n \n1200.0\n,\n\n    \nfecha_vencimiento\n:\n \n10/06/2013\n,\n\n    \nvendedor\n:\n \nnull\n,\n\n    \npos\n:\n \n,\n\n    \nsubtotal_0\n:\n \n0.0\n,\n\n    \ndescripcion\n:\n \nprueba\n,\n\n    \ntotal\n:\n \n11200.0\n,\n\n    \nid\n:\n \nusdjcbjsydhcsjd\n,\n\n    \nservicio\n:\n \nnull\n,\n\n    \nelectronico\n:\n \nfalse\n,\n\n    \ncobros\n:\n \n[\n\n        \n{\n\n            \nforma_cobro\n:\n \nCH\n,\n\n            \nmonto\n:\n \n10000.0\n,\n\n            \nfecha\n:\n \n01/07/2013\n,\n\n            \nnumero_tarjeta\n:\n \nnull\n,\n\n            \nnumero_cheque\n:\n \n201307000001\n,\n\n            \ntipo_ping\n:\n \nnull\n\n        \n}\n\n    \n],\n\n    \ndetalles\n:\n \n[\n\n        \n{\n\n            \nporcentaje_iva\n:\n \n12\n,\n\n            \ncantidad\n:\n \n500.0\n,\n\n            \nbase_no_gravable\n:\n \n0.0\n,\n\n            \nprecio\n:\n \n20.0\n,\n\n            \nporcentaje_descuento\n:\n \n0.0\n,\n\n            \ndescripcion\n:\n \nnull\n,\n\n            \nproducto_id\n:\n \nMRYWb4kJoHz0aZ1m\n,\n\n            \nbase_cero\n:\n \n0.0\n,\n\n            \nbase_gravable\n:\n \n10000.0\n\n        \n}\n\n    \n],\n\n    \nfecha_emision\n:\n \n10/06/2013\n,\n\n    \ndocumento\n:\n \n221-321-321321321\n,\n\n    \nadicional2\n:\n \n,\n\n    \nadicional1\n:\n \n,\n\n    \nestado\n:\n \nP\n,\n\n    \ntipo_documento\n:\n \nFAC\n,\n\n    \nautorizacion\n:\n \n5454654546\n,\n\n    \nid_caja\n:\n \n,\n\n    \nsubtotal_12\n:\n \n10000.0\n,\n\n    \ncliente\n:\n \n{\n\n        \ntipo\n:\n \nJ\n,\n\n        \ntelefonos\n:\n \n2745486\n,\n\n        \nruc\n:\n \n0990004196001\n,\n\n        \nrazon_social\n:\n \nCORPORACION EL ROSADO S.A.\n,\n\n        \ndireccion\n:\n \nGUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES\n,\n\n        \nes_extranjero\n:\n \nfalse\n,\n\n        \nporcentaje_descuento\n:\n \nnull\n,\n\n        \nes_cliente\n:\n \nfalse\n,\n\n        \nid\n:\n \nnull\n,\n\n        \nes_empleado\n:\n \nfalse\n,\n\n        \nemail\n:\n \nagomez@contifico.com\n,\n\n        \ncedula\n:\n \n,\n\n        \nes_vendedor\n:\n \nfalse\n\n    \n}\n\n\n}\n\n\n\n\n\n\nHTTP Request\n\n\nGET https://contifico.com/sistema/api/v1/documento/\nID\n\n\nDevuelve un documento con el \nID\n solicitado.\n\n\n\n\n\n\n\n\nPar\u00e1metro\n\n\nTipo\n\n\nLongitud\n\n\nDescripci\u00f3n\n\n\n\n\n\n\n\n\n\n\nid\n\n\nvarchar\n\n\n16\n\n\nIdentificador de la caja en punto de venta\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContenido\n\n\nRepresentacion\n\n\n\n\n\n\n\n\n\n\n\"cobros\": [{ .. }]\n\n\nContiene los cobros realizados en el documento.\n\n\n\n\n\n\n\"detalles\": [{ .. }]\n\n\nContiene los detalles del documento, bien/servicio agregados al documento.\n\n\n\n\n\n\n\"cliente\": { .. }\n\n\nEl cliente que esta asignado al documento.\n\n\n\n\n\n\n\n\nAgregar\n\n\n{\n\n    \npos\n \n:\n \nceaa9097-1d76-4eb8-0000-6f412fa0297b\n,\n\n    \nfecha_emision\n:\n \n01/11/2015\n,\n\n    \ntipo_documento\n:\n \nFAC\n,\n\n    \ndocumento\n:\n \n001-001-000008089\n,\n\n    \nestado\n:\n \nP\n,\n\n    \nautorizacion\n:\n \n0123456789\n,\n\n    \ncaja_id\n:\n \nnull\n,\n\n    \ncliente\n:\n \n{\n\n        \nruc\n:\n \n0922054366001\n,\n\n        \ncedula\n:\n \n0922054366\n,\n\n        \nrazon_social\n:\n \nNombres del Cliente\n,\n\n        \ntelefonos\n:\n \n0988800001\n,\n\n        \ndireccion\n:\n \nDireccion cliente\n,\n\n        \ntipo\n:\n \nN\n,\n\n        \nemail\n:\n \ncliente@contifico.com\n,\n\n        \nes_extranjero\n:\n \nfalse\n\n    \n},\n\n    \nvendedor\n:\n \n{\n\n        \nruc\n:\n \n0904728680001\n,\n\n        \ncedula\n:\n \n0904728680\n,\n\n        \nrazon_social\n:\n \nNombres del Vendedor\n,\n\n        \ntelefonos\n:\n \n5104910\n,\n\n        \ndireccion\n:\n \ndireccion del vendedor\n,\n\n        \ntipo\n:\n \nN\n,\n\n        \nemail\n:\n \nvendedor@contifico.com\n,\n\n        \nes_extranjero\n:\n \nfalse\n\n    \n},\n\n    \ndescripcion\n:\n \nFACTURA 8040\n,\n\n    \nsubtotal_0\n:\n \n0.00\n,\n\n    \nsubtotal_12\n:\n \n1.35\n,\n\n    \niva\n:\n \n0.16\n,\n\n    \nservicio\n:\n \n0.00\n,\n\n    \ntotal\n:\n \n1.51\n,\n\n    \nadicional1\n:\n \n,\n\n    \nadicional2\n:\n \n,\n\n    \ndetalles\n:\n \n[{\n\n        \nproducto_id\n:\n \nRZxg87rxLh9Mb1pV\n,\n\n        \ncantidad\n:\n \n1.00\n,\n\n        \nprecio\n:\n \n1.00\n,\n\n        \nporcentaje_iva\n:\n \n12\n,\n\n        \nporcentaje_descuento\n:\n \n0.00\n,\n\n        \nbase_cero\n:\n \n0.00\n,\n\n        \nbase_gravable\n:\n \n1.00\n,\n\n        \nbase_no_gravable\n:\n \n0.00\n\n    \n},\n\n    \n{\n\n        \nproducto_id\n:\n \nYqxgeprxLh9981cU\n,\n\n        \ncantidad\n:\n \n1.00\n,\n\n        \nprecio\n:\n \n0.35\n,\n\n        \nporcentaje_iva\n:\n \n12\n,\n\n        \nporcentaje_descuento\n:\n \n0.00\n,\n\n        \nbase_cero\n:\n \n0.00\n,\n\n        \nbase_gravable\n:\n \n0.35\n,\n\n        \nbase_no_gravable\n:\n \n0.00\n\n    \n}],\n\n    \ncobros\n:[{\n\n      \nforma_cobro\n \n:\n \nTC\n,\n\n      \nmonto\n \n:\n \n1.51\n,\n\n      \nnumero_cheque\n \n:\n \n4567897\n,\n\n      \ntipo_ping\n \n:\n \nD\n\n    \n}]\n\n\n}\n\n\n\n\n\n\nEste servicio permite agregar un nuevo documento a Contifico.\n\n\nHTTP Request\n\n\nPOST https://contifico.com/sistema/api/documento/\n\n\nQuery Parameters\n\n\n\n\n\n\n\n\nContenido\n\n\nRepresentacion\n\n\n\n\n\n\n\n\n\n\n\"cliente\": { .. }\n\n\nEl cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea.\n\n\n\n\n\n\n\"vendedor\": { .. }\n\n\nEl vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea.\n\n\n\n\n\n\n\"detalles\": [{ .. }]\n\n\nContiene los detalles del documento, bien/servicio agregados al documento.\n\n\n\n\n\n\n\"cobros\": [{ .. }]\n\n\nContiene los cobros realizados en el documento. Se crean los cobros", 
+            "title": "Documento"
+        }, 
+        {
+            "location": "/registro/documento/#documento", 
+            "text": "", 
+            "title": "Documento"
+        }, 
+        {
+            "location": "/registro/documento/#consultar", 
+            "text": "A continuacion la respuesta al consultar un documento   { \n     iva :   1200.0 , \n     fecha_vencimiento :   10/06/2013 , \n     vendedor :   null , \n     pos :   , \n     subtotal_0 :   0.0 , \n     descripcion :   prueba , \n     total :   11200.0 , \n     id :   usdjcbjsydhcsjd , \n     servicio :   null , \n     electronico :   false , \n     cobros :   [ \n         { \n             forma_cobro :   CH , \n             monto :   10000.0 , \n             fecha :   01/07/2013 , \n             numero_tarjeta :   null , \n             numero_cheque :   201307000001 , \n             tipo_ping :   null \n         } \n     ], \n     detalles :   [ \n         { \n             porcentaje_iva :   12 , \n             cantidad :   500.0 , \n             base_no_gravable :   0.0 , \n             precio :   20.0 , \n             porcentaje_descuento :   0.0 , \n             descripcion :   null , \n             producto_id :   MRYWb4kJoHz0aZ1m , \n             base_cero :   0.0 , \n             base_gravable :   10000.0 \n         } \n     ], \n     fecha_emision :   10/06/2013 , \n     documento :   221-321-321321321 , \n     adicional2 :   , \n     adicional1 :   , \n     estado :   P , \n     tipo_documento :   FAC , \n     autorizacion :   5454654546 , \n     id_caja :   , \n     subtotal_12 :   10000.0 , \n     cliente :   { \n         tipo :   J , \n         telefonos :   2745486 , \n         ruc :   0990004196001 , \n         razon_social :   CORPORACION EL ROSADO S.A. , \n         direccion :   GUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES , \n         es_extranjero :   false , \n         porcentaje_descuento :   null , \n         es_cliente :   false , \n         id :   null , \n         es_empleado :   false , \n         email :   agomez@contifico.com , \n         cedula :   , \n         es_vendedor :   false \n     }  }", 
+            "title": "Consultar"
+        }, 
+        {
+            "location": "/registro/documento/#http-request", 
+            "text": "GET https://contifico.com/sistema/api/v1/documento/ ID  Devuelve un documento con el  ID  solicitado.     Par\u00e1metro  Tipo  Longitud  Descripci\u00f3n      id  varchar  16  Identificador de la caja en punto de venta         Contenido  Representacion      \"cobros\": [{ .. }]  Contiene los cobros realizados en el documento.    \"detalles\": [{ .. }]  Contiene los detalles del documento, bien/servicio agregados al documento.    \"cliente\": { .. }  El cliente que esta asignado al documento.", 
+            "title": "HTTP Request"
+        }, 
+        {
+            "location": "/registro/documento/#agregar", 
+            "text": "{ \n     pos   :   ceaa9097-1d76-4eb8-0000-6f412fa0297b , \n     fecha_emision :   01/11/2015 , \n     tipo_documento :   FAC , \n     documento :   001-001-000008089 , \n     estado :   P , \n     autorizacion :   0123456789 , \n     caja_id :   null , \n     cliente :   { \n         ruc :   0922054366001 , \n         cedula :   0922054366 , \n         razon_social :   Nombres del Cliente , \n         telefonos :   0988800001 , \n         direccion :   Direccion cliente , \n         tipo :   N , \n         email :   cliente@contifico.com , \n         es_extranjero :   false \n     }, \n     vendedor :   { \n         ruc :   0904728680001 , \n         cedula :   0904728680 , \n         razon_social :   Nombres del Vendedor , \n         telefonos :   5104910 , \n         direccion :   direccion del vendedor , \n         tipo :   N , \n         email :   vendedor@contifico.com , \n         es_extranjero :   false \n     }, \n     descripcion :   FACTURA 8040 , \n     subtotal_0 :   0.00 , \n     subtotal_12 :   1.35 , \n     iva :   0.16 , \n     servicio :   0.00 , \n     total :   1.51 , \n     adicional1 :   , \n     adicional2 :   , \n     detalles :   [{ \n         producto_id :   RZxg87rxLh9Mb1pV , \n         cantidad :   1.00 , \n         precio :   1.00 , \n         porcentaje_iva :   12 , \n         porcentaje_descuento :   0.00 , \n         base_cero :   0.00 , \n         base_gravable :   1.00 , \n         base_no_gravable :   0.00 \n     }, \n     { \n         producto_id :   YqxgeprxLh9981cU , \n         cantidad :   1.00 , \n         precio :   0.35 , \n         porcentaje_iva :   12 , \n         porcentaje_descuento :   0.00 , \n         base_cero :   0.00 , \n         base_gravable :   0.35 , \n         base_no_gravable :   0.00 \n     }], \n     cobros :[{ \n       forma_cobro   :   TC , \n       monto   :   1.51 , \n       numero_cheque   :   4567897 , \n       tipo_ping   :   D \n     }]  }   Este servicio permite agregar un nuevo documento a Contifico.", 
+            "title": "Agregar"
+        }, 
+        {
+            "location": "/registro/documento/#http-request_1", 
+            "text": "POST https://contifico.com/sistema/api/documento/", 
+            "title": "HTTP Request"
+        }, 
+        {
+            "location": "/registro/documento/#query-parameters", 
+            "text": "Contenido  Representacion      \"cliente\": { .. }  El cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea.    \"vendedor\": { .. }  El vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea.    \"detalles\": [{ .. }]  Contiene los detalles del documento, bien/servicio agregados al documento.    \"cobros\": [{ .. }]  Contiene los cobros realizados en el documento. Se crean los cobros", 
+            "title": "Query Parameters"
+        }, 
+        {
+            "location": "/registro/cobros/", 
+            "text": "Cobros\n\n\nConsulta\n\n\nGET https://contifico.com/sistema/api/v1/documento/\nID\n/cobro/\n\n\nCreaci\u00f3n\n\n\nUna vez creado el documento si desea agregarle cobros puede hacer uso del servicio:\n\n\nPOST https://contifico.com/sistema/api/v1/documento/\nID\n/cobro/\n\n\ncambiando el par\u00e1metro \n por el id del documento (devuelto al momento de crear el documento).\n\n\nEl formato del json que se envia al endpoint es el siguiente:\n\n\n{\n\n    \nforma_cobro\n:\n \nTC\n,\n\n    \nmonto\n:\n \n100.00\n,\n\n    \nfecha\n:\n \n08/11/2017\n,\n\n    \nnumero_tarjeta\n:\n \nnull\n,\n\n    \nnumero_cheque\n:\n \n,\n\n    \ntipo_ping\n:\n \nD\n\n\n}\n\n\n\n\n\n\ndonde se aceptan los siguientes valores:\n\n\nforma_cobro: \nRepresenta el la forma como se realiza el cobro sus valores pueden ser:\n\n\n\n\n\n\n\n\nValor\n\n\nTipo\n\n\n\n\n\n\n\n\n\n\nEF\n\n\nEfectivo\n\n\n\n\n\n\nCH\n\n\nCheque\n\n\n\n\n\n\nTC\n\n\nTarjeta de Cr\u00e9dito\n\n\n\n\n\n\n\n\nnumero_tarjeta (campo opcional):\nRepresenta el n\u00famero de tarjeta de cr\u00e9dito y se guarda \u00fanicamente si el campo forma_cobro es tarjeta de cr\u00e9dito (TC)\n\n\nnumero_cheque:\nRepresenta el n\u00famero de cheque y se guarda \u00fanicamente si el campo forma_cobro es cheque (CH)\n\n\ntipo_ping:\nRepresenta la red de cobro con la que se hace el d\u00e9bito en la tarjeta y se guarda \u00fanicamente si el campo forma_cobro es tarjeta de cr\u00e9dito (TC)\n\n\n\"D\" -\n Datafast\n\"M\" -\n Medianet", 
+            "title": "Cobros"
+        }, 
+        {
+            "location": "/registro/cobros/#cobros", 
+            "text": "", 
+            "title": "Cobros"
+        }, 
+        {
+            "location": "/registro/cobros/#consulta", 
+            "text": "GET https://contifico.com/sistema/api/v1/documento/ ID /cobro/", 
+            "title": "Consulta"
+        }, 
+        {
+            "location": "/registro/cobros/#creacion", 
+            "text": "Una vez creado el documento si desea agregarle cobros puede hacer uso del servicio:  POST https://contifico.com/sistema/api/v1/documento/ ID /cobro/  cambiando el par\u00e1metro   por el id del documento (devuelto al momento de crear el documento).  El formato del json que se envia al endpoint es el siguiente:  { \n     forma_cobro :   TC , \n     monto :   100.00 , \n     fecha :   08/11/2017 , \n     numero_tarjeta :   null , \n     numero_cheque :   , \n     tipo_ping :   D  }   donde se aceptan los siguientes valores:  forma_cobro: \nRepresenta el la forma como se realiza el cobro sus valores pueden ser:     Valor  Tipo      EF  Efectivo    CH  Cheque    TC  Tarjeta de Cr\u00e9dito     numero_tarjeta (campo opcional):\nRepresenta el n\u00famero de tarjeta de cr\u00e9dito y se guarda \u00fanicamente si el campo forma_cobro es tarjeta de cr\u00e9dito (TC)  numero_cheque:\nRepresenta el n\u00famero de cheque y se guarda \u00fanicamente si el campo forma_cobro es cheque (CH)  tipo_ping:\nRepresenta la red de cobro con la que se hace el d\u00e9bito en la tarjeta y se guarda \u00fanicamente si el campo forma_cobro es tarjeta de cr\u00e9dito (TC)  \"D\" -  Datafast\n\"M\" -  Medianet", 
+            "title": "Creaci\u00f3n"
+        }
+    ]
+}
