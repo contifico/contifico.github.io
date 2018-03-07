@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,26 +12,36 @@
     
         
     <url>
+     <loc>/persona/persona/</loc>
+     <lastmod>2018-03-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/inventario/categoria/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/inventario/bodega/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/inventario/producto/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/inventario/movimientos/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -41,13 +51,19 @@
         
     <url>
      <loc>/registro/documento/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/registro/documentoelectronico/</loc>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/registro/cobros/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

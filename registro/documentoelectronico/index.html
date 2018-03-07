@@ -36,7 +36,7 @@
     
     
       
-        <title>Documento - Contifico Api</title>
+        <title>Documento Electrónico - Contifico Api</title>
       
     
     
@@ -69,7 +69,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#documento" tabindex="1" class="md-skip">
+      <a href="#documentos-electronicos" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -95,7 +95,7 @@
                 Contifico Api
               </span>
               <span class="md-header-nav__topic">
-                Documento
+                Documento Electrónico
               </span>
             
           
@@ -305,6 +305,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../documento/" title="Documento" class="md-nav__link">
+      Documento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -316,11 +328,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Documento
+        Documento Electrónico
       </label>
     
-    <a href="./" title="Documento" class="md-nav__link md-nav__link--active">
-      Documento
+    <a href="./" title="Documento Electrónico" class="md-nav__link md-nav__link--active">
+      Documento Electrónico
     </a>
     
       
@@ -334,49 +346,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#consultar" title="Consultar" class="md-nav__link">
-    Consultar
+  <a href="#crear-un-documento-electronico" title="Crear un Documento Electrónico" class="md-nav__link">
+    Crear un Documento Electrónico
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#http-request" title="HTTP Request" class="md-nav__link">
-    HTTP Request
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#agregar" title="Agregar" class="md-nav__link">
-    Agregar
+  <a href="#enviar-al-sri-documentos-electronicos" title="Enviar al SRI Documentos Electrónicos" class="md-nav__link">
+    Enviar al SRI Documentos Electrónicos
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#http-request_1" title="HTTP Request" class="md-nav__link">
-    HTTP Request
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-parameters" title="Query Parameters" class="md-nav__link">
-    Query Parameters
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -386,18 +365,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../documentoelectronico/" title="Documento Electrónico" class="md-nav__link">
-      Documento Electrónico
-    </a>
   </li>
 
         
@@ -439,49 +406,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#consultar" title="Consultar" class="md-nav__link">
-    Consultar
+  <a href="#crear-un-documento-electronico" title="Crear un Documento Electrónico" class="md-nav__link">
+    Crear un Documento Electrónico
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#http-request" title="HTTP Request" class="md-nav__link">
-    HTTP Request
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#agregar" title="Agregar" class="md-nav__link">
-    Agregar
+  <a href="#enviar-al-sri-documentos-electronicos" title="Enviar al SRI Documentos Electrónicos" class="md-nav__link">
+    Enviar al SRI Documentos Electrónicos
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#http-request_1" title="HTTP Request" class="md-nav__link">
-    HTTP Request
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-parameters" title="Query Parameters" class="md-nav__link">
-    Query Parameters
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -500,126 +434,41 @@
               
                 
                 
-                <h1 id="documento">Documento</h1>
-<h2 id="consultar">Consultar</h2>
-<blockquote>
-<p>A continuacion la respuesta al consultar un documento</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="s2">&quot;1200.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha_vencimiento&quot;</span><span class="p">:</span> <span class="s2">&quot;10/06/2013&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;vendedor&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;subtotal_0&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;11200.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;usdjcbjsydhcsjd&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;servicio&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;electronico&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;cobros&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;01/07/2013&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;numero_cheque&quot;</span><span class="p">:</span> <span class="s2">&quot;201307000001&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="kc">null</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;porcentaje_iva&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;500.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MRYWb4kJoHz0aZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;10/06/2013&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;documento&quot;</span><span class="p">:</span> <span class="s2">&quot;221-321-321321321&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;adicional2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;FAC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;autorizacion&quot;</span><span class="p">:</span> <span class="s2">&quot;5454654546&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;id_caja&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;subtotal_12&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;2745486&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0990004196001&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;CORPORACION EL ROSADO S.A.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;GUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;es_cliente&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;es_empleado&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;agomez@contifico.com&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_vendedor&quot;</span><span class="p">:</span> <span class="kc">false</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="http-request">HTTP Request</h3>
-<p><code>GET https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;</code></p>
-<p>Devuelve un documento con el <code>&lt;ID&gt;</code> solicitado.</p>
+                <h1 id="documentos-electronicos">Documentos Electrónicos</h1>
+<h2 id="crear-un-documento-electronico">Crear un Documento Electrónico</h2>
+<p><code>POST https://contifico.com/sistema/api/documento/</code></p>
+<p>Este servicio permite agregar un nuevo documento electrónico a Contifico.</p>
 <table>
 <thead>
 <tr>
 <th>Parámetro</th>
-<th>Tipo</th>
-<th>Longitud</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>id</td>
-<td>varchar</td>
-<td>16</td>
-<td>Identificador de la caja en punto de venta</td>
+<td>"autorizacion": ""</td>
+<td>La autorización debe ser enviada en blanco para los documentos electrónicos.</td>
+</tr>
+<tr>
+<td>"electronico": true</td>
+<td>Especificar el parametro "true".</td>
 </tr>
 </tbody>
 </table>
-<hr>
-
-<table>
-<thead>
-<tr>
-<th>Contenido</th>
-<th>Representacion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>"cobros": [{ .. }]</td>
-<td>Contiene los cobros realizados en el documento.</td>
-</tr>
-<tr>
-<td>"detalles": [{ .. }]</td>
-<td>Contiene los detalles del documento, bien/servicio agregados al documento.</td>
-</tr>
-<tr>
-<td>"cliente": { .. }</td>
-<td>El cliente que esta asignado al documento.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="agregar">Agregar</h2>
+<p>El número de documento debe poseer la siguiente estructura:</p>
+<p><code>Expresión regular: [0-9]{3}-[0-9]{3}-[0-9]{1,9}</code></p>
+<p>Ejemplo:
+001-001-000008089</p>
+<p>Completando la cantidad de ceros en el número de documento.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;ceaa9097-1d76-4eb8-0000-6f412fa0297b&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;01/11/2015&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tipo_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;FAC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;documento&quot;</span><span class="p">:</span> <span class="s2">&quot;001-001-000008089&quot;</span><span class="p">,</span>
     <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;autorizacion&quot;</span><span class="p">:</span> <span class="s2">&quot;0123456789&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;electronico&quot;</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;autorizacion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366001&quot;</span><span class="p">,</span>
@@ -679,36 +528,11 @@
 </pre></div>
 
 
-<p>Este servicio permite agregar un nuevo documento a Contifico.</p>
-<h3 id="http-request_1">HTTP Request</h3>
-<p><code>POST https://contifico.com/sistema/api/documento/</code></p>
-<h3 id="query-parameters">Query Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Contenido</th>
-<th>Representacion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>"cliente": { .. }</td>
-<td>El cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
-</tr>
-<tr>
-<td>"vendedor": { .. }</td>
-<td>El vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
-</tr>
-<tr>
-<td>"detalles": [{ .. }]</td>
-<td>Contiene los detalles del documento, bien/servicio agregados al documento.</td>
-</tr>
-<tr>
-<td>"cobros": [{ .. }]</td>
-<td>Contiene los cobros realizados en el documento. Se crean los cobros</td>
-</tr>
-</tbody>
-</table>
+<h2 id="enviar-al-sri-documentos-electronicos">Enviar al SRI Documentos Electrónicos</h2>
+<p><code>PUT https://contifico.com/sistema/api/documento/&lt;ID&gt;/sri/</code></p>
+<p>Este servicio permite enviar documentos electrónicos creados en Contifico de manera manual al SRI.</p>
+<p>Se debe usar el metodo PUT y adjuntar el ID del documento. No se debe enviar el JSON nuevamente.</p>
+<p>Adicional a esto, Contifico posee un script que envia automaticamente los documentos pendientes al SRI cada hora.</p>
                 
                   
                 
@@ -727,7 +551,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../inventario/movimientos/" title="Movimientos" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../documento/" title="Documento" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -736,19 +560,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Movimientos
+                Documento
               </span>
             </div>
           </a>
         
         
-          <a href="../documentoelectronico/" title="Documento Electrónico" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cobros/" title="Cobros" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Documento Electrónico
+                Cobros
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
