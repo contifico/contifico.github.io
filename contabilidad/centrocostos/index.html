@@ -36,7 +36,7 @@
     
     
       
-        <title>Movimientos - Contifico Api</title>
+        <title>Centros de Costo - Contifico Api</title>
       
     
     
@@ -69,7 +69,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#movimientos-de-inventario" tabindex="1" class="md-skip">
+      <a href="#centros-de-costo" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -95,7 +95,7 @@
                 Contifico Api
               </span>
               <span class="md-header-nav__topic">
-                Movimientos
+                Centros de Costo
               </span>
             
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Contabilidad
@@ -197,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../contabilidad/asientos/" title="Asientos" class="md-nav__link">
+    <a href="../asientos/" title="Asientos" class="md-nav__link">
       Asientos
     </a>
   </li>
@@ -209,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../contabilidad/cuentas/" title="Cuentas Contables" class="md-nav__link">
+    <a href="../cuentas/" title="Cuentas Contables" class="md-nav__link">
       Cuentas Contables
     </a>
   </li>
@@ -219,11 +221,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../contabilidad/centrocostos/" title="Centros de Costo" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Centros de Costo
+      </label>
+    
+    <a href="./" title="Centros de Costo" class="md-nav__link md-nav__link--active">
       Centros de Costo
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#consulta" title="Consulta" class="md-nav__link">
+    Consulta
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-listado-de-centros-de-costo" title="Obtener listado de Centros de Costo" class="md-nav__link">
+    Obtener listado de Centros de Costo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -272,12 +323,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Inventario
@@ -295,7 +344,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../categoria/" title="Categoría" class="md-nav__link">
+    <a href="../../inventario/categoria/" title="Categoría" class="md-nav__link">
       Categoría
     </a>
   </li>
@@ -307,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../bodega/" title="Bodega" class="md-nav__link">
+    <a href="../../inventario/bodega/" title="Bodega" class="md-nav__link">
       Bodega
     </a>
   </li>
@@ -319,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../producto/" title="Producto" class="md-nav__link">
+    <a href="../../inventario/producto/" title="Producto" class="md-nav__link">
       Producto
     </a>
   </li>
@@ -329,88 +378,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Movimientos
-      </label>
-    
-    <a href="./" title="Movimientos" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../inventario/movimientos/" title="Movimientos" class="md-nav__link">
       Movimientos
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creacion" title="Creación" class="md-nav__link">
-    Creación
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-ingreso-de-inventario" title="Crear un Ingreso de Inventario" class="md-nav__link">
-    Crear un Ingreso de Inventario
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-egreso-de-inventario" title="Crear un Egreso de Inventario" class="md-nav__link">
-    Crear un Egreso de Inventario
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-traslado-de-inventario" title="Crear un Traslado de Inventario" class="md-nav__link">
-    Crear un Traslado de Inventario
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consulta" title="Consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-un-movimiento-de-inventario" title="Obtener un Movimiento de Inventario" class="md-nav__link">
-    Obtener un Movimiento de Inventario
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -512,50 +484,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creacion" title="Creación" class="md-nav__link">
-    Creación
+  <a href="#consulta" title="Consulta" class="md-nav__link">
+    Consulta
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#crear-un-ingreso-de-inventario" title="Crear un Ingreso de Inventario" class="md-nav__link">
-    Crear un Ingreso de Inventario
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-egreso-de-inventario" title="Crear un Egreso de Inventario" class="md-nav__link">
-    Crear un Egreso de Inventario
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-traslado-de-inventario" title="Crear un Traslado de Inventario" class="md-nav__link">
-    Crear un Traslado de Inventario
+  <a href="#obtener-listado-de-centros-de-costo" title="Obtener listado de Centros de Costo" class="md-nav__link">
+    Obtener listado de Centros de Costo
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consulta" title="Consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-un-movimiento-de-inventario" title="Obtener un Movimiento de Inventario" class="md-nav__link">
-    Obtener un Movimiento de Inventario
-  </a>
   
 </li>
       
@@ -574,74 +518,67 @@
               
                 
                 
-                <h1 id="movimientos-de-inventario">Movimientos de Inventario</h1>
-<p>Servicios para la interacción con movimientos de Inventario dentro de Contífico</p>
-<p>Métodos Disponibles: <code>GET</code>, <code>POST</code></p>
-<h2 id="creacion">Creación</h2>
-<h3 id="crear-un-ingreso-de-inventario">Crear un Ingreso de Inventario</h3>
-<p><code>POST https://contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ING&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;01/01/2019&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ljMEegJAHq0dQ5g3&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;15.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle ingreso&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="crear-un-egreso-de-inventario">Crear un Egreso de Inventario</h3>
-<p><code>POST https://contifico.com/sistema/api/v1/movimiento-inventario/</code>  </p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/02/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;lLPEegJAHq0dQty8&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2vj6e9pm5Uz3dWBV&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;30.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle egreso&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="crear-un-traslado-de-inventario">Crear un Traslado de Inventario</h3>
-<p><code>POST https://contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000002&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;O9pgen5AoTXOdNQx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;24/05/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PxBleX5JYI45arNO&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Traslado prueba&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="s2">&quot;mxGge0gWwHkodADR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
-<span class="p">}</span>
-</pre></div>
-
-
+                <h1 id="centros-de-costo">Centros de Costo</h1>
 <h2 id="consulta">Consulta</h2>
-<h2 id="obtener-un-movimiento-de-inventario">Obtener un Movimiento de Inventario</h2>
-<p><code>GET https://contifico.com/sistema/api/v1/movimiento-inventario/&lt;ID&gt;</code></p>
-<p>Devuelve el movimiento de inventario con el <code>&lt;ID&gt;</code> solicitado.</p>
+<h3 id="obtener-listado-de-centros-de-costo">Obtener listado de Centros de Costo</h3>
+<p><code>GET https://contifico.com/sistema/api/v1/contabilidad/centro-costo/?tipo=T</code></p>
+<p>Devuelve un listado con todos los centros de costo creadas en el sistema</p>
+<blockquote>
+<p>Ejemplo:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xidkjeuekdldiej&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;centro costo 1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span>  <span class="p">:</span> <span class="s2">&quot;T&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;kdiekjdleke&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;centro costo 2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span>  <span class="p">:</span> <span class="s2">&quot;T&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del centro de costo en el sistema</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>50</td>
+<td>Código del centro de costo</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del centro de costo</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>2</td>
+<td>Tipo de centro de costo T:Transaccional G:Grupo</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -660,7 +597,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../producto/" title="Producto" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../cuentas/" title="Cuentas Contables" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -669,19 +606,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Producto
+                Cuentas Contables
               </span>
             </div>
           </a>
         
         
-          <a href="../../registro/documento/" title="Documento" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../persona/persona/" title="Persona" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Documento
+                Persona
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
