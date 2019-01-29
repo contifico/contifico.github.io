@@ -379,6 +379,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#obtener-stock-de-bodegas" title="Obtener Stock de bodegas" class="md-nav__link">
+    Obtener Stock de bodegas
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -531,6 +538,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#obtener-stock-de-bodegas" title="Obtener Stock de bodegas" class="md-nav__link">
+    Obtener Stock de bodegas
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -640,6 +654,25 @@
 </tr>
 </tbody>
 </table>
+<h2 id="obtener-stock-de-bodegas">Obtener Stock de bodegas</h2>
+<p>Para obtener el stock de un producto por bodega se puede hacer uso del servicio:</p>
+<p><code>GET https://contifico.com/sistema/api/v1/producto/&lt;ID&gt;/stock/</code></p>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;bodega_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Bodega Principal&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;BQ9pdBB26H52d8KE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;bodega_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Bodega Ventas&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;OgDGe79XJc17bn2x&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mi">10</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<p>Esto nos devolverá un json listando el stock de las bodegas que pertenezcan a un punto de venta en Contífico.</p>
                 
                   
                 
