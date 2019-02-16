@@ -431,6 +431,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-tarjeta-de-credito" title="Registrar cobro tarjeta de crédito" class="md-nav__link">
+    Registrar cobro tarjeta de crédito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-efectivo" title="Registrar cobro efectivo" class="md-nav__link">
+    Registrar cobro efectivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-cheque" title="Registrar cobro cheque" class="md-nav__link">
+    Registrar cobro cheque
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-transferencia" title="Registrar cobro transferencia" class="md-nav__link">
+    Registrar cobro transferencia
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -448,6 +476,42 @@
   <li class="md-nav__item">
     <a href="../proforma/" title="Proforma" class="md-nav__link">
       Proforma
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Bancos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Bancos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../banco/cuentas/" title="Consultar" class="md-nav__link">
+      Consultar
     </a>
   </li>
 
@@ -491,6 +555,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-tarjeta-de-credito" title="Registrar cobro tarjeta de crédito" class="md-nav__link">
+    Registrar cobro tarjeta de crédito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-efectivo" title="Registrar cobro efectivo" class="md-nav__link">
+    Registrar cobro efectivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-cheque" title="Registrar cobro cheque" class="md-nav__link">
+    Registrar cobro cheque
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-transferencia" title="Registrar cobro transferencia" class="md-nav__link">
+    Registrar cobro transferencia
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -508,26 +600,21 @@
                 
                 <h1 id="cobros">Cobros</h1>
 <h2 id="consulta">Consulta</h2>
+<p>Podemos consultar los cobros que tiene un documento de cliente por medio de la url:</p>
 <p><code>GET https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cobro/</code></p>
+<p>Usando el id devuelto en la creación de documento.</p>
 <h2 id="creacion">Creación</h2>
-<p>Una vez creado el documento si desea agregarle cobros puede hacer uso del servicio:</p>
+<p>Se permite registrar cobros a un documento de dos formas:</p>
+<ol>
+<li>En el momento de su creación enviando dentro de la sección de <strong>cobros</strong> un arreglo 
+con las distintas formas </li>
+<li>
+<p>Si el documento fué creado previamente haciendo  uso del servicio:</p>
 <p><code>POST https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cobro/</code></p>
 <p>cambiando el parámetro <ID> por el id del documento (devuelto al momento de crear el documento).</p>
-<p>El formato del json que se envia al endpoint es el siguiente:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;numero_cheque&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="s2">&quot;D&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>donde se aceptan los siguientes valores:</p>
-<p>forma_cobro: 
-Representa el la forma como se realiza el cobro sus valores pueden ser:</p>
+</li>
+</ol>
+<p>Los tipos de cobro soportados vía API son:</p>
 <table>
 <thead>
 <tr>
@@ -548,16 +635,157 @@ Representa el la forma como se realiza el cobro sus valores pueden ser:</p>
 <td>TC</td>
 <td>Tarjeta de Crédito</td>
 </tr>
+<tr>
+<td>TRA</td>
+<td>Transferencia</td>
+</tr>
 </tbody>
 </table>
-<p>numero_tarjeta (campo opcional):
-Representa el número de tarjeta de crédito y se guarda únicamente si el campo forma_cobro es tarjeta de crédito (TC)</p>
-<p>numero_cheque:
-Representa el número de cheque y se guarda únicamente si el campo forma_cobro es cheque (CH)</p>
-<p>tipo_ping:
-Representa la red de cobro con la que se hace el débito en la tarjeta y se guarda únicamente si el campo forma_cobro es tarjeta de crédito (TC)</p>
-<p>"D" -&gt; Datafast
-"M" -&gt; Medianet</p>
+<h2 id="registrar-cobro-tarjeta-de-credito">Registrar cobro tarjeta de crédito</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="s2">&quot;D&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"TC" para tarjeta de crédito</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>Representa la red de cobro con la que se hace el débito. "D" -&gt; Datafast "M" -&gt; Medianet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-efectivo">Registrar cobro efectivo</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;EF&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"EF" para efectivo</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-cheque">Registrar cobro cheque</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numero_cheque&quot;</span> <span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"CH" para cheque</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>número de cheque utilizado</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-transferencia">Registrar cobro transferencia</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cuenta_bancaria_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;qRYjbPkzC10eLNgn&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numero_comprobante&quot;</span> <span class="p">:</span> <span class="s2">&quot;TRANSFERENCIA 123&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"TRA" para transferencia</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>id de la <a href="../../banco/cuentas/#obtener-listado-de-cuentas-bancarias" title="Obtener cuentas bancarias API">cuenta bancaria</a></td>
+</tr>
+<tr>
+<td>numero_comprobante</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

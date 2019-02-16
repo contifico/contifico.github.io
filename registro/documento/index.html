@@ -402,6 +402,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#obtener-listado-de-documentos" title="Obtener Listado de Documentos" class="md-nav__link">
+    Obtener Listado de Documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#obtener-un-documento" title="Obtener un Documento" class="md-nav__link">
     Obtener un Documento
   </a>
@@ -497,6 +504,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Bancos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Bancos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../banco/cuentas/" title="Consultar" class="md-nav__link">
+      Consultar
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -524,6 +567,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-listado-de-documentos" title="Obtener Listado de Documentos" class="md-nav__link">
+    Obtener Listado de Documentos
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#obtener-un-documento" title="Obtener un Documento" class="md-nav__link">
@@ -588,6 +638,55 @@
                 
                 <h1 id="documento">Documento</h1>
 <h2 id="consulta">Consulta</h2>
+<h3 id="obtener-listado-de-documentos">Obtener Listado de Documentos</h3>
+<p>Para obtener todos los documentos de la cuenta hacemos uso del endpoint:</p>
+<p><code>GET https://contifico.com/sistema/api/v1/registro/documento/</code></p>
+<p>podemos filtrar resultados por medio de querystring, enviando los parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valores admitidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tipo_registro</td>
+<td>CLI -&gt; Cliente <br> PRO -&gt; Proveedor</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>tipo de documento a consultar</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>fecha de emisión del documento</td>
+</tr>
+<tr>
+<td>fecha_vencimiento</td>
+<td>fecha de vencimiento del documento</td>
+</tr>
+<tr>
+<td>fecha_creacion</td>
+<td>fecha de creación del documento</td>
+</tr>
+<tr>
+<td>persona_identificacion</td>
+<td>identificación de la persona del documento</td>
+</tr>
+<tr>
+<td>result_size</td>
+<td>cantidad de resultados por consulta</td>
+</tr>
+<tr>
+<td>result_page</td>
+<td>número de página que se quiere obtener</td>
+</tr>
+</tbody>
+</table>
+<p>por ejemplo:</p>
+<p><code>GET https://contifico.com/sistema/api/v1/registro/documento/?tipo_registro=CLI&amp;fecha_emision=24/01/2019</code></p>
+<p>Nos devolverá todos los documentos de tipo cliente emitidos el 24/01/2019</p>
 <h3 id="obtener-un-documento">Obtener un Documento</h3>
 <p><code>GET https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;</code></p>
 <p>Devuelve un documento con el <code>&lt;ID&gt;</code> solicitado.</p>
