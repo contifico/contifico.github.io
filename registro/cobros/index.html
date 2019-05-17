@@ -2,7 +2,7 @@
 
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
     
@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
     
     
       
@@ -40,25 +40,19 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
       
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-    
-    
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-    
-    
-    
-      
     
     
   </head>
@@ -71,9 +65,9 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
       <a href="#cobros" tabindex="1" class="md-skip">
         Skip to content
@@ -91,30 +85,33 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              Contifico Api
-            </span>
-            <span class="md-header-nav__topic">
-              Cobros
-            </span>
+            
+              <span class="md-header-nav__topic">
+                Contifico Api
+              </span>
+              <span class="md-header-nav__topic">
+                Cobros
+              </span>
+            
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
+      <label class="md-icon md-search__icon" for="search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -131,6 +128,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -151,12 +149,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Contifico Api" class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </a>
+    </span>
     Contifico Api
   </label>
   
@@ -408,12 +406,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Cobros
       </label>
     
@@ -428,7 +426,7 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -445,7 +443,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-tarjeta-de-credito" title="Registrar cobro tarjeta de crédito" class="md-nav__link">
+    Registrar cobro tarjeta de crédito
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-efectivo" title="Registrar cobro efectivo" class="md-nav__link">
+    Registrar cobro efectivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-cheque" title="Registrar cobro cheque" class="md-nav__link">
+    Registrar cobro cheque
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-transferencia" title="Registrar cobro transferencia" class="md-nav__link">
+    Registrar cobro transferencia
+  </a>
+  
+</li>
       
       
       
@@ -526,7 +550,7 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -543,7 +567,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-tarjeta-de-credito" title="Registrar cobro tarjeta de crédito" class="md-nav__link">
+    Registrar cobro tarjeta de crédito
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-efectivo" title="Registrar cobro efectivo" class="md-nav__link">
+    Registrar cobro efectivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-cheque" title="Registrar cobro cheque" class="md-nav__link">
+    Registrar cobro cheque
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-cobro-transferencia" title="Registrar cobro transferencia" class="md-nav__link">
+    Registrar cobro transferencia
+  </a>
+  
+</li>
       
       
       
@@ -562,26 +612,21 @@
                 
                 <h1 id="cobros">Cobros</h1>
 <h2 id="consulta">Consulta</h2>
+<p>Podemos consultar los cobros que tiene un documento de cliente por medio de la url:</p>
 <p><code>GET https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cobro/</code></p>
+<p>Usando el id devuelto en la creación de documento.</p>
 <h2 id="creacion">Creación</h2>
-<p>Una vez creado el documento si desea agregarle cobros puede hacer uso del servicio:</p>
+<p>Se permite registrar cobros a un documento de dos formas:</p>
+<ol>
+<li>En el momento de su creación enviando dentro de la sección de <strong>cobros</strong> un arreglo 
+con las distintas formas </li>
+<li>
+<p>Si el documento fué creado previamente haciendo  uso del servicio:</p>
 <p><code>POST https://contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cobro/</code></p>
 <p>cambiando el parámetro <ID> por el id del documento (devuelto al momento de crear el documento).</p>
-<p>El formato del json que se envia al endpoint es el siguiente:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;numero_cheque&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="s2">&quot;D&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>donde se aceptan los siguientes valores:</p>
-<p>forma_cobro: 
-Representa el la forma como se realiza el cobro sus valores pueden ser:</p>
+</li>
+</ol>
+<p>Los tipos de cobro soportados vía API son:</p>
 <table>
 <thead>
 <tr>
@@ -602,24 +647,163 @@ Representa el la forma como se realiza el cobro sus valores pueden ser:</p>
 <td>TC</td>
 <td>Tarjeta de Crédito</td>
 </tr>
+<tr>
+<td>TRA</td>
+<td>Transferencia</td>
+</tr>
 </tbody>
 </table>
-<p>numero_tarjeta (campo opcional):
-Representa el número de tarjeta de crédito y se guarda únicamente si el campo forma_cobro es tarjeta de crédito (TC)</p>
-<p>numero_cheque:
-Representa el número de cheque y se guarda únicamente si el campo forma_cobro es cheque (CH)</p>
-<p>tipo_ping:
-Representa la red de cobro con la que se hace el débito en la tarjeta y se guarda únicamente si el campo forma_cobro es tarjeta de crédito (TC)</p>
-<p>"D" -&gt; Datafast
-"M" -&gt; Medianet</p>
+<h2 id="registrar-cobro-tarjeta-de-credito">Registrar cobro tarjeta de crédito</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="s2">&quot;D&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"TC" para tarjeta de crédito</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>Representa la red de cobro con la que se hace el débito. "D" -&gt; Datafast "M" -&gt; Medianet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-efectivo">Registrar cobro efectivo</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;EF&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"EF" para efectivo</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-cheque">Registrar cobro cheque</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numero_cheque&quot;</span> <span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"CH" para cheque</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>número de cheque utilizado</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registrar-cobro-transferencia">Registrar cobro transferencia</h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cuenta_bancaria_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;qRYjbPkzC10eLNgn&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numero_comprobante&quot;</span> <span class="p">:</span> <span class="s2">&quot;TRANSFERENCIA 123&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>"TRA" para transferencia</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>valor cobrado</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>fecha del cobro</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>id de la <a href="../../banco/cuentas/#obtener-listado-de-cuentas-bancarias" title="Obtener cuentas bancarias API">cuenta bancaria</a></td>
+</tr>
+<tr>
+<td>numero_comprobante</td>
+<td>fecha del cobro</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
               
               
                 
-
-
               
             </article>
           </div>
@@ -669,11 +853,13 @@ Representa la red de cobro con la que se hace el débito en la tarjeta y se guar
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
+      
+        
       
     </div>
   </div>
@@ -681,9 +867,12 @@ Representa la red de cobro con la que se hace el débito en la tarjeta y se guar
       
     </div>
     
-      <script src="../../assets/javascripts/application.b806dc00.js"></script>
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
       
     
   </body>
