@@ -15,7 +15,7 @@
     
     
       
-        <title>Consultar - Contifico Api</title>
+        <title>Cruces - Contifico Api</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cuentas-contables" class="md-skip">
+        <a href="#cruce-de-documentos" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Consultar
+              Cruces
             
           </span>
         </div>
@@ -359,10 +359,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Transacción
@@ -386,7 +388,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../registro/documento/" title="Documento" class="md-nav__link">
+    <a href="../documento/" title="Documento" class="md-nav__link">
       Documento
     </a>
   </li>
@@ -398,7 +400,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../registro/documentoelectronico/" title="Documento Electrónico" class="md-nav__link">
+    <a href="../documentoelectronico/" title="Documento Electrónico" class="md-nav__link">
       Documento Electrónico
     </a>
   </li>
@@ -410,7 +412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../registro/cobros/" title="Cobros" class="md-nav__link">
+    <a href="../cobros/" title="Cobros" class="md-nav__link">
       Cobros
     </a>
   </li>
@@ -420,11 +422,120 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../registro/cruces/" title="Cruces" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cruces
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Cruces" class="md-nav__link md-nav__link--active">
       Cruces
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cruce-de-documentos_1" class="md-nav__link">
+    Cruce de Documentos
+  </a>
+  
+    <nav class="md-nav" aria-label="Cruce de Documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formato-del-json" class="md-nav__link">
+    Formato del JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta" class="md-nav__link">
+    Respuesta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cruce-de-un-documento-con-una-cuenta-contable" class="md-nav__link">
+    Cruce de un Documento con una Cuenta Contable
+  </a>
+  
+    <nav class="md-nav" aria-label="Cruce de un Documento con una Cuenta Contable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-cruce" class="md-nav__link">
+    Tipo de Cruce
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-del-json_1" class="md-nav__link">
+    Formato del JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta_1" class="md-nav__link">
+    Respuesta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -434,7 +545,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../registro/proforma/" title="Proforma" class="md-nav__link">
+    <a href="../proforma/" title="Proforma" class="md-nav__link">
       Proforma
     </a>
   </li>
@@ -449,12 +560,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Bancos
@@ -476,66 +585,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Consultar
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Consultar" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../banco/cuentas/" title="Consultar" class="md-nav__link">
       Consultar
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-    <nav class="md-nav" aria-label="Consulta">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -570,16 +624,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
+  <a href="#cruce-de-documentos_1" class="md-nav__link">
+    Cruce de Documentos
   </a>
   
-    <nav class="md-nav" aria-label="Consulta">
+    <nav class="md-nav" aria-label="Cruce de Documentos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
+  <a href="#formato-del-json" class="md-nav__link">
+    Formato del JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta" class="md-nav__link">
+    Respuesta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cruce-de-un-documento-con-una-cuenta-contable" class="md-nav__link">
+    Cruce de un Documento con una Cuenta Contable
+  </a>
+  
+    <nav class="md-nav" aria-label="Cruce de un Documento con una Cuenta Contable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-cruce" class="md-nav__link">
+    Tipo de Cruce
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-del-json_1" class="md-nav__link">
+    Formato del JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta_1" class="md-nav__link">
+    Respuesta
   </a>
   
 </li>
@@ -605,35 +713,291 @@
                   
                 
                 
-                <h1 id="cuentas-contables">Cuentas Contables</h1>
-<h2 id="consulta">Consulta</h2>
-<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Cuentas Bancarias</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/banco/cuenta/</code></p>
-<p>Devuelve un listado con todas las cuentas bancarias creadas en el sistema</p>
-<blockquote>
-<p>Ejemplo:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;BQ9pdBZ3tD6d8KEN&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;1204567890&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;14/08/2014&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PACIFICO&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14pzb8j9sXveEwNY&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;800.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;0010000983949&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;07/01/2015&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PICHINCHA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+                <h1 id="cruce-de-documentos">Cruce de Documentos</h1>
+<h2 id="cruce-de-documentos_1">Cruce de Documentos</h2>
+<p>Se permite registrar un cruce de un documento con el siguiente endpoint:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">`POST https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cruce/`</span>
 </code></pre></div>
+
+
+<p>donde el parámetro <code>&lt;ID&gt;</code> es el ID de integración del documento (devuelto al momento de su creación).</p>
+<h3 id="formato-del-json">Formato del JSON</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;e4ee7f87-471c-4110-8c2f-15dae1e44ac4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu830&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu831&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span> <span class="p">:</span> <span class="s2">&quot;Cruce de Documento&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>  
+<span class="p">}</span>
+</code></pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>API Token del POS</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>ID de integración de la caja del POS (opcional)</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>Valor de la transacción</td>
+</tr>
+<tr>
+<td>documento_id</td>
+<td>ID de integración del documento con el que se hará el cruce</td>
+</tr>
+<tr>
+<td>descripción</td>
+<td>Descripción de la transacción</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Fecha de la transacción</td>
+</tr>
+</tbody>
+</table>
+<h3 id="respuesta">Respuesta</h3>
+<p>Se retorna el detalle del cruce, con la siguiente forma:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrL&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Cruce de Documento con Cuenta&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="s2">&quot;k0pZeVnxDYsPeGWX&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transaccion_id</td>
+<td>ID de integración de la transacción</td>
+</tr>
+<tr>
+<td>giftcard_id</td>
+<td>ID de integración de giftcard (en caso de que aplique)</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>Valor del cruce</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Fecha del cruce</td>
+</tr>
+<tr>
+<td>documento_id</td>
+<td>ID del documento al que se aplicó el cruce</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>ID de integración de la caja del POS (en caso de que aplique)</td>
+</tr>
+<tr>
+<td>descripción</td>
+<td>Descripción de la transacción</td>
+</tr>
+<tr>
+<td>cuenta_id</td>
+<td>ID de integración de la cuenta contable</td>
+</tr>
+<tr>
+<td>id</td>
+<td>ID de integración del cruce</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cruce-de-un-documento-con-una-cuenta-contable">Cruce de un Documento con una Cuenta Contable</h2>
+<p>Se permite registrar un cruce de un documento con una cuenta contable utilizando el siguiente endpoint:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">`POST https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cruce_cuenta/`</span>
+</code></pre></div>
+
+
+<p>donde el parámetro <code>&lt;ID&gt;</code> es el ID de integración del documento (devuelto al momento de su creación).</p>
+<h3 id="query-parameters">Query Parameters</h3>
+<h4 id="tipo-de-cruce">Tipo de Cruce</h4>
+<p>El tipo de cruce con cuenta contable está determinado por uno de los valores de la siguiente table:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTA</td>
+<td>Cualquier cuenta contable</td>
+</tr>
+<tr>
+<td>GC</td>
+<td>Giftcard</td>
+</tr>
+<tr>
+<td>DY</td>
+<td>Domicilio Ya</td>
+</tr>
+<tr>
+<td>PE</td>
+<td>Super Easy</td>
+</tr>
+<tr>
+<td>UB</td>
+<td>Uber</td>
+</tr>
+<tr>
+<td>GL</td>
+<td>Glovo</td>
+</tr>
+<tr>
+<td>RA</td>
+<td>Rappi</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>Picker</td>
+</tr>
+<tr>
+<td>OT</td>
+<td>Otros</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, para realizar el cruce de un documento con cualquier cuenta contable del sistema, se define el query parameter en la llamada al servicio de la sigiente forma:</p>
+<p><code>POST https://api.contifico.com/sistema/api/v1/documento/7ujk93jdhsieu839/cruce_cuenta/?tipo="CTA"</code></p>
+<p>Para un servicio de delivery, como Glovo, se utiliza el valor correspondiente, y así:</p>
+<p><code>POST https://api.contifico.com/sistema/api/v1/documento/7ujk93jdhsieu839/cruce_cuenta/?tipo="GL"</code></p>
+<h3 id="formato-del-json_1">Formato del JSON</h3>
+<p>Ejemplo:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;e4ee7f87-471c-4110-8c2f-15dae1e44ac4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu830&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span> <span class="p">:</span> <span class="s2">&quot;Cruce de Documento con Cuenta Contable&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu832&quot;</span> 
+<span class="p">}</span>
+</code></pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>API Token del POS</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>ID de integración de la caja del POS (opcional)</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>Valor de la transacción</td>
+</tr>
+<tr>
+<td>descripción</td>
+<td>Descripción de la transacción</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Fecha de la transacción</td>
+</tr>
+<tr>
+<td>cuenta_id</td>
+<td>ID de integración de la cuenta contable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="respuesta_1">Respuesta</h3>
+<p>Se retorna el detalle del cruce, con la siguiente forma:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrL&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Cruce de Documento con Cuenta&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="s2">&quot;k0pZeVnxDYsPeGWX&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transaccion_id</td>
+<td>ID de integración de la transacción</td>
+</tr>
+<tr>
+<td>giftcard_id</td>
+<td>ID de integración de giftcard (en caso de que aplique)</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>Valor del cruce</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Fecha del cruce</td>
+</tr>
+<tr>
+<td>documento_id</td>
+<td>ID del documento al que se aplicó el cruce</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>ID de integración de la caja del POS (en caso de que aplique)</td>
+</tr>
+<tr>
+<td>descripción</td>
+<td>Descripción de la transacción</td>
+</tr>
+<tr>
+<td>cuenta_id</td>
+<td>ID de integración de la cuenta contable</td>
+</tr>
+<tr>
+<td>id</td>
+<td>ID de integración del cruce</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -652,7 +1016,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../registro/proforma/" title="Proforma" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../cobros/" title="Cobros" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -661,11 +1025,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Proforma
+                Cobros
               </div>
             </div>
           </a>
         
+        
+          <a href="../proforma/" title="Proforma" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Proforma
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
