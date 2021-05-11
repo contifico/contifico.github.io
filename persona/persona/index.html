@@ -757,11 +757,17 @@
 <td>Cédula o Ruc de la persona.</td>
 </tr>
 <tr>
-  <td>fecha_inicial</td>
+  <td>fecha_final</td>
   <td>date</td>
   <td></td>
   <td>Filtro de fecha inicial de la fecha de ultimo cambio.</td>
-  </tr>
+</tr>
+<tr>
+  <td>fecha_inicial</td>
+  <td>date</td>
+  <td></td>
+  <td>Filtro de fecha final de la fecha de ultimo cambio.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="obtener-una-persona">Obtener una Persona</h3>
@@ -773,13 +779,16 @@
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;adicional1_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;personaasociada_id&quot;</span><span class="p">:</span> <span class="s2">&quot;null&quot;</span><span class="p">,</span>
         <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;Edificio las camaras&quot;</span><span class="p">,</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4Lmav7AK4TENb3Nr&quot;</span><span class="p">,</span>
         <span class="nt">&quot;es_vendedor&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
         <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Fernando Apupalo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre_comercial&quot;</span><span class="p">:</span> <span class="s2">&quot;Fernando Apupalo&quot;</span><span class="p">,</span>
         <span class="nt">&quot;es_corporativo&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;origen&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;banco_codigo_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;lala@gmail.com&quot;</span><span class="p">,</span>
@@ -814,6 +823,8 @@
 </blockquote>
 <div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
         <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;personaasociada_id&quot;</span><span class="p">:</span> <span class="s2">&quot;null&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre_comercial&quot;</span><span class="p">:</span> <span class="s2">&quot;Andres&quot;</span><span class="p">,</span>
         <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;2745486&quot;</span><span class="p">,</span>
         <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0990004776201&quot;</span><span class="p">,</span>
         <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Andres&quot;</span><span class="p">,</span>
