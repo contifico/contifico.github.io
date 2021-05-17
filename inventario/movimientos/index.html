@@ -755,6 +755,64 @@
   <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
 </code></pre></div>
+
+
+<h2 id="obtener-lista-movimiento-de-inventario">Obtener listado de Movimientos de Inventario</h2>
+<p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
+<p>Devuelve un listado de los movimientos inventarios</p>
+
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000009&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;A9pgen5AoTXOd1Qx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ERG&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;16/02/2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;generar_asiento&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1WBleX5JYI45arNO&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;105.0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;maneja_venta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Traslado prueba&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1XPnaQ6wBimaO2yN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="s2">&quot;mxGge0gWwHkodADR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">}</span><span>,</span>
+  <span class="p">{</span>
+  <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000002&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;O9pgen5AoTXOdNQx&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ERG&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;16/06/2020&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;generar_asiento&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PxBleX5JYI45arNO&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;125.0&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
+      <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;maneja_venta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Traslado prueba&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;JXPnaz67BimaO2yN&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="s2">&quot;mxGge0gWwHkodADR&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span><span>,</span>
+<span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div>
                 
               
               
