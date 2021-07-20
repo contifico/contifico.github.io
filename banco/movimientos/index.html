@@ -452,7 +452,7 @@
   
 
 
-   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
@@ -491,6 +491,8 @@
     <a href="./" title="movimientos" class="md-nav__link">
       Movimientos
     </a>
+
+
     
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
@@ -573,8 +575,12 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
+  <a href="#obtener-listado-de-movimientos-bancarios" class="md-nav__link">
+    Obtener listado de Movimientos Bancarios
+  </a>
+
+  <a href="#obtener-un-movimiento" class="md-nav__link">
+    Obtener un Movimiento Bancario
   </a>
   
 </li>
@@ -600,37 +606,120 @@
                   
                 
                 
-                <h1 id="cuentas-contables">Cuentas Contables</h1>
+                <h1 id="movimientos">Movimientos</h1>
 <h2 id="consulta">Consulta</h2>
-<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Cuentas Bancarias</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/banco/cuenta/</code></p>
-<p>Devuelve un listado con todas las cuentas bancarias creadas en el sistema</p>
+<h3 id="obtener-listado-de-movimientos-bancarios">Obtener listado de Movimientos Bancarios</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/banco/movimiento/</code></p>
+<p>Devuelve un listado con todos los movimientos bancarios creados en el sistema</p>
 <blockquote>
 <p>Ejemplo:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;BQ9pdBZ3tD6d8KEN&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;1204567890&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;14/08/2014&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PACIFICO&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;201301000006&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;persona&quot;</span><span class="p">:</span> <span class="s2">&quot;G6x01dN2ZFNdX7Wz&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_bancaria_id&quot;</span><span class="p">:</span> <span class="s2">&quot;Q8J0yelYfoaER7OY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_registro&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;30.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;31/01/2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;LOgDGe7EImbn2x47&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14pzb8j9sXveEwNY&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;800.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;0010000983949&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;07/01/2015&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PICHINCHA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;201302000002&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;persona&quot;</span><span class="p">:</span> <span class="s2">&quot;G6x01dN2ZFNdX7Wz&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_bancaria_id&quot;</span><span class="p">:</span> <span class="s2">&quot;Q8J0yelYfoaER7OY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_registro&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;50.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;04/02/2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;l2vj6e9lTmdWBVp3&quot;</span>
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
                 
-              
+              <h3 id="obtener-un-movimiento">Obtener un Movimiento</h3>
+            <p><code>GET https://api.contifico.com/sistema/api/v1/banco/movimiento/&lt;ID&gt;</code></p>
+            <p>Devuelve un objeto JSON de un movimiento bancario, utilizando el <code>&lt;ID&gt;</code> solicitado.</p>
+            <p>Los campos que se presentan en el objeto JSON del producto se describen a continuación:</p>
+
+            <div class="codehilite">
+              <pre><span></span><code>
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;201301000006&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;persona&quot;</span><span class="p">:</span> <span class="s2">&quot;G6x01dN2ZFNdX7Wz&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_bancaria_id&quot;</span><span class="p">:</span> <span class="s2">&quot;Q8J0yelYfoaER7OY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_registro&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;30.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;31/01/2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;LOgDGe7EImbn2x47&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Parámetro</th>
+                  <th>Tipo</th>
+                  <th>Longitud</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>fecha_emision</td>
+                  <td>date</td>
+                  <td></td>
+                  <td>Filtro de fecha de emision del movimiento bancario.
+                  </td>
+                </tr>
+                <tr>
+                  <td>fecha_inicial</td>
+                  <td>date</td>
+                  <td></td>
+                  <td>Filtro de fecha inicial con respecto a la fecha de ultimo cambio.
+                  </td>
+                </tr>
+                <tr>
+                  <td>fecha_final</td>
+                  <td>date</td>
+                  <td></td>
+                  <td>Filtro de fecha final con respecto a la fecha de ultimo cambio.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
               
                 
 

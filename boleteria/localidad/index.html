@@ -1,6 +1,5 @@
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -452,7 +451,7 @@
   
 
 
-   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
@@ -470,12 +469,20 @@
         Bancos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
-             
+        
+        
+          
+          
+          
+
+  
 
 
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -485,10 +492,11 @@
         </span>
       </label>
     
-    <a href="../cuentas" title="Consultar" class="md-nav__link">
+    <a href="../../banco/cuentas" title="Consultar" class="md-nav__link md-nav__link--active">
       Consultar
     </a>
-    <a href="./" title="movimientos" class="md-nav__link">
+
+    <a href="../../banco/movimientos" title="movimientos" class="md-nav__link md-nav__link--active">
       Movimientos
     </a>
     
@@ -600,32 +608,30 @@
                   
                 
                 
-                <h1 id="cuentas-contables">Cuentas Contables</h1>
+                <h1 id="cuentas-contables">Localidades</h1>
 <h2 id="consulta">Consulta</h2>
-<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Cuentas Bancarias</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/banco/cuenta/</code></p>
-<p>Devuelve un listado con todas las cuentas bancarias creadas en el sistema</p>
+<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Localidades</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/boleteria/localidad/</code></p>
+<p>Devuelve un listado con todas las localidades creadas en el modulo de boleteria</p>
 <blockquote>
 <p>Ejemplo:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;BQ9pdBZ3tD6d8KEN&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;1204567890&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;14/08/2014&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PACIFICO&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Terminal Guayaquil&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14pzb8j9sXveEwNY&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;800.0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;0010000983949&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;07/01/2015&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PICHINCHA&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Bus 01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;B01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;E291qdGAiJaN8jGL&quot;</span>
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
