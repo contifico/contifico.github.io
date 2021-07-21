@@ -620,6 +620,84 @@
     </a>
   </li>
 
+  <li class="md-nav__item">
+    <a href="boleteria/temporadas" title="Temporadas" class="md-nav__link">
+      Temporadas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Domicilio
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Boleteria" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Domicilio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+  <li class="md-nav__item">
+    <a href="domicilio/glovo" title="glovo" class="md-nav__link">
+      Glovo
+    </a>
+  </li>
+
+  <li class="md-nav__item">
+    <a href="domicilio/uber" title="uber" class="md-nav__link">
+      Uber
+    </a>
+  </li>
+  
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Turismo
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Boleteria" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Turismo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+  <li class="md-nav__item">
+    <a href="turismo/islas" title="islas" class="md-nav__link">
+      Islas
+    </a>
+  </li>
+
+  <li class="md-nav__item">
+    <a href="turismo/reservas" title="Reservas" class="md-nav__link">
+      Reservas
+    </a>
+  </li>
 
         
       </ul>
@@ -721,7 +799,35 @@
   </a>
   
 </li>
+
+
         
+          <li class="md-nav__item">
+  <a href="#urls-boleteria" class="md-nav__link">
+    URL's Boleteria
+  </a>
+  
+</li>
+
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls-domicilio" class="md-nav__link">
+    URL's Domicilio
+  </a>
+  
+</li>
+
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls-turismo" class="md-nav__link">
+    URL's Turismo
+  </a>
+  
+</li>
+       
+
       </ul>
     </nav>
   
@@ -1017,6 +1123,77 @@ Dependiende del endpoint que se desea utilizar acepta uno u otro método.</p>
 <tr>
 <td>Mis Bancos</td>
 <td>https://api.contifico.com/sistema/api/v1/banco/cuenta/</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>Movimientos</td>
+<td>https://api.contifico.com/sistema/api/v1/banco/movimiento/</td>
+<td><code>GET</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="urls-boleteria">URL's Boleteria</h3>
+<table>
+<thead>
+<tr>
+<th>SERVICIO</th>
+<th>URL</th>
+<th>METODOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Localidades</td>
+<td>https://api.contifico.com/sistema/api/v1/boleteria/localidad/</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>Temporadas</td>
+<td>https://api.contifico.com/sistema/api/v1/boleteria/temporada/</td>
+<td><code>GET</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="urls-domicilio">URL's Domicilio</h3>
+<table>
+<thead>
+<tr>
+<th>SERVICIO</th>
+<th>URL</th>
+<th>METODOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glovo</td>
+<td>https://api.contifico.com/sistema/api/v1/domicilio/glovo/consultar/</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>Uber</td>
+<td>https://api.contifico.com/sistema/api/v1/domicilio/glovo/consultar/</td>
+<td><code>GET</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="urls-turismo">URL's Turismo</h3>
+<table>
+<thead>
+<tr>
+<th>SERVICIO</th>
+<th>URL</th>
+<th>METODOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Islas</td>
+<td>https://api.contifico.com/sistema/api/v1/turismo/isla/</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>Reservas</td>
+<td>https://api.contifico.com/sistema/api/v1/turismo/reserva/</td>
 <td><code>GET</code></td>
 </tr>
 </tbody>
