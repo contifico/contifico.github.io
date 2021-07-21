@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -384,6 +383,9 @@
     
 
 
+
+
+
   <li class="md-nav__item">
     <a href="../../boleteria/temporadas/" title="temporadas" class="md-nav__link">
       Temporadas
@@ -557,50 +559,7 @@
 
 
       
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-    <nav class="md-nav" aria-label="Consulta">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
 
-        
-      </ul>
-    </nav>
-  </li>
 
 
     
@@ -665,34 +624,32 @@
                   
                 
                 
-                <h1 id="cuentas-contables">Localidades</h1>
+                <h1 id="cuentas-contables">Temporadas</h1>
 <h2 id="consulta">Consulta</h2>
-<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Localidades</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/boleteria/localidad/</code></p>
-<p>Devuelve un listado con todas las localidades creadas en el modulo de boleteria</p>
+<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de temporadas</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/boleteria/temporada/</code></p>
+<p>Devuelve un listado con todas las temporadas creadas en el modulo de boleteria</p>
 <blockquote>
 <p>Ejemplo:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Terminal Guayaquil&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Normal&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_inicio&quot;</span><span class="p">:</span> <span class="s2">&quot;01/01/2018&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;activa&quot;</span><span class="p">:</span> <span class="s2">true;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_fin&quot;</span><span class="p">:</span> <span class="s2">&quot;31/12/2018&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7BQ9pdB9cVb8KEN6&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="p">{</span>
-        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Bus 01&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;B01&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;E291qdGAiJaN8jGL&quot;</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Carnaval&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_inicio&quot;</span><span class="p">:</span> <span class="s2">&quot;09/02/2018&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;activa&quot;</span><span class="p">:</span> <span class="s2">true;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_fin&quot;</span><span class="p">:</span> <span class="s2">&quot;11/02/2018&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EPgrRbDEfBd6L2vw&quot;</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
-                
+                		
               
               
                 

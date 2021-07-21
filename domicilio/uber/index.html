@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -384,6 +383,9 @@
     
 
 
+
+
+
   <li class="md-nav__item">
     <a href="../../boleteria/temporadas/" title="temporadas" class="md-nav__link">
       Temporadas
@@ -557,50 +559,7 @@
 
 
       
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-    <nav class="md-nav" aria-label="Consulta">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
 
-        
-      </ul>
-    </nav>
-  </li>
 
 
     
@@ -638,8 +597,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
-    Obtener listado de Cuentas Bancarias
+  <a href="#obtener-listado-de-uber" class="md-nav__link">
+    Obtener listado de Pedidos Uber
   </a>
   
 </li>
@@ -665,34 +624,98 @@
                   
                 
                 
-                <h1 id="cuentas-contables">Localidades</h1>
+                <h1 id="cuentas-contables">Uber</h1>
 <h2 id="consulta">Consulta</h2>
-<h3 id="obtener-listado-de-cuentas-bancarias">Obtener listado de Localidades</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/boleteria/localidad/</code></p>
-<p>Devuelve un listado con todas las localidades creadas en el modulo de boleteria</p>
+<h3 id="obtener-listado-de-uber">Obtener listado de Pedidos Uber</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/domicilio/uber/consultar</code></p>
+<p>Devuelve un listado con todos los pedidos de uber creados en el sistema</p>
 <blockquote>
 <p>Ejemplo:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Terminal Guayaquil&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;Capacidad&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x5onPeEXhWdp1vLK&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Bus 01&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;B01&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;E291qdGAiJaN8jGL&quot;</span>
+        <span class="nt">&quot;display_id&quot;</span><span class="p">:</span> <span class="s2">&quot;A311A&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;placed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;04/06/2020, 01:54 &quot;</span><span class="p">,</span>
+        <span class="nt">&quot;external_reference_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;store_id&quot;</span><span class="p">:</span> <span class="s2">&quot;696f00d1-4bfa-4b09-956f-89e10bf2d9ff&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;3eb9fc25-20b4-47a3-839c-13a920da311a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="s2"></span><span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;total_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;base_unit_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;base_total_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;base_total_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;external_data&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;unit_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;special_instructions&quot;</span><span class="p">:</span> <span class="kc">null&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;unit_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;total_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;selected_modifier_groups&quot;</span><span class="p">:</span> <span class="s2"></span><span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;selected_items&quot;</span><span class="p">:</span> <span class="s2"></span><span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;total_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;base_unit_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;default_quantity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                                <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                                <span class="nt">&quot;base_total_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;total_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;external_data&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                                <span class="nt">&quot;unit_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;unit_price_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;base_total_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;base_unit_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;mloejR8W49sY5eQM&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p"></span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="nt">&quot;removed_items&quot;</span><span class="p">:</span> <span class="s2">[]</span><span class="p">,</span>
+                        <span class="nt">&quot;external_data&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p"></span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;base_unit_price_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;pXKdwpr6LjIv8egW&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;eater&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;current_state&quot;</span><span class="p">:</span> <span class="s2">&quot;FI&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;eater_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Contifico&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cart&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;POoLqdP8C0Gdl4Gp&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;packaging&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;charges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="p"></span>
+            <span class="p">{</span>
+                <span class="nt">&quot;total_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tax_currency&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;tax_amount&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;total_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;3.7&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;subtotal_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tax&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;sub_total&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p"></span><span class="p">,</span>
+                <span class="nt">&quot;total_fee_currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;total_fee_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;1.7&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;total_fee&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;subtotal_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p"></span><span class="p">,</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p"></span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;estimated_ready_for_pickup_at&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;special_instructions&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;should_include&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DELIVERY_BY_UBER&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;payment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;store&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;documento&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p"></span>
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
-                
+                		
               
               
                 
