@@ -368,9 +368,29 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-una-categoria" class="md-nav__link">
     Obtener una Categoría
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-categoria" class="md-nav__link">
+    Crear una Categoria
   </a>
   
 </li>
@@ -680,9 +700,29 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-una-categoria" class="md-nav__link">
     Obtener una Categoría
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-categoria" class="md-nav__link">
+    Crear una Categoria
   </a>
   
 </li>
@@ -754,23 +794,6 @@
 <span class="p">]</span>
 </code></pre></div>
 
-<h3 id="obtener-una-categoria">Obtener una Categoría</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/categoria/&lt;ID&gt;/</code></p>
-<p>Devuelve una categoria con el <code>&lt;ID&gt;</code> solicitado.</p>
-<blockquote>
-<p>Ejemplo:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
-        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;FIESTA AMAZON&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PxBleXJwu0000NOR&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;agrupar&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;para_supereasy&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;para_comisariato&quot;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
-</code></pre></div>
-
-<p>Cada objeto JSON de categoría posee los siguientes campos:</p>
 <table>
 <thead>
 <tr>
@@ -782,41 +805,78 @@
 </thead>
 <tbody>
 <tr>
-<td>id</td>
-<td>varchar</td>
-<td>16</td>
-<td>Identificador de la categoria en el sistema</td>
-</tr>
-<tr>
 <td>padre_id</td>
 <td>varchar</td>
 <td>16</td>
-<td>Identificador de la categoría padre</td>
+<td>Identificador de la categoría padre.</td>
 </tr>
 <tr>
-<td>nombre</td>
+<td>cuenta_compra</td>
 <td>varchar</td>
 <td>16</td>
-<td>Nombre de la categoría</td>
+<td>Identificador de la cuenta para compras.</td>
 </tr>
 <tr>
-<td>agrupar</td>
-<td>boolean</td>
-<td>1</td>
-<td>Valor que define si los productos de esta categoría se agrupan en los documentos</td>
+<td>cuenta_venta</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
+</tr>
+<tr>
+<td>tipo_producto</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
 </tr>
 <tr>
 <td>para_supereasy</td>
 <td>boolean</td>
 <td>1</td>
-<td>Valor que define si los productos de esta categoría son para Super Easy</td>
+<td>Valor que define si los productos de esta categoría son para Super Easy.</td>
 </tr>
 <tr>
 <td>para_comisariato</td>
 <td>boolean</td>
 <td>1</td>
-<td>Valor que define si los productos de esta categoría son para Mi Comisariato</td>
+<td>Valor que define si los productos de esta categoría son para Mi Comisariato.</td>
 </tr>
+<tr>
+<td>agrupar</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría se agrupan en los documentos.</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>16</td>
+<td>Nombre de la categoría.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria en el sistema.</td>
+</tr>
+<tr>
+<td>cuenta_inventario</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para inventariar.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>fecha_inicial</td>
 <td>date</td>
@@ -828,6 +888,192 @@
 <td>date</td>
 <td></td>
 <td>Filtro de fecha final con respecto a la fecha de creación</td>
+</tr>
+</tbody>
+</table>
+<h3 id="obtener-una-categoria">Obtener una Categoría</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/categoria/&lt;ID&gt;/</code></p>
+<p>Devuelve una categoria con el <code>&lt;ID&gt;</code> solicitado.</p>
+<blockquote>
+<p>Ejemplo:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
+        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_compra&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_venta&quot;</span><span class="p">:</span> <span class="s2">&quot;P9aQWzZ25Uo11dDM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_producto&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;para_supereasy&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;para_comisariato&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;agrupar&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;GENERAL&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;91qdGZOkJUANNbN8&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_inventario&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padre_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoría padre.</td>
+</tr>
+<tr>
+<td>cuenta_compra</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para compras.</td>
+</tr>
+<tr>
+<td>cuenta_venta</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
+</tr>
+<tr>
+<td>tipo_producto</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
+</tr>
+<tr>
+<td>para_supereasy</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría son para Super Easy.</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría son para Mi Comisariato.</td>
+</tr>
+<tr>
+<td>agrupar</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría se agrupan en los documentos.</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>16</td>
+<td>Nombre de la categoría.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria en el sistema.</td>
+</tr>
+<tr>
+<td>cuenta_inventario</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para inventariar.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crear-una-categoria">Crear una Categoria</h3>
+<p>Para crear una categoria se debe de hacer uso de la url:</p>
+<p><code>POST https://api.contifico.com/sistema/api/v1/categoria/</code></p>
+<p>Por medio del método POST enviando en el cuerpo del requerimiento los datos de la categoria:</p>
+<blockquote>
+<p>Estructura del JSON:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
+        <span class="nt">&quot;padre_id&quot;</span><span class="p">:</span> <span class="s2">&quot;NO8bYv2VATAWWd7j&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_compra&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_producto&quot;</span><span class="p">:</span> <span class="s2">&quot;SERV&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_venta&quot;</span><span class="p">:</span> <span class="s2">&quot;P9aQWzZ25Uo11dDM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;agrupar&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Prueba01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_inventario&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padre_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoría padre</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cuenta_compra</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para compras</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cuenta_venta</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_producto</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para ventas.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_supereasy</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría son para Super Easy.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría son para Mi Comisariato.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>agrupar</td>
+<td>boolean</td>
+<td>1</td>
+<td>Valor que define si los productos de esta categoría se agrupan en los documentos.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>16</td>
+<td>Nombre de la categoría.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cuenta_inventario</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta para inventariar.</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
