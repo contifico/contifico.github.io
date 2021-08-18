@@ -272,6 +272,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-cuenta-contable" class="md-nav__link">
     Obtener Cuenta Contable
@@ -281,6 +294,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters_1" class="md-nav__link">
+    Query Parameters
+  </a>
   
 </li>
       
@@ -680,6 +700,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-cuenta-contable" class="md-nav__link">
     Obtener Cuenta Contable
@@ -689,6 +722,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters_1" class="md-nav__link">
+    Query Parameters
+  </a>
   
 </li>
       
@@ -708,7 +748,7 @@
                 <h1 id="cuentas-contables">Cuentas Contables</h1>
 <h2 id="consulta">Consulta</h2>
 <h3 id="obtener-listado-de-cuentas-contables">Obtener listado de Cuentas Contables</h3>
-<p><code>GET https://api.contifico.com/sistema/api/v1/contabilidad/cuenta-contable/?tipo=C</code></p>
+<p><code>GET https://api.contifico.com/sistema/api/v1/contabilidad/cuenta-contable/</code></p>
 <p>Devuelve un listado con todas las cuentas contables creadas en el sistema</p>
 <blockquote>
 <p>Ejemplo:</p>
@@ -729,6 +769,59 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta en el sistema</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>30</td>
+<td>Código de la cuenta</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre de la cuenta</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>2</td>
+<td>Tipo de cuenta G:Grupo C:Cuenta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="obtener-cuenta-contable">Obtener Cuenta Contable</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/contabilidad/cuenta-contable/&lt;ID&gt;</code></p>
 <p>Devuelve una cuenta contable por el <code>&lt;ID&gt;</code> solicitado.</p>
@@ -776,6 +869,23 @@
 <td>varchar</td>
 <td>2</td>
 <td>Tipo de cuenta G:Grupo C:Cuenta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters_1">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>

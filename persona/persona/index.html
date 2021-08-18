@@ -324,20 +324,20 @@
     Obtener listado de Personas
   </a>
   
-    <nav class="md-nav" aria-label="Obtener listado de Personas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtros" class="md-nav__link">
-    Filtros
-  </a>
-  
 </li>
         
       </ul>
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#obtener-una-persona" class="md-nav__link">
@@ -705,20 +705,20 @@
     Obtener listado de Personas
   </a>
   
-    <nav class="md-nav" aria-label="Obtener listado de Personas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtros" class="md-nav__link">
-    Filtros
-  </a>
-  
 </li>
         
       </ul>
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#obtener-una-persona" class="md-nav__link">
@@ -838,7 +838,169 @@
 <span class="p">]</span>
 </code></pre></div>
 
-<h4 id="filtros">Filtros</h4>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta en el sistema.</td>
+</tr>
+<tr>
+<td>adicionales_cliente</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del cliente.</td>
+</tr>
+<tr>
+<td>personaasociada_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada a la persona actual.</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+</tr>
+<tr>
+<td>es_vendedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+</tr>
+<tr>
+<td>nombre_comercial</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre comercial de la persona.</td>
+</tr>
+<tr>
+<td>es_corporativo</td>
+<td>bool</td>
+<td></td>
+<td>Rol corporativo de la persona.</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>2</td>
+<td>Descuento de tipo cliente (2 decimales Max).</td>
+</tr>
+<tr>
+<td>origen</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de POS desde el cual se registro.</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+</tr>
+<tr>
+<td>banco_codigo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Codigo de banco asociado a la persona.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+</tr>
+<tr>
+<td>es_cliente</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona.</td>
+</tr>
+<tr>
+<td>adicionales_proveedor</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del proveedor.</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>200</td>
+<td>Numero de tarjeta de la persona.</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+</tr>
+<tr>
+<td>es_empleado</td>
+<td>bool</td>
+<td></td>
+<td>Rol empleado de la persona.</td>
+</tr>
+<tr>
+<td>es_proveedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol proveedor de la persona.</td>
+</tr>
+<tr>
+<td>aplicar_cupo</td>
+<td>bool</td>
+<td></td>
+<td>Verificador si la persona tiene un cupo maximo como cliente.</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>tipo de la cuenta contable asociada.</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>13</td>
+<td>Placa de la persona si es de tipo placa.</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
 <table>
 <thead>
 <tr>
@@ -872,6 +1034,30 @@
 <td>varchar</td>
 <td>200</td>
 <td>Filtro que puede contener la razon social o nombre comercial.</td>
+</tr>
+<tr>
+<td>Adicional_1</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro para campo adicional 1 de cliente.</td>
+</tr>
+<tr>
+<td>Adicional_2</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro para campo adicional 2 de cliente.</td>
+</tr>
+<tr>
+<td>Adicional_3</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro para campo adicional 3 de cliente.</td>
+</tr>
+<tr>
+<td>Adicional_4</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro para campo adicional 4 de cliente.</td>
 </tr>
 </tbody>
 </table>
@@ -918,6 +1104,168 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta en el sistema.</td>
+</tr>
+<tr>
+<td>adicionales_cliente</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del cliente.</td>
+</tr>
+<tr>
+<td>personaasociada_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada a la persona actual.</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+</tr>
+<tr>
+<td>es_vendedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+</tr>
+<tr>
+<td>nombre_comercial</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre comercial de la persona.</td>
+</tr>
+<tr>
+<td>es_corporativo</td>
+<td>bool</td>
+<td></td>
+<td>Rol corporativo de la persona.</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>2</td>
+<td>Descuento de tipo cliente (2 decimales Max).</td>
+</tr>
+<tr>
+<td>origen</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de POS desde el cual se registro.</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+</tr>
+<tr>
+<td>banco_codigo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Codigo de banco asociado a la persona.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+</tr>
+<tr>
+<td>es_cliente</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona.</td>
+</tr>
+<tr>
+<td>adicionales_proveedor</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del proveedor.</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>200</td>
+<td>Numero de tarjeta de la persona.</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+</tr>
+<tr>
+<td>es_empleado</td>
+<td>bool</td>
+<td></td>
+<td>Rol empleado de la persona.</td>
+</tr>
+<tr>
+<td>es_proveedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol proveedor de la persona.</td>
+</tr>
+<tr>
+<td>aplicar_cupo</td>
+<td>bool</td>
+<td></td>
+<td>Verificador si la persona tiene un cupo maximo como cliente.</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>tipo de la cuenta contable asociada.</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>13</td>
+<td>Placa de la persona si es de tipo placa.</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="crear-una-persona">Crear una Persona</h3>
 <p>Para crear una persona se debe de hacer uso de la url:</p>
 <p><code>POST https://api.contifico.com/sistema/api/v1/persona/?pos=&lt;TOKEN&gt;</code></p>
@@ -954,6 +1302,194 @@
     <span class="p">}</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta en el sistema</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicionales_cliente</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del cliente (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>personaasociada_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada a la persona actual (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_vendedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>nombre_comercial</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre comercial de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_corporativo</td>
+<td>bool</td>
+<td></td>
+<td>Rol corporativo de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>2</td>
+<td>Descuento de tipo cliente (2 decimales Max) (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>origen</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de POS desde el cual se registro  (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>banco_codigo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Codigo de banco asociado a la persona (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_cliente</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicionales_proveedor</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del proveedor (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>200</td>
+<td>Numero de tarjeta de la persona (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_empleado</td>
+<td>bool</td>
+<td></td>
+<td>Rol empleado de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_proveedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol proveedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>aplicar_cupo</td>
+<td>bool</td>
+<td></td>
+<td>Verificador si la persona tiene un cupo maximo como cliente (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>tipo de la cuenta contable asociada (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>13</td>
+<td>Placa de la persona si es de tipo placa (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -1009,6 +1545,187 @@
     <span class="p">}</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta en el sistema</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicionales_cliente</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del cliente (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>personaasociada_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada a la persona actual (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_vendedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>nombre_comercial</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre comercial de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_corporativo</td>
+<td>bool</td>
+<td></td>
+<td>Rol corporativo de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>2</td>
+<td>Descuento de tipo cliente (2 decimales Max) (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>origen</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de POS desde el cual se registro  (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>banco_codigo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Codigo de banco asociado a la persona (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_cliente</td>
+<td>bool</td>
+<td></td>
+<td>Rol vendedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicionales_proveedor</td>
+<td>varchar</td>
+<td>50</td>
+<td>Informacion adicional del proveedor (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>200</td>
+<td>Numero de tarjeta de la persona (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_empleado</td>
+<td>bool</td>
+<td></td>
+<td>Rol empleado de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>es_proveedor</td>
+<td>bool</td>
+<td></td>
+<td>Rol proveedor de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>aplicar_cupo</td>
+<td>bool</td>
+<td></td>
+<td>Verificador si la persona tiene un cupo maximo como cliente (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>tipo de la cuenta contable asociada (acepta null)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>13</td>
+<td>Placa de la persona si es de tipo placa (acepta null)</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
