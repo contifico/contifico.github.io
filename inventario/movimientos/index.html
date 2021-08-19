@@ -402,6 +402,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#consulta" class="md-nav__link">
+    Consulta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-listado-de-movimientos-de-inventario" class="md-nav__link">
+    Obtener listado de Movimientos de Inventario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-un-movimiento-de-inventario" class="md-nav__link">
+    Obtener un Movimiento de Inventario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creacion" class="md-nav__link">
     Creación
   </a>
@@ -435,27 +463,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-un-movimiento-de-inventario" class="md-nav__link">
-    Obtener un Movimiento de Inventario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-listado-de-movimientos-de-inventario" class="md-nav__link">
-    Obtener listado de Movimientos de Inventario
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -471,6 +478,18 @@
     <li class="md-nav__item">
       <a href="../guia/" class="md-nav__link">
         Guia
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marca/" class="md-nav__link">
+        Marca
       </a>
     </li>
   
@@ -694,6 +713,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#consulta" class="md-nav__link">
+    Consulta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-listado-de-movimientos-de-inventario" class="md-nav__link">
+    Obtener listado de Movimientos de Inventario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-un-movimiento-de-inventario" class="md-nav__link">
+    Obtener un Movimiento de Inventario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creacion" class="md-nav__link">
     Creación
   </a>
@@ -727,27 +774,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#consulta" class="md-nav__link">
-    Consulta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-un-movimiento-de-inventario" class="md-nav__link">
-    Obtener un Movimiento de Inventario
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtener-listado-de-movimientos-de-inventario" class="md-nav__link">
-    Obtener listado de Movimientos de Inventario
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -762,106 +788,10 @@
                 
                 
                 <h1 id="movimientos-de-inventario">Movimientos de Inventario</h1>
-<p>Servicios para la interacción con movimientos de Inventario dentro de Contífico</p>
-<p>Métodos Disponibles: <code>GET</code>, <code>POST</code></p>
-<h2 id="creacion">Creación</h2>
-<h3 id="crear-un-ingreso-de-inventario">Crear un Ingreso de Inventario</h3>
-<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ING&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;01/01/2019&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ljMEegJAHq0dQ5g3&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;15.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle ingreso&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<h3 id="crear-un-egreso-de-inventario">Crear un Egreso de Inventario</h3>
-<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code>  </p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/02/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;lLPEegJAHq0dQty8&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2vj6e9pm5Uz3dWBV&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;30.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle egreso&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<h3 id="crear-un-traslado-de-inventario">Crear un Traslado de Inventario</h3>
-<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000002&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;O9pgen5AoTXOdNQx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;24/05/2017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PxBleX5JYI45arNO&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Traslado prueba&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="s2">&quot;mxGge0gWwHkodADR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
-<span class="p">}</span>
-</code></pre></div>
-
 <h2 id="consulta">Consulta</h2>
-<h2 id="obtener-un-movimiento-de-inventario">Obtener un Movimiento de Inventario</h2>
-<p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/&lt;ID&gt;</code></p>
-<p>Devuelve el movimiento de inventario con el <code>&lt;ID&gt;</code> solicitado.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR 202006000017&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MZN5wbo2fKaxEO0g&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;16/06/2020&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;generar_asiento&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PQEMaxGqKhQe5GBk&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;125.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;OoLqdP1Njf5el4Gp&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;72.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;maneja_venta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Factura prueba&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;JXPnaz67BimaO2yN&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
-<span class="p">}</span>
-</code></pre></div>
-
 <h2 id="obtener-listado-de-movimientos-de-inventario">Obtener listado de Movimientos de Inventario</h2>
 <p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<p>Devuelve un listado de los movimientos inventarios</p>
+<p>Devuelve un listado de los movimientos de inventario.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR 202006000017&quot;</span><span class="p">,</span>
@@ -928,6 +858,484 @@
     <span class="err">...</span>
 <span class="p">]</span>
 </code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Código del movimiento de inventario.</td>
+</tr>
+<tr>
+<td>bodega_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega en el sistema.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td>-</td>
+<td>fecha del movimiento de inventario</td>
+</tr>
+<tr>
+<td>generar_asiento</td>
+<td>boolean</td>
+<td>-</td>
+<td>Indica si el movimiento se marco para generar un asiento.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del punto de venta desde el que se registro el movimento.</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los detalles del movimiento.</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>edicion</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio del producto en el movimiento.</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+</tr>
+<tr>
+<td>maneja_venta</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Descripcion del movimiento.</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>bodega_destino_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega destino del movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>codigo_interno</td>
+<td>varchar</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="obtener-un-movimiento-de-inventario">Obtener un Movimiento de Inventario</h2>
+<p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/&lt;ID&gt;</code></p>
+<p>Devuelve un movimiento de inventario con el <code>&lt;ID&gt;</code> solicitado.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR 202006000017&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MZN5wbo2fKaxEO0g&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;16/06/2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;generar_asiento&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PQEMaxGqKhQe5GBk&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;125.0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;OoLqdP1Njf5el4Gp&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;edicion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;72.0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;maneja_venta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Factura prueba&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;JXPnaz67BimaO2yN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Código del movimiento de inventario.</td>
+</tr>
+<tr>
+<td>bodega_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega en el sistema.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td>-</td>
+<td>fecha del movimiento de inventario</td>
+</tr>
+<tr>
+<td>generar_asiento</td>
+<td>boolean</td>
+<td>-</td>
+<td>Indica si el movimiento se marco para generar un asiento.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del punto de venta desde el que se registro el movimento.</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los detalles del movimiento.</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>edicion</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio del producto en el movimiento.</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+</tr>
+<tr>
+<td>maneja_venta</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Descripcion del movimiento.</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>bodega_destino_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega destino del movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>codigo_interno</td>
+<td>varchar</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creacion">Creación</h2>
+<h3 id="crear-un-ingreso-de-inventario">Crear un Ingreso de Inventario</h3>
+<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;01/01/2019&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ljMEegJAHq0dQ5g3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RYWb4xYKNhz0bZ1m&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;15.0&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle ingreso&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="crear-un-egreso-de-inventario">Crear un Egreso de Inventario</h3>
+<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code>  </p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/02/2017&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;lLPEegJAHq0dQty8&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2vj6e9pm5Uz3dWBV&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;30.0&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle egreso&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="crear-un-traslado-de-inventario">Crear un Traslado de Inventario</h3>
+<p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000002&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;O9pgen5AoTXOdNQx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;24/05/2017&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PxBleX5JYI45arNO&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Traslado prueba&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bodega_destino_id&quot;</span><span class="p">:</span> <span class="s2">&quot;mxGge0gWwHkodADR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Código del movimiento de inventario.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>bodega_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td>-</td>
+<td>fecha del movimiento de inventario</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>generar_asiento</td>
+<td>boolean</td>
+<td>-</td>
+<td>Indica si el movimiento se marco para generar un asiento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del punto de venta desde el que se registro el movimento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los detalles del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>edicion</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio del producto en el movimiento. (Precio es obligatorio para movimientos de tipo ING)</td>
+<td>Si/No</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>maneja_venta</td>
+<td>boolean</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Descripcion del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>bodega_destino_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega destino del movimiento en el sistema. (Campo obligatorio para movimientos de tipo TRA)</td>
+<td>Si/No</td>
+</tr>
+<tr>
+<td>codigo_interno</td>
+<td>varchar</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
                 
               
               

@@ -392,6 +392,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-una-variante" class="md-nav__link">
     Obtener una Variante
@@ -443,6 +456,18 @@
     <li class="md-nav__item">
       <a href="../guia/" class="md-nav__link">
         Guia
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marca/" class="md-nav__link">
+        Marca
       </a>
     </li>
   
@@ -680,6 +705,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-una-variante" class="md-nav__link">
     Obtener una Variante
@@ -732,7 +770,7 @@
         <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;TAMAÑO&quot;</span><span class="p">,</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0RZxgepgh9Md1pVM&quot;</span><span class="p">,</span>
         <span class="nt">&quot;valores&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
+            <span class="p">{</span> 
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;wJJYjbqYi10bLNgm&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;valor&quot;</span><span class="p">:</span> <span class="s2">&quot;13 pulg.&quot;</span>
             <span class="p">},</span>
@@ -750,6 +788,61 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>-</td>
+<td>nombre de la variante</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la variante/valores en el sistema</td>
+</tr>
+<tr>
+<td>valor</td>
+<td>varchar</td>
+<td>-</td>
+<td>Valor que se encuentra asociado a cada variante en el sistema</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fecha_inicial</td>
+<td>date</td>
+<td></td>
+<td>Filtro de fecha inicial con respecto a la fecha de creación</td>
+</tr>
+<tr>
+<td>fecha_final</td>
+<td>date</td>
+<td></td>
+<td>Filtro de fecha final con respecto a la fecha de creación</td>
+</tr>
+</tbody>
+</table>
 <h3 id="obtener-una-variante">Obtener una Variante</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/variante/&lt;ID&gt;/</code></p>
 <p>Devuelve una variante con el <code>&lt;ID&gt;</code> solicitado.</p>
@@ -799,18 +892,6 @@
 <td>varchar</td>
 <td>-</td>
 <td>Valor que se encuentra asociado a cada variante en el sistema</td>
-</tr>
-<tr>
-<td>fecha_inicial</td>
-<td>date</td>
-<td></td>
-<td>Filtro de fecha inicial con respecto a la fecha de creación.</td>
-</tr>
-<tr>
-<td>fecha_final</td>
-<td>date</td>
-<td></td>
-<td>Filtro de fecha final con respecto a la fecha de creación.</td>
 </tr>
 </tbody>
 </table>

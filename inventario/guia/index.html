@@ -461,6 +461,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marca/" class="md-nav__link">
+        Marca
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -781,6 +793,204 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cedula_chofer</td>
+<td>varchar</td>
+<td>16</td>
+<td>Cedula del chofer de la guia.</td>
+</tr>
+<tr>
+<td>transportista_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona transportista en el sistema.</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision de la guia de remision.</td>
+</tr>
+<tr>
+<td>electronico</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indica si la guia esta marcada como electronica.</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Indica si el movimiento se marco para generar un asiento.</td>
+</tr>
+<tr>
+<td>nombre_chofer</td>
+<td>varchar</td>
+<td>16</td>
+<td>Autorizacion de la guia.</td>
+</tr>
+<tr>
+<td>numero_documento</td>
+<td>varchar</td>
+<td>30</td>
+<td>Numero de documento asociado a la guia.</td>
+</tr>
+<tr>
+<td>fecha_fin</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha fin para el envio de la guia.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del pos en el sistema.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la guia de remision en el sistema.</td>
+</tr>
+<tr>
+<td>nombre_despachador</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre del despachador asignado a la guia.</td>
+</tr>
+<tr>
+<td>fecha_inicio</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha fin para el envio de la guia.</td>
+</tr>
+<tr>
+<td>ordencompraventa_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la orden de compra venta en el sistema.</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Descripcion de la guia de remision.</td>
+</tr>
+<tr>
+<td>direccion_partida</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de partida desde la cual se emite la guia.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado de la guia de remision (E:emitido A:anulado).</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>30</td>
+<td>placa del vehiculo asignado a la guia de remision.</td>
+</tr>
+<tr>
+<td>destinatario</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto contenedor de la informacion del destinatario.</td>
+</tr>
+<tr>
+<td>documento_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del documento asociado a la guia en el sistema.</td>
+</tr>
+<tr>
+<td>codigo_destino</td>
+<td>varchar</td>
+<td>13</td>
+<td>Codigo de destino de la guia.</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>100</td>
+<td>Direccion a la cual se enviara la guia.</td>
+</tr>
+<tr>
+<td>ruta</td>
+<td>varchar</td>
+<td>50</td>
+<td>Ruta a la cual se enviara la guia.</td>
+</tr>
+<tr>
+<td>destinatario_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona destinataria a la guia en el sistema.</td>
+</tr>
+<tr>
+<td>motivo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Descripcion del motivo por el cual se envia la guia.</td>
+</tr>
+<tr>
+<td>detalle</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles de los productos de la guia.</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Cantidad del producto en el detalle de la guia.</td>
+</tr>
+<tr>
+<td>serie</td>
+<td>varchar</td>
+<td>16</td>
+<td>Serie del producto en el detalle de la guia.</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>fecha_expiracion</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de expiracion del producto en el detalle.</td>
+</tr>
+<tr>
+<td>nombre_manual</td>
+<td>varchar</td>
+<td>16</td>
+<td>Nombre manual del producto en el detalla de la guia.</td>
+</tr>
+<tr>
+<td>lote</td>
+<td>varchar</td>
+<td>-</td>
+<td>Campo para modulo especifico.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="creacion">Creación</h2>
 <h3 id="creacion-de-guia-de-remision">Creacion de Guia de Remisión</h3>
 <p>Este servicio permite agregar una nueva Guia de Remisión a Contifico.</p>
@@ -863,13 +1073,13 @@
       
       
         
-        <a href="../../registro/documento/" class="md-footer__link md-footer__link--next" aria-label="Next: Documento" rel="next">
+        <a href="../marca/" class="md-footer__link md-footer__link--next" aria-label="Next: Marca" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Documento
+              Marca
             </div>
           </div>
           <div class="md-footer__button md-icon">
