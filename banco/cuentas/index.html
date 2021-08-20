@@ -476,18 +476,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../registro/proforma/" class="md-nav__link">
-        Proforma
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -568,6 +556,13 @@
           <li class="md-nav__item">
   <a href="#obtener-listado-de-cuentas-bancarias" class="md-nav__link">
     Obtener listado de Cuentas Bancarias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-una-cuenta-bancaria" class="md-nav__link">
+    Obtener una Cuenta Bancaria
   </a>
   
 </li>
@@ -685,6 +680,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#obtener-una-cuenta-bancaria" class="md-nav__link">
+    Obtener una Cuenta Bancaria
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -732,6 +734,132 @@
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria en el sistema</td>
+</tr>
+<tr>
+<td>saldo_inicial</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor con el cual inicia la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>numero</td>
+<td>varchar</td>
+<td>20</td>
+<td>Numero de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>Define el tipo de cuenta bancaria (CC:cuenta corriente, CA:cuenta de ahorros).</td>
+</tr>
+<tr>
+<td>fecha_corte</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha a la cual se realiza el corte de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>nombre de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado de actual de la cuenta bancaria (A:activo, I:inactivo).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="obtener-una-cuenta-bancaria">Obtener una Cuenta Bancaria</h3>
+<p><code>GET https://api.contifico.com/sistema/api/v1/banco/cuenta/&lt;ID&gt;/</code></p>
+<p>Devuelve una cuenta contable con el <code>&lt;ID&gt;</code> solicitado.</p>
+<blockquote>
+<p>Ejemplo:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14pzb8j9sXveEwNY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;saldo_inicial&quot;</span><span class="p">:</span> <span class="s2">&quot;800.0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;0010000983949&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_corte&quot;</span><span class="p">:</span> <span class="s2">&quot;07/01/2015&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;CTA PICHINCHA&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria en el sistema.</td>
+</tr>
+<tr>
+<td>saldo_inicial</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor con el cual inicia la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>numero</td>
+<td>varchar</td>
+<td>20</td>
+<td>Numero de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>tipo_cuenta</td>
+<td>varchar</td>
+<td>2</td>
+<td>Define el tipo de cuenta bancaria (CC:cuenta corriente, CA:cuenta de ahorros).</td>
+</tr>
+<tr>
+<td>fecha_corte</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha a la cual se realiza el corte de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>nombre de la cuenta bancaria.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado de actual de la cuenta bancaria (A:activo, I:inactivo).</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -751,7 +879,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../registro/proforma/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Proforma" rel="prev">
+        <a href="../../registro/cruces/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cruces" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -760,7 +888,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Proforma
+              Cruces
             </div>
           </div>
         </a>

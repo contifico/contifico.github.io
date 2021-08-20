@@ -573,18 +573,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../registro/proforma/" class="md-nav__link">
-        Proforma
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -885,7 +873,7 @@
 <td>tipo</td>
 <td>varchar</td>
 <td>3</td>
-<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+<td>Tipo de movimiento de inventario (ING:ingreso, EGR:egreso, TRA:traslado, AJU:ajuste de costo)</td>
 </tr>
 <tr>
 <td>fecha</td>
@@ -957,7 +945,7 @@
 <td>estado</td>
 <td>varchar</td>
 <td>1</td>
-<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+<td>Estado del movimiento de inventario (G:generado, P:pendiente).</td>
 </tr>
 <tr>
 <td>id</td>
@@ -994,13 +982,13 @@
 <td>estado</td>
 <td>varchar</td>
 <td>1</td>
-<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+<td>Estado del movimiento de inventario (G:generado, P:pendiente).</td>
 </tr>
 <tr>
 <td>tipo</td>
 <td>varchar</td>
 <td>3</td>
-<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso, TRA:traslado, AJU:ajuste de costo)</td>
 </tr>
 </tbody>
 </table>
@@ -1066,7 +1054,7 @@
 <td>tipo</td>
 <td>varchar</td>
 <td>3</td>
-<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+<td>Tipo de movimiento de inventario (ING:ingreso, EGR:egreso, TRA:traslado, AJU:ajuste de costo)</td>
 </tr>
 <tr>
 <td>fecha</td>
@@ -1138,7 +1126,7 @@
 <td>estado</td>
 <td>varchar</td>
 <td>1</td>
-<td>Estado del movimiento de inventario (G:generado P:pendiente).</td>
+<td>Estado del movimiento de inventario (G:generado, P:pendiente).</td>
 </tr>
 <tr>
 <td>id</td>
@@ -1247,7 +1235,7 @@
 <td>tipo</td>
 <td>varchar</td>
 <td>3</td>
-<td>Tipo de movimiento de inventario (ING:ingreso EGR:egreso TRA:traslado AJU:ajuste de costo)</td>
+<td>Tipo de movimiento de inventario (ING:ingreso, EGR:egreso, TRA:traslado, AJU:ajuste de costo)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1297,7 +1285,7 @@
 <td>decimal</td>
 <td>13</td>
 <td>Precio del producto en el movimiento. (Precio es obligatorio para movimientos de tipo ING)</td>
-<td>Si/No</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>cantidad</td>
@@ -1325,7 +1313,7 @@
 <td>varchar</td>
 <td>16</td>
 <td>Identificador de la bodega destino del movimiento en el sistema. (Campo obligatorio para movimientos de tipo TRA)</td>
-<td>Si/No</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>codigo_interno</td>

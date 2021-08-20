@@ -551,18 +551,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../registro/proforma/" class="md-nav__link">
-        Proforma
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -801,7 +789,7 @@
 <tr>
 <td>nombre</td>
 <td>varchar</td>
-<td>-</td>
+<td>100</td>
 <td>nombre de la variante</td>
 </tr>
 <tr>
@@ -811,9 +799,15 @@
 <td>Identificador de la variante/valores en el sistema</td>
 </tr>
 <tr>
+<td>valores</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto contenedor de los valores de la variante.</td>
+</tr>
+<tr>
 <td>valor</td>
 <td>varchar</td>
-<td>-</td>
+<td>100</td>
 <td>Valor que se encuentra asociado a cada variante en el sistema</td>
 </tr>
 </tbody>
@@ -833,13 +827,13 @@
 <td>fecha_inicial</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha inicial con respecto a la fecha de creación</td>
+<td>Filtro para consultar las categorias desde la fecha de ultima modificacion.</td>
 </tr>
 <tr>
 <td>fecha_final</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha final con respecto a la fecha de creación</td>
+<td>Filtro para consultar las categorias hasta la fecha de ultima modificacion.</td>
 </tr>
 </tbody>
 </table>
@@ -879,19 +873,25 @@
 <td>id</td>
 <td>varchar</td>
 <td>16</td>
-<td>Identificador de la variante/valores en el sistema</td>
+<td>Identificador de la variante/valores en el sistema.</td>
 </tr>
 <tr>
 <td>nombre</td>
 <td>varchar</td>
+<td>100</td>
+<td>nombre de la variante.</td>
+</tr>
+<tr>
+<td>valores</td>
+<td>objeto</td>
 <td>-</td>
-<td>nombre de la variante</td>
+<td>Objeto contenedor de los valores de la variante.</td>
 </tr>
 <tr>
 <td>valor</td>
 <td>varchar</td>
-<td>-</td>
-<td>Valor que se encuentra asociado a cada variante en el sistema</td>
+<td>100</td>
+<td>Valor que se encuentra asociado a cada variante en el sistema.</td>
 </tr>
 </tbody>
 </table>

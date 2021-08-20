@@ -417,6 +417,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#crear-un-producto" class="md-nav__link">
     Crear un Producto
   </a>
@@ -554,18 +561,6 @@
     <li class="md-nav__item">
       <a href="../../registro/cruces/" class="md-nav__link">
         Cruces
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../registro/proforma/" class="md-nav__link">
-        Proforma
       </a>
     </li>
   
@@ -726,6 +721,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#crear-un-producto" class="md-nav__link">
     Crear un Producto
   </a>
@@ -830,6 +832,325 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+</tr>
+<tr>
+<td>costo_maximo</td>
+<td>DecimalField</td>
+<td>13</td>
+<td>Valor de costo máximo que puede tener el producto.</td>
+</tr>
+<tr>
+<td>descripcion_departamento</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de departamento de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>imagen</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto Foto relacionado al producto.</td>
+</tr>
+<tr>
+<td>minimo</td>
+<td>DecimalField</td>
+<td>10</td>
+<td>Valor mínino de stock que debe estar disponible.</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>indicador_peso</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador de balanza (0:no es de balanza, 1:requiere peso, 2:por cantidad). (Modulo adicional)</td>
+</tr>
+<tr>
+<td>generacion_automatica</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en Orden de Compra.</td>
+</tr>
+<tr>
+<td>cuenta_costo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta costo en el sistema.</td>
+</tr>
+<tr>
+<td>pvp2</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 2.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Tipo de producto (PRO:Producto, SER:Servicio).</td>
+</tr>
+<tr>
+<td>fecha_creacion</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de creacion del producto.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>tipo_producto</td>
+<td>varchar</td>
+<td>3</td>
+<td>Subtipo del tipo Producto (SIM:simple, COM:combo, COP:compuesto, PRO:produccion)</td>
+</tr>
+<tr>
+<td>pvp3</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 3.</td>
+</tr>
+<tr>
+<td>codigo_proveedor</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código utilizado para catalogo de productos.</td>
+</tr>
+<tr>
+<td>pvp1</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 1.</td>
+</tr>
+<tr>
+<td>id_integracion_proveedor</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona proveedor en el sistema.</td>
+</tr>
+<tr>
+<td>para_supereasy</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para supereasy. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto. +</td>
+</tr>
+<tr>
+<td>codigo_sap</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código de producto registrado desde SAP. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>descripcion_jerarquia</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de jerarquía de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp_manual</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto utiliza precio manual.</td>
+</tr>
+<tr>
+<td>codigo_barra</td>
+<td>varchar</td>
+<td>50</td>
+<td>Secuencia que representa el codigo de barras de un producto.</td>
+</tr>
+<tr>
+<td>pvp_comisariato</td>
+<td>decimal</td>
+<td>13</td>
+<td>precio de venta de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp4</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 4.</td>
+</tr>
+<tr>
+<td>cuenta_venta_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la venta en el sistema.</td>
+</tr>
+<tr>
+<td>categoria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria en el sistema.</td>
+</tr>
+<tr>
+<td>peso_hasta</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso final para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp_peso</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor de venta de peso para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>jerarquia</td>
+<td>varchar</td>
+<td>10</td>
+<td>jerarquía del producto de en Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>departamento</td>
+<td>varchar</td>
+<td>3</td>
+<td>identificador de departamento de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>para_pos</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en POS.</td>
+</tr>
+<tr>
+<td>familia</td>
+<td>varchar</td>
+<td>6</td>
+<td>identificador de familia de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>marca_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la marca en el sistema.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del producto (A:activo, I:inactivo)</td>
+</tr>
+<tr>
+<td>categoria_comisariato_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria comisariato en el sistema. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>cuenta_compra_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la compra en el sistema.</td>
+</tr>
+<tr>
+<td>personalizado1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+</tr>
+<tr>
+<td>peso_desde</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso inicial para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>personalizado2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código único del producto. +</td>
+</tr>
+<tr>
+<td>nombre_producto_base</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto padre.</td>
+</tr>
+<tr>
+<td>pvp_supereasy</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta de Super Easy. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de las variantes del producto.</td>
+</tr>
+<tr>
+<td>producto_base_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>detalle_variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles de las variantes del producto.</td>
+</tr>
+<tr>
+<td>valor_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del valor de la variante en el sistema.</td>
+</tr>
+<tr>
+<td>variante_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la variante en el sistema.</td>
+</tr>
+<tr>
+<td>lead_time</td>
+<td>int</td>
+<td>-</td>
+<td>Tiempo estimado para recepción de producto desde su solicitud.</td>
+</tr>
+<tr>
+<td>cantidad_stock</td>
+<td>varchar</td>
+<td>16</td>
+<td>Stock del producto.</td>
+</tr>
+</tbody>
+</table>
+<p>NOTA: los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden ser consultados por las respectivas empresas habilitadas. De lo contrario, el servicio retornará cada objeto JSON de producto sin estos campos.</p>
 <h3 id="obtener-un-producto">Obtener un Producto</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/producto/&lt;ID&gt;</code></p>
 <p>Devuelve un objeto JSON de un producto, utilizando el <code>&lt;ID&gt;</code> solicitado.</p>
@@ -893,7 +1214,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Los campos que se presentan en el objeto JSON del producto se describen a continuación:</p>
 <table>
 <thead>
 <tr>
@@ -905,58 +1225,335 @@
 </thead>
 <tbody>
 <tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+</tr>
+<tr>
+<td>costo_maximo</td>
+<td>DecimalField</td>
+<td>13</td>
+<td>Valor de costo máximo que puede tener el producto.</td>
+</tr>
+<tr>
+<td>descripcion_departamento</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de departamento de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>imagen</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto Foto relacionado al producto.</td>
+</tr>
+<tr>
+<td>minimo</td>
+<td>DecimalField</td>
+<td>10</td>
+<td>Valor mínino de stock que debe estar disponible.</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>indicador_peso</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador de balanza (0:no es de balanza, 1:requiere peso, 2:por cantidad). (Modulo adicional)</td>
+</tr>
+<tr>
+<td>generacion_automatica</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en Orden de Compra.</td>
+</tr>
+<tr>
+<td>cuenta_costo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta costo en el sistema.</td>
+</tr>
+<tr>
+<td>pvp2</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 2.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Tipo de producto (PRO:Producto, SER:Servicio).</td>
+</tr>
+<tr>
+<td>fecha_creacion</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de creacion del producto.</td>
+</tr>
+<tr>
 <td>id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Identificador del producto en el sistema.</td>
 </tr>
 <tr>
-<td>codigo_sap</td>
+<td>tipo_producto</td>
 <td>varchar</td>
-<td>18</td>
-<td>Identificador único asociado al producto generado en SAP.</td>
+<td>3</td>
+<td>Subtipo del tipo Producto (SIM:simple, COM:combo, COP:compuesto, PRO:produccion)</td>
+</tr>
+<tr>
+<td>pvp3</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 3.</td>
+</tr>
+<tr>
+<td>codigo_proveedor</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código utilizado para catalogo de productos.</td>
+</tr>
+<tr>
+<td>pvp1</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 1.</td>
+</tr>
+<tr>
+<td>id_integracion_proveedor</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona proveedor en el sistema.</td>
 </tr>
 <tr>
 <td>para_supereasy</td>
 <td>boolean</td>
 <td>1</td>
-<td>Valor que define si los productos de esta categoría son para Super Easy</td>
+<td>Indicador si el producto se usa para supereasy. (Modulo adicional)</td>
 </tr>
 <tr>
-<td>para_comisariato</td>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto. +</td>
+</tr>
+<tr>
+<td>codigo_sap</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código de producto registrado desde SAP. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>descripcion_jerarquia</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de jerarquía de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp_manual</td>
 <td>boolean</td>
 <td>1</td>
-<td>Valor que define si los productos de esta categoría son para Mi Comisariato</td>
+<td>Variable de control para determina si el producto utiliza precio manual.</td>
 </tr>
 <tr>
-<td>pvp_supereasy</td>
+<td>codigo_barra</td>
 <td>varchar</td>
-<td>10</td>
-<td>Representación del PVP del producto para Super Easy</td>
+<td>50</td>
+<td>Secuencia que representa el codigo de barras de un producto.</td>
 </tr>
 <tr>
 <td>pvp_comisariato</td>
+<td>decimal</td>
+<td>13</td>
+<td>precio de venta de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp4</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 4.</td>
+</tr>
+<tr>
+<td>cuenta_venta_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la venta en el sistema.</td>
+</tr>
+<tr>
+<td>categoria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria en el sistema.</td>
+</tr>
+<tr>
+<td>peso_hasta</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso final para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>pvp_peso</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor de venta de peso para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>jerarquia</td>
 <td>varchar</td>
 <td>10</td>
-<td>Representación del PVP del producto para Mi Comisariato</td>
+<td>jerarquía del producto de en Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>departamento</td>
+<td>varchar</td>
+<td>3</td>
+<td>identificador de departamento de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>para_pos</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en POS.</td>
+</tr>
+<tr>
+<td>familia</td>
+<td>varchar</td>
+<td>6</td>
+<td>identificador de familia de Mi Comisariato. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>marca_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la marca en el sistema.</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del producto (A:activo, I:inactivo)</td>
 </tr>
 <tr>
 <td>categoria_comisariato_id</td>
 <td>varchar</td>
-<td>18</td>
-<td>Identificador para la categoría de Mi Comisariato a la que se encuentra vinculada el producto.</td>
+<td>16</td>
+<td>Identificador de la categoria comisariato en el sistema. (Modulo adicional)</td>
 </tr>
+<tr>
+<td>cuenta_compra_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la compra en el sistema.</td>
+</tr>
+<tr>
+<td>personalizado1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+</tr>
+<tr>
+<td>peso_desde</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso inicial para balanza. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>personalizado2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código único del producto. +</td>
+</tr>
+<tr>
+<td>nombre_producto_base</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto padre.</td>
+</tr>
+<tr>
+<td>pvp_supereasy</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta de Super Easy. (Modulo adicional)</td>
+</tr>
+<tr>
+<td>variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de las variantes del producto.</td>
+</tr>
+<tr>
+<td>producto_base_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>detalle_variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles de las variantes del producto.</td>
+</tr>
+<tr>
+<td>valor_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del valor de la variante en el sistema.</td>
+</tr>
+<tr>
+<td>variante_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la variante en el sistema.</td>
+</tr>
+<tr>
+<td>lead_time</td>
+<td>int</td>
+<td>-</td>
+<td>Tiempo estimado para recepción de producto desde su solicitud.</td>
+</tr>
+<tr>
+<td>cantidad_stock</td>
+<td>varchar</td>
+<td>16</td>
+<td>Stock del producto.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>fecha_inicial</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha inicial con respecto a la fecha de ultimo cambio.</td>
+<td>Filtro para consultar las categorias desde la fecha de ultima modificacion.</td>
 </tr>
 <tr>
 <td>fecha_final</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha final con respecto a la fecha de ultimo cambio.</td>
+<td>Filtro para consultar las categorias hasta la fecha de ultima modificacion.</td>
 </tr>
 <tr>
 <td>filtro</td>
@@ -964,9 +1561,26 @@
 <td>100</td>
 <td>Filtro que puede contener el nombre o codigo o nombre de una categoría vinculado a dicho producto.</td>
 </tr>
+<tr>
+<td>categoria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Filtro que contiene el identificador de la categoria del producto.</td>
+</tr>
+<tr>
+<td>codigo_barra</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro del codigo de barra asignado al producto.</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>200</td>
+<td>Filtro del codigo del producto.</td>
+</tr>
 </tbody>
 </table>
-<p>NOTA: los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden ser consultados por las respectivas empresas habilitadas. De lo contrario, el servicio retornará cada objeto JSON de producto sin estos campos.</p>
 <h2 id="crear-un-producto">Crear un Producto</h2>
 <p>Para crear un producto se debe hacer uso de la url:</p>
 <p><code>POST https://api.contifico.com/sistema/api/v1/producto/</code></p>
@@ -1005,18 +1619,370 @@
 <th>Tipo</th>
 <th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>costo_maximo</td>
+<td>DecimalField</td>
+<td>13</td>
+<td>Valor de costo máximo que puede tener el producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion_departamento</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de departamento de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>imagen</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto Foto relacionado al producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>minimo</td>
+<td>DecimalField</td>
+<td>10</td>
+<td>Valor mínino de stock que debe estar disponible.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>indicador_peso</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador de balanza (0:no es de balanza, 1:requiere peso, 2:por cantidad). (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>generacion_automatica</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en Orden de Compra.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cuenta_costo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta costo en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp2</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 2.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>16</td>
+<td>Tipo de producto (PRO:Producto, SER:Servicio). *Por defecto PRO si no se envia en el json</td>
+<td>No</td>
+</tr>
+<tr>
+<td>fecha_creacion</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de creacion del producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_producto</td>
+<td>varchar</td>
+<td>3</td>
+<td>Subtipo del tipo Producto (SIM:simple, COM:combo, COP:compuesto, PRO:produccion)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp3</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 3.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>codigo_proveedor</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código utilizado para catalogo de productos.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp1</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 1.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>id_integracion_proveedor</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona proveedor en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_supereasy</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para supereasy. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>codigo_sap</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código de producto registrado desde SAP. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion_jerarquia</td>
+<td>varchar</td>
+<td>40</td>
+<td>Descripción de jerarquía de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_manual</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto utiliza precio manual.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>codigo_barra</td>
+<td>varchar</td>
+<td>50</td>
+<td>Secuencia que representa el codigo de barras de un producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_comisariato</td>
+<td>decimal</td>
+<td>13</td>
+<td>precio de venta de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp4</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta 4.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cuenta_venta_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la venta en el sistema.</td>
+<td>No</td>
+</tr>
 <tr>
 <td>categoria_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Identificador de la categoria en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>peso_hasta</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso final para balanza. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_peso</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor de venta de peso para balanza. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>jerarquia</td>
+<td>varchar</td>
+<td>10</td>
+<td>jerarquía del producto de en Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>departamento</td>
+<td>varchar</td>
+<td>3</td>
+<td>identificador de departamento de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_pos</td>
+<td>boolean</td>
+<td>1</td>
+<td>Variable de control para determina si el producto se utiliza en POS.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>familia</td>
+<td>varchar</td>
+<td>6</td>
+<td>identificador de familia de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>marca_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la marca en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Estado del producto (A:activo, I:inactivo)</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>categoria_comisariato_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria comisariato en el sistema. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cuenta_compra_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asignada para la compra en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>personalizado1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>peso_desde</td>
+<td>decimal</td>
+<td>5</td>
+<td>Valor de peso inicial para balanza. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>personalizado2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Campo personalizado para información adicional del producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código único del producto.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>nombre_producto_base</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre del producto padre.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_supereasy</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta de Super Easy. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de las variantes del producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>producto_base_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalle_variantes</td>
+<td>obj</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles de las variantes del producto.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>valor_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del valor de la variante en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>variante_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la variante en el sistema.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>lead_time</td>
+<td>int</td>
+<td>-</td>
+<td>Tiempo estimado para recepción de producto desde su solicitud.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cantidad_stock</td>
+<td>varchar</td>
+<td>16</td>
+<td>Stock del producto.</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
-<p>NOTA: El valor del campo <code>categoria_comisariato_id</code> también se obtiene de la misma manera, y podrá enviarse en el requerimiento siempre que la categoría tenga el valor de <code>true</code> en <code>para_comisariato</code>. Los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden modificarse por las respectivas empresas habilitadas. De lo contrario, el servicio retornará errores.</p>
+<p>NOTA: El valor del campo <code>categoria_comisariato_id</code> también se obtiene de la misma manera, y podrá enviarse en el requerimiento siempre que la categoría tenga el valor de <code>true</code> en <code>para_comisariato</code>. Los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden modificarse por las respectivas empresas habilitadas. De lo contrario, el servicio retornará errores. Los campos de <code>pvp</code> aunque no sean obligatorios son necesarios para el correcto funcionamiento del producto en el sistema, si no se desea enviar un pvp en especifico, enviar la opcion de <code>pvp_manual</code> como <code>true</code>.</p>
 <h2 id="modificar-un-producto">Modificar un producto</h2>
 <p>Para modificar un producto, se utiliza la siguiente URL:</p>
 <p><code>PATCH https://api.contifico.com/sistema/api/v1/producto/&lt;ID&gt;/</code></p>
@@ -1054,7 +2020,6 @@
     <span class="p">}</span>
 </code></pre></div>
 
-<p>Para obtener el ID de la categoría a ser el valor de <code>categoria_comisariato_id</code>, se debe hacer uso del <a href="../categoria/">servicio de consulta de categorías</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1062,17 +2027,62 @@
 <th>Tipo</th>
 <th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>categoria_id</td>
+<td>codigo_sap</td>
+<td>varchar</td>
+<td>200</td>
+<td>Código de producto registrado desde SAP. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_supereasy</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para supereasy. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_supereasy</td>
+<td>decimal</td>
+<td>13</td>
+<td>Precio de venta de Super Easy. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pvp_comisariato</td>
+<td>decimal</td>
+<td>13</td>
+<td>precio de venta de Mi Comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>para_comisariato</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el producto se usa para comisariato. (Modulo adicional)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>categoria_comisariato_id</td>
 <td>varchar</td>
 <td>16</td>
-<td>Identificador de la categoría en el sistema.</td>
+<td>Identificador de la categoria comisariato en el sistema. (Modulo adicional)</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
+<p>Para obtener el ID de la categoría a ser el valor de <code>categoria_comisariato_id</code>, se debe hacer uso del <a href="../categoria/">servicio de consulta de categorías</a>.</p>
 <p>NOTA: El valor del campo <code>categoria_comisariato_id</code> podrá enviarse en el requerimiento siempre que la categoría tenga el valor de <code>true</code> en <code>para_comisariato</code>. Los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden modificarse por las respectivas empresas habilitadas. De lo contrario, el servicio retornará errores.</p>
 <h2 id="obtener-stock-de-bodegas">Obtener Stock de bodegas</h2>
 <p>Para obtener el stock de un producto por bodega se puede hacer uso del servicio:</p>
@@ -1092,6 +2102,36 @@
 </code></pre></div>
 
 <p>Esto nos devolverá un JSON listando el stock de las bodegas que pertenezcan a un punto de venta en Contífico.</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bodega_nombre</td>
+<td>varchar</td>
+<td>200</td>
+<td>Nombre de la bodega.</td>
+</tr>
+<tr>
+<td>bodega_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la bodega en el sistema.</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>DecimalField</td>
+<td>13</td>
+<td>Cantidad actual del producto en la bodega.</td>
+</tr>
+</tbody>
+</table>
                 
               
               

@@ -476,18 +476,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../registro/proforma/" class="md-nav__link">
-        Proforma
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -593,6 +581,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
   
 </li>
       
@@ -704,6 +699,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -748,7 +750,7 @@
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;LOgDGe7EImbn2x47&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-       <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;201302000002&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;201302000002&quot;</span><span class="p">,</span>
         <span class="nt">&quot;persona&quot;</span><span class="p">:</span> <span class="s2">&quot;G6x01dN2ZFNdX7Wz&quot;</span><span class="p">,</span>
         <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
         <span class="nt">&quot;cuenta_bancaria_id&quot;</span><span class="p">:</span> <span class="s2">&quot;Q8J0yelYfoaER7OY&quot;</span><span class="p">,</span>
@@ -766,6 +768,84 @@
 <span class="p">]</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numero_comprobante</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de comprobante del movimiento bancario.</td>
+</tr>
+<tr>
+<td>persona</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada al movimiento bancario en el sistema.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo del movimiento bancario (D:deposito ingreso, N:transferencia ingreso, X:tarjeta credito ingreso, C:cheque egreso, T:transferencia egreso).</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria asociada al movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de registro del movimiento (I:ingreso, E:egreso).</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles del movimiento bancario.</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor monetario del o los detalles en el movimiento.</td>
+</tr>
+<tr>
+<td>cuenta_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asociada al o los detalles del movimiento bancario en el sistema.</td>
+</tr>
+<tr>
+<td>centro_costo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del centro de costo en el sistema.</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha a la cual se emite el movimiento bancario.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del movimiento bancario en el sistema.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="obtener-un-movimiento">Obtener un Movimiento</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/banco/movimiento/&lt;ID&gt;</code></p>
 <p>Devuelve un objeto JSON de un movimiento bancario, utilizando el <ID> solicitado.</p>
@@ -809,22 +889,101 @@
 </thead>
 <tbody>
 <tr>
+<td>numero_comprobante</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de comprobante del movimiento bancario.</td>
+</tr>
+<tr>
+<td>persona</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona asociada al movimiento bancario en el sistema.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo del movimiento bancario (D:deposito ingreso, N:transferencia ingreso, X:tarjeta credito ingreso, C:cheque egreso, T:transferencia egreso).</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria asociada al movimiento en el sistema.</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de registro del movimiento (I:ingreso, E:egreso).</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto contenedor de los detalles del movimiento bancario.</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor monetario del o los detalles en el movimiento.</td>
+</tr>
+<tr>
+<td>cuenta_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta contable asociada al o los detalles del movimiento bancario en el sistema.</td>
+</tr>
+<tr>
+<td>centro_costo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del centro de costo en el sistema.</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha a la cual se emite el movimiento bancario.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del movimiento bancario en el sistema.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td>fecha_emision</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha de emision del movimiento bancario.</td>
+<td>Filtro de fecha en la cual se ha emitido el movimiento bancario.</td>
 </tr>
 <tr>
 <td>fecha_inicial</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha inicial con respecto a la fecha de ultimo cambio.</td>
+<td>Filtro para consultar las categorias desde la fecha de ultima modificacion.</td>
 </tr>
 <tr>
 <td>fecha_final</td>
 <td>date</td>
 <td></td>
-<td>Filtro de fecha final con respecto a la fecha de ultimo cambio.</td>
+<td>Filtro para consultar las categorias hasta la fecha de ultima modificacion.</td>
 </tr>
 </tbody>
 </table>
