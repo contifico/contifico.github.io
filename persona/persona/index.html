@@ -1314,39 +1314,32 @@
 </thead>
 <tbody>
 <tr>
-<td>id</td>
-<td>varchar</td>
-<td>16</td>
-<td>Identificador de la cuenta en el sistema</td>
-<td>Si</td>
-</tr>
-<tr>
 <td>adicionales_cliente</td>
 <td>varchar</td>
 <td>50</td>
 <td>Informacion adicional del cliente (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>personaasociada_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Identificador de la persona asociada a la persona actual (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>direccion</td>
 <td>varchar</td>
 <td>50</td>
 <td>Direccion de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_vendedor</td>
 <td>bool</td>
 <td></td>
 <td>Rol vendedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>tipo</td>
@@ -1367,119 +1360,119 @@
 <td>varchar</td>
 <td>50</td>
 <td>Nombre comercial de la persona</td>
-<td>Si</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>es_corporativo</td>
 <td>bool</td>
 <td></td>
 <td>Rol corporativo de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>porcentaje_descuento</td>
 <td>decimal</td>
 <td>2</td>
-<td>Descuento de tipo cliente (2 decimales Max) (acepta null)</td>
-<td>Si</td>
+<td>Descuento de tipo cliente</td>
+<td>No</td>
 </tr>
 <tr>
 <td>origen</td>
 <td>varchar</td>
 <td>3</td>
 <td>Tipo de POS desde el cual se registro  (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>ruc</td>
 <td>varchar</td>
 <td>13</td>
 <td>Ruc de la persona</td>
-<td>Si</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>banco_codigo_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Codigo de banco asociado a la persona (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>email</td>
 <td>varchar</td>
 <td>50</td>
 <td>Correo de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_cliente</td>
 <td>bool</td>
 <td></td>
 <td>Rol vendedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>adicionales_proveedor</td>
 <td>varchar</td>
 <td>50</td>
-<td>Informacion adicional del proveedor (acepta null)</td>
-<td>Si</td>
+<td>Informacion adicional del proveedor</td>
+<td>No</td>
 </tr>
 <tr>
 <td>numero_tarjeta</td>
 <td>varchar</td>
 <td>200</td>
-<td>Numero de tarjeta de la persona (acepta null)</td>
-<td>Si</td>
+<td>Numero de tarjeta de la persona</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_extranjero</td>
 <td>bool</td>
 <td></td>
 <td>Verificador de personas extranjeras</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_empleado</td>
 <td>bool</td>
 <td></td>
 <td>Rol empleado de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_proveedor</td>
 <td>bool</td>
 <td></td>
 <td>Rol proveedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>aplicar_cupo</td>
 <td>bool</td>
 <td></td>
-<td>Verificador si la persona tiene un cupo maximo como cliente (acepta null)</td>
-<td>Si</td>
+<td>Verificador si la persona tiene un cupo maximo como cliente</td>
+<td>No</td>
 </tr>
 <tr>
 <td>telefonos</td>
 <td>varchar</td>
 <td>50</td>
 <td>Telefono de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>tipo_cuenta</td>
 <td>varchar</td>
 <td>2</td>
-<td>tipo de la cuenta contable asociada (acepta null)</td>
-<td>Si</td>
+<td>tipo de la cuenta contable asociada</td>
+<td>No</td>
 </tr>
 <tr>
 <td>placa</td>
 <td>varchar</td>
 <td>13</td>
-<td>Placa de la persona si es de tipo placa (acepta null)</td>
-<td>Si</td>
+<td>Placa de la persona si es de tipo placa</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>cedula</td>
@@ -1508,6 +1501,7 @@
 </tr>
 </tbody>
 </table>
+<p>NOTA: Para el correcto funcionamiento de la persona en la pagina web de contifico, campos de asignacion de rol en la empresa como <code>es_vendedor</code>, <code>es_cliente</code>, <code>es_empleado</code>, <code>es_proveedor</code> aunque no son obligatorios para la creacion de la persona se debe enviar rol para el cual sera usada la persona. Los campos opcionales son obligatorios dependiendo del <code>tipo</code> de persona que se cree, personas Juridicas requieren el envio del campo <code>ruc</code>.</p>
 <h3 id="modificar-una-persona">Modificar una Persona</h3>
 <p>Para modificar una persona se debe de hacer uso de la url:</p>
 <p><code>PUT https://api.contifico.com/sistema/api/v1/persona/?pos=&lt;TOKEN&gt;</code></p>
@@ -1568,34 +1562,34 @@
 <td>varchar</td>
 <td>50</td>
 <td>Informacion adicional del cliente (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>personaasociada_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Identificador de la persona asociada a la persona actual (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>direccion</td>
 <td>varchar</td>
 <td>50</td>
 <td>Direccion de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_vendedor</td>
 <td>bool</td>
 <td></td>
 <td>Rol vendedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>tipo</td>
 <td>varchar</td>
 <td>1</td>
-<td>Tipo de persona (N:Natural, J:Juridica, I:SinId, P:Placa)</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1610,118 +1604,125 @@
 <td>varchar</td>
 <td>50</td>
 <td>Nombre comercial de la persona</td>
-<td>Si</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>es_corporativo</td>
 <td>bool</td>
 <td></td>
 <td>Rol corporativo de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>porcentaje_descuento</td>
 <td>decimal</td>
 <td>2</td>
-<td>Descuento de tipo cliente (2 decimales Max) (acepta null)</td>
-<td>Si</td>
+<td>Descuento de tipo cliente</td>
+<td>No</td>
 </tr>
 <tr>
 <td>origen</td>
 <td>varchar</td>
 <td>3</td>
 <td>Tipo de POS desde el cual se registro  (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>ruc</td>
 <td>varchar</td>
 <td>13</td>
 <td>Ruc de la persona</td>
-<td>Si</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>banco_codigo_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>Codigo de banco asociado a la persona (acepta null)</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>email</td>
 <td>varchar</td>
 <td>50</td>
 <td>Correo de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_cliente</td>
 <td>bool</td>
 <td></td>
 <td>Rol vendedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>adicionales_proveedor</td>
 <td>varchar</td>
 <td>50</td>
-<td>Informacion adicional del proveedor (acepta null)</td>
-<td>Si</td>
+<td>Informacion adicional del proveedor</td>
+<td>No</td>
 </tr>
 <tr>
 <td>numero_tarjeta</td>
 <td>varchar</td>
 <td>200</td>
-<td>Numero de tarjeta de la persona (acepta null)</td>
-<td>Si</td>
+<td>Numero de tarjeta de la persona</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_extranjero</td>
 <td>bool</td>
 <td></td>
 <td>Verificador de personas extranjeras</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_empleado</td>
 <td>bool</td>
 <td></td>
 <td>Rol empleado de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>es_proveedor</td>
 <td>bool</td>
 <td></td>
 <td>Rol proveedor de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>aplicar_cupo</td>
 <td>bool</td>
 <td></td>
-<td>Verificador si la persona tiene un cupo maximo como cliente (acepta null)</td>
-<td>Si</td>
+<td>Verificador si la persona tiene un cupo maximo como cliente</td>
+<td>No</td>
 </tr>
 <tr>
 <td>telefonos</td>
 <td>varchar</td>
 <td>50</td>
 <td>Telefono de la persona</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>tipo_cuenta</td>
 <td>varchar</td>
 <td>2</td>
-<td>tipo de la cuenta contable asociada (acepta null)</td>
-<td>Si</td>
+<td>tipo de la cuenta contable asociada</td>
+<td>No</td>
 </tr>
 <tr>
 <td>placa</td>
 <td>varchar</td>
 <td>13</td>
-<td>Placa de la persona si es de tipo placa (acepta null)</td>
+<td>Placa de la persona si es de tipo placa</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona</td>
 <td>Si</td>
 </tr>
 </tbody>

@@ -810,7 +810,7 @@
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;e4ee7f87-471c-4110-8c2f-15dae1e44ac4&quot;</span><span class="p">,</span>
     <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu830&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span><span class="p">,</span>
     <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu831&quot;</span><span class="p">,</span>
     <span class="nt">&quot;descripcion&quot;</span> <span class="p">:</span> <span class="s2">&quot;Cruce de Documento&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>  
@@ -820,34 +820,55 @@
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>pos</td>
-<td>API Token del POS</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td></td>
 </tr>
 <tr>
 <td>caja_id</td>
-<td>ID de integración de la caja del POS (opcional)</td>
+<td>varchar</td>
+<td>16</td>
+<td>ID de integración de la caja del POS (opcional).</td>
+<td></td>
 </tr>
 <tr>
 <td>monto</td>
-<td>Valor de la transacción</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor de la transacción.</td>
+<td></td>
 </tr>
 <tr>
 <td>documento_id</td>
-<td>ID de integración del documento con el que se hará el cruce</td>
+<td>varchar</td>
+<td>16</td>
+<td>ID de integración del documento con el que se hará el cruce.</td>
+<td></td>
 </tr>
 <tr>
-<td>descripción</td>
+<td>descripcion</td>
+<td>varchar</td>
+<td>300</td>
 <td>Descripción de la transacción</td>
+<td></td>
 </tr>
 <tr>
 <td>fecha</td>
+<td>date</td>
+<td></td>
 <td>Fecha de la transacción</td>
+<td></td>
 </tr>
 </tbody>
 </table>

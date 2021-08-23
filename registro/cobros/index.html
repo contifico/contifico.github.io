@@ -499,6 +499,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tipos-cobro" class="md-nav__link">
+    Tipos Cobro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creacion" class="md-nav__link">
     Creación
   </a>
@@ -688,6 +695,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tipos-cobro" class="md-nav__link">
+    Tipos Cobro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creacion" class="md-nav__link">
     Creación
   </a>
@@ -740,6 +754,163 @@
 <p>Podemos consultar los cobros que tiene un documento de cliente por medio de la url:</p>
 <p><code>GET https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cobro/</code></p>
 <p>Usando el id devuelto en la creación de documento.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;21312312&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;23/08/2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nombre_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_banco&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;cuenta_bancaria_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;bin_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;monto_propina&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;numero_cheque&quot;</span><span class="p">:</span> <span class="s2">&quot;21312312&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fecha_cheque&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;tipo_ping&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;O8bY956LKhAWWb7j&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lote&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+</tr>
+<tr>
+<td>numero_comprobante</td>
+<td>varchar</td>
+<td>15</td>
+<td>Secuencia unica que identifica la transacción.</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>10</td>
+<td>Numero de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td></td>
+<td>Fecha que se realiza la transacción.</td>
+</tr>
+<tr>
+<td>nombre_tarjeta</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>tipo_banco</td>
+<td>char</td>
+<td>300</td>
+<td>Nombre del banco supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria en el sistema.</td>
+</tr>
+<tr>
+<td>bin_tarjeta</td>
+<td>varchar</td>
+<td>10</td>
+<td>Numero de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>monto_propina</td>
+<td>decimal</td>
+<td>10</td>
+<td>Represeta el valor de la propina por un servicio.</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+</tr>
+<tr>
+<td>fecha_cheque</td>
+<td>Date</td>
+<td>-</td>
+<td>Fecha del cheque.</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del cobro en el sistema.</td>
+</tr>
+<tr>
+<td>lote</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del lote asociado a la transaccion.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tipos-cobro">Tipos Cobro</h2>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EF</td>
+<td>Efectivo</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>Cheque</td>
+</tr>
+<tr>
+<td>TC</td>
+<td>Tarjeta de Crédito</td>
+</tr>
+<tr>
+<td>TRA</td>
+<td>Transferencia</td>
+</tr>
+</tbody>
+</table>
 <h2 id="creacion">Creación</h2>
 <p>Se permite registrar cobros a un documento de dos formas:</p>
 <ol>
@@ -790,26 +961,41 @@ con las distintas formas </li>
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>forma_cobro</td>
-<td>"TC" para tarjeta de crédito</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>monto</td>
-<td>valor cobrado</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>fecha</td>
-<td>fecha del cobro</td>
+<td>date</td>
+<td></td>
+<td>Fecha que se realiza la transacción.</td>
+<td>No</td>
 </tr>
 <tr>
 <td>tipo_ping</td>
-<td>Representa la red de cobro con la que se hace el débito. "D" -&gt; Datafast "M" -&gt; Medianet</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+<td>Si</td>
 </tr>
 </tbody>
 </table>
@@ -824,22 +1010,34 @@ con las distintas formas </li>
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>forma_cobro</td>
-<td>"EF" para efectivo</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>monto</td>
-<td>valor cobrado</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>fecha</td>
-<td>fecha del cobro</td>
+<td>date</td>
+<td></td>
+<td>Fecha que se realiza la transacción.</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
@@ -855,26 +1053,41 @@ con las distintas formas </li>
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>forma_cobro</td>
-<td>"CH" para cheque</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro, "CH" para transferencia).</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>numero_cheque</td>
-<td>número de cheque utilizado</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>monto</td>
-<td>valor cobrado</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>fecha</td>
-<td>fecha del cobro</td>
+<td>date</td>
+<td></td>
+<td>Fecha que se realiza la transacción.</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
@@ -885,37 +1098,48 @@ con las distintas formas </li>
     <span class="nt">&quot;cuenta_bancaria_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;qRYjbPkzC10eLNgn&quot;</span><span class="p">,</span>
     <span class="nt">&quot;numero_comprobante&quot;</span> <span class="p">:</span> <span class="s2">&quot;TRANSFERENCIA 123&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span><span class="p">,</span>
-
 <span class="p">}</span>
 </code></pre></div>
 
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>forma_cobro</td>
-<td>"TRA" para transferencia</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro, "TRA" para transferencia).</td>
 </tr>
 <tr>
 <td>monto</td>
-<td>valor cobrado</td>
-</tr>
-<tr>
-<td>fecha</td>
-<td>fecha del cobro</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
 </tr>
 <tr>
 <td>cuenta_bancaria_id</td>
 <td>id de la <a href="../banco/cuentas/#obtener-listado-de-cuentas-bancarias" title="Obtener cuentas bancarias API">cuenta bancaria</a></td>
+<td>Si</td>
+<td></td>
 </tr>
 <tr>
 <td>numero_comprobante</td>
-<td>fecha del cobro</td>
+<td>varchar</td>
+<td>15</td>
+<td>Secuencia unica que identifica la transacción.</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td></td>
+<td>Fecha que se realiza la transacción.</td>
 </tr>
 </tbody>
 </table>

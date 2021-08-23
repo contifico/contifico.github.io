@@ -612,23 +612,17 @@
     Obtener el Rol de una Persona
   </a>
   
-    <nav class="md-nav" aria-label="Obtener el Rol de una Persona">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
-    Parametros
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -684,23 +678,17 @@
     Obtener el Rol de una Persona
   </a>
   
-    <nav class="md-nav" aria-label="Obtener el Rol de una Persona">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
-    Parametros
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -766,7 +754,121 @@
 <span class="p">]</span>
 </code></pre></div>
 
-<h4 id="parametros">Parametros</h4>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>anio</td>
+<td>int</td>
+<td>-</td>
+<td>Representa el anio de la quincena.</td>
+</tr>
+<tr>
+<td>tipo_pago</td>
+<td>varchar</td>
+<td>1</td>
+<td>Representa el tipo de pago del rol (B:cheque, T:transferencia, N:no pago)</td>
+</tr>
+<tr>
+<td>nombre_persona</td>
+<td>varchar</td>
+<td>50</td>
+<td>Nombre de la persona consultada.</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Date</td>
+<td>-</td>
+<td>Fecha del rol.</td>
+</tr>
+<tr>
+<td>total_ingresos</td>
+<td>decimal</td>
+<td>2</td>
+<td>Total de rubros de tipo ingreso del rol de la persona.</td>
+</tr>
+<tr>
+<td>dias_trabajados</td>
+<td>int</td>
+<td>-</td>
+<td>Dias que trabajo la persona en el rol consultado.</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>Detalles de los diferentes rubros de la persona en el rol.</td>
+</tr>
+<tr>
+<td>nombre</td>
+<td>varchar</td>
+<td>100</td>
+<td>Nombre del rubro en especifico.</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>11</td>
+<td>Valor total del detalle del rubro en especifico.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo del detalle del rubro (I:ingreso, E:egreso).</td>
+</tr>
+<tr>
+<td>comprobante</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de comprobante del movimiento bancario asociado al rol.</td>
+</tr>
+<tr>
+<td>total_egresos</td>
+<td>decimal</td>
+<td>2</td>
+<td>Total de rubros de tipo egreso del rol de la persona.</td>
+</tr>
+<tr>
+<td>mes</td>
+<td>int</td>
+<td>-</td>
+<td>Representa el mes de la quincena.</td>
+</tr>
+<tr>
+<td>num_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque del movimiento bancario asociado al rol.</td>
+</tr>
+<tr>
+<td>num_cuenta</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de la cuenta a la cual se realizara la transferencia de pago del rol.</td>
+</tr>
+<tr>
+<td>total_pago</td>
+<td>decimal</td>
+<td>12</td>
+<td>Valor totalizado del pago del rol.</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-parameters">Query Parameters</h2>
 <table>
 <thead>
 <tr>
@@ -787,7 +889,7 @@
 <td>Periodo</td>
 <td>varchar</td>
 <td>1</td>
-<td>Periodo en el cual se encuentra el empleado; PrimeraQ: P, SegundaQ: S, Mensual: M.</td>
+<td>Periodo en el cual se encuentra el empleado (P:primera Quincena, S:segunda Quincena, M:rol mensual).</td>
 </tr>
 <tr>
 <td>anio</td>
