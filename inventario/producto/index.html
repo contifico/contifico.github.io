@@ -404,13 +404,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#obtener-un-producto" class="md-nav__link">
-    Obtener un Producto
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -420,6 +413,19 @@
   <a href="#query-parameters" class="md-nav__link">
     Query Parameters
   </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-un-producto" class="md-nav__link">
+    Obtener un Producto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -561,6 +567,18 @@
     <li class="md-nav__item">
       <a href="../../registro/cruces/" class="md-nav__link">
         Cruces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registro/proforma/" class="md-nav__link">
+        Proforma
       </a>
     </li>
   
@@ -708,13 +726,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#obtener-un-producto" class="md-nav__link">
-    Obtener un Producto
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -724,6 +735,19 @@
   <a href="#query-parameters" class="md-nav__link">
     Query Parameters
   </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtener-un-producto" class="md-nav__link">
+    Obtener un Producto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1150,6 +1174,55 @@
 </tr>
 </tbody>
 </table>
+<h2 id="query-parameters">Query Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fecha_inicial</td>
+<td>date</td>
+<td></td>
+<td>Filtro para consultar las categorias desde la fecha de ultima modificacion.</td>
+</tr>
+<tr>
+<td>fecha_final</td>
+<td>date</td>
+<td></td>
+<td>Filtro para consultar las categorias hasta la fecha de ultima modificacion.</td>
+</tr>
+<tr>
+<td>filtro</td>
+<td>varchar</td>
+<td>100</td>
+<td>Filtro que puede contener el nombre o codigo o nombre de una categoría vinculado a dicho producto.</td>
+</tr>
+<tr>
+<td>categoria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Filtro que contiene el identificador de la categoria del producto.</td>
+</tr>
+<tr>
+<td>codigo_barra</td>
+<td>varchar</td>
+<td>50</td>
+<td>Filtro del codigo de barra asignado al producto.</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>varchar</td>
+<td>200</td>
+<td>Filtro del codigo del producto.</td>
+</tr>
+</tbody>
+</table>
 <p>NOTA: los campos de <code>codigo_sap</code>, <code>para_supereasy</code>, <code>para_comisariato</code>, <code>pvp_supereasy</code>, <code>pvp_comisariato</code> y <code>categoria_comisariato_id</code> solo pueden ser consultados por las respectivas empresas habilitadas. De lo contrario, el servicio retornará cada objeto JSON de producto sin estos campos.</p>
 <h3 id="obtener-un-producto">Obtener un Producto</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/producto/&lt;ID&gt;</code></p>
@@ -1532,55 +1605,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="query-parameters">Query Parameters</h2>
-<table>
-<thead>
-<tr>
-<th>Parámetro</th>
-<th>Tipo</th>
-<th>Longitud</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fecha_inicial</td>
-<td>date</td>
-<td></td>
-<td>Filtro para consultar las categorias desde la fecha de ultima modificacion.</td>
-</tr>
-<tr>
-<td>fecha_final</td>
-<td>date</td>
-<td></td>
-<td>Filtro para consultar las categorias hasta la fecha de ultima modificacion.</td>
-</tr>
-<tr>
-<td>filtro</td>
-<td>varchar</td>
-<td>100</td>
-<td>Filtro que puede contener el nombre o codigo o nombre de una categoría vinculado a dicho producto.</td>
-</tr>
-<tr>
-<td>categoria_id</td>
-<td>varchar</td>
-<td>16</td>
-<td>Filtro que contiene el identificador de la categoria del producto.</td>
-</tr>
-<tr>
-<td>codigo_barra</td>
-<td>varchar</td>
-<td>50</td>
-<td>Filtro del codigo de barra asignado al producto.</td>
-</tr>
-<tr>
-<td>codigo</td>
-<td>varchar</td>
-<td>200</td>
-<td>Filtro del codigo del producto.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="crear-un-producto">Crear un Producto</h2>
 <p>Para crear un producto se debe hacer uso de la url:</p>
 <p><code>POST https://api.contifico.com/sistema/api/v1/producto/</code></p>
@@ -1740,7 +1764,7 @@
 <td>decimal</td>
 <td>13</td>
 <td>Precio de venta 1.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>id_integracion_proveedor</td>
@@ -1782,7 +1806,7 @@
 <td>boolean</td>
 <td>1</td>
 <td>Variable de control para determina si el producto utiliza precio manual.</td>
-<td>No</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>codigo_barra</td>

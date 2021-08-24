@@ -560,6 +560,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proforma/" class="md-nav__link">
+        Proforma
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -819,7 +831,7 @@
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha que se realiza la transacción.</td>
 </tr>
 <tr>
@@ -922,6 +934,7 @@ con las distintas formas </li>
 <p>cambiando el parámetro <ID> por el id del documento (devuelto al momento de crear el documento).</p>
 </li>
 </ol>
+<p>NOTA: Para poder hacer uso del cobro de un documento mediante api, el mismo debe haber sido creado mediante api; no se pueden cobrar documentos que hayan sido creados desde la pagina web de contifico.</p>
 <p>Los tipos de cobro soportados vía API son:</p>
 <table>
 <thead>
@@ -986,7 +999,7 @@ con las distintas formas </li>
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha que se realiza la transacción.</td>
 <td>No</td>
 </tr>
@@ -1035,7 +1048,7 @@ con las distintas formas </li>
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha que se realiza la transacción.</td>
 <td>No</td>
 </tr>
@@ -1073,7 +1086,7 @@ con las distintas formas </li>
 <td>varchar</td>
 <td>15</td>
 <td>Numero de cheque en la transacción.</td>
-<td>Si</td>
+<td>No</td>
 </tr>
 <tr>
 <td>monto</td>
@@ -1085,7 +1098,7 @@ con las distintas formas </li>
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha que se realiza la transacción.</td>
 <td>No</td>
 </tr>
@@ -1108,6 +1121,7 @@ con las distintas formas </li>
 <th>Tipo</th>
 <th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
@@ -1116,30 +1130,35 @@ con las distintas formas </li>
 <td>varchar</td>
 <td>10</td>
 <td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro, "TRA" para transferencia).</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>monto</td>
 <td>decimal</td>
 <td>10</td>
 <td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>cuenta_bancaria_id</td>
+<td>varchar</td>
+<td>16</td>
 <td>id de la <a href="../banco/cuentas/#obtener-listado-de-cuentas-bancarias" title="Obtener cuentas bancarias API">cuenta bancaria</a></td>
 <td>Si</td>
-<td></td>
 </tr>
 <tr>
 <td>numero_comprobante</td>
 <td>varchar</td>
 <td>15</td>
 <td>Secuencia unica que identifica la transacción.</td>
+<td>No</td>
 </tr>
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha que se realiza la transacción.</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>

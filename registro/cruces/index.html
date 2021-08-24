@@ -518,13 +518,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#respuesta" class="md-nav__link">
-    Respuesta
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -539,35 +532,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-parameters" class="md-nav__link">
-    Query Parameters
-  </a>
-  
-    <nav class="md-nav" aria-label="Query Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#tipo-de-cruce" class="md-nav__link">
     Tipo de Cruce
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#formato-del-json_1" class="md-nav__link">
     Formato del JSON
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta_1" class="md-nav__link">
-    Respuesta
   </a>
   
 </li>
@@ -581,6 +554,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proforma/" class="md-nav__link">
+        Proforma
+      </a>
     </li>
   
 
@@ -727,13 +712,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#respuesta" class="md-nav__link">
-    Respuesta
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -748,35 +726,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-parameters" class="md-nav__link">
-    Query Parameters
-  </a>
-  
-    <nav class="md-nav" aria-label="Query Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#tipo-de-cruce" class="md-nav__link">
     Tipo de Cruce
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#formato-del-json_1" class="md-nav__link">
     Formato del JSON
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta_1" class="md-nav__link">
-    Respuesta
   </a>
   
 </li>
@@ -833,47 +791,50 @@
 <td>varchar</td>
 <td>36</td>
 <td>API Token del POS.</td>
-<td></td>
+<td>No</td>
 </tr>
 <tr>
 <td>caja_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>ID de integración de la caja del POS (opcional).</td>
-<td></td>
+<td>Si</td>
 </tr>
 <tr>
 <td>monto</td>
 <td>decimal</td>
 <td>13</td>
 <td>Valor de la transacción.</td>
-<td></td>
+<td>Si</td>
 </tr>
 <tr>
 <td>documento_id</td>
 <td>varchar</td>
 <td>16</td>
 <td>ID de integración del documento con el que se hará el cruce.</td>
-<td></td>
+<td>Si</td>
 </tr>
 <tr>
 <td>descripcion</td>
 <td>varchar</td>
 <td>300</td>
 <td>Descripción de la transacción</td>
-<td></td>
+<td>Si</td>
 </tr>
 <tr>
 <td>fecha</td>
 <td>date</td>
-<td></td>
+<td>-</td>
 <td>Fecha de la transacción</td>
-<td></td>
+<td>Si</td>
 </tr>
 </tbody>
 </table>
-<h3 id="respuesta">Respuesta</h3>
-<p>Se retorna el detalle del cruce, con la siguiente forma:</p>
+<p>NOTA: Para poder hacer uso del cruce de un documento mediante api, uno de los dos documentos a cruzar debe haber sido creado mediante API, el <code>&lt;ID&gt;</code> del documento creado desde API es el que se incluira en la url <code>POST</code>.</p>
+<!-- ### Respuesta
+Se retorna el detalle del cruce, con la siguiente forma:
+
+
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
     <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -887,59 +848,26 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<table>
-<thead>
-<tr>
-<th>Campo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>transaccion_id</td>
-<td>ID de integración de la transacción</td>
-</tr>
-<tr>
-<td>giftcard_id</td>
-<td>ID de integración de giftcard (en caso de que aplique)</td>
-</tr>
-<tr>
-<td>monto</td>
-<td>Valor del cruce</td>
-</tr>
-<tr>
-<td>fecha</td>
-<td>Fecha del cruce</td>
-</tr>
-<tr>
-<td>documento_id</td>
-<td>ID del documento al que se aplicó el cruce</td>
-</tr>
-<tr>
-<td>caja_id</td>
-<td>ID de integración de la caja del POS (en caso de que aplique)</td>
-</tr>
-<tr>
-<td>descripción</td>
-<td>Descripción de la transacción</td>
-</tr>
-<tr>
-<td>cuenta_id</td>
-<td>ID de integración de la cuenta contable</td>
-</tr>
-<tr>
-<td>id</td>
-<td>ID de integración del cruce</td>
-</tr>
-</tbody>
-</table>
+
+
+Campo | Descripción 
+----- | ---- 
+transaccion_id | ID de integración de la transacción
+giftcard_id | ID de integración de giftcard (en caso de que aplique)
+monto | Valor del cruce
+fecha | Fecha del cruce
+documento_id | ID del documento al que se aplicó el cruce
+caja_id | ID de integración de la caja del POS (en caso de que aplique)
+descripción | Descripción de la transacción
+cuenta_id | ID de integración de la cuenta contable
+id | ID de integración del cruce -->
+
 <h2 id="cruce-de-un-documento-con-una-cuenta-contable">Cruce de un Documento con una Cuenta Contable</h2>
 <p>Se permite registrar un cruce de un documento con una cuenta contable utilizando el siguiente endpoint:</p>
 <div class="codehilite"><pre><span></span><code>`POST https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cruce_cuenta/`
 </code></pre></div>
 
 <p>donde el parámetro <code>&lt;ID&gt;</code> es el ID de integración del documento (devuelto al momento de su creación).</p>
-<h3 id="query-parameters">Query Parameters</h3>
 <h4 id="tipo-de-cruce">Tipo de Cruce</h4>
 <p>El tipo de cruce con cuenta contable está determinado por uno de los valores de la siguiente table:</p>
 <table>
@@ -1007,39 +935,63 @@
 <table>
 <thead>
 <tr>
-<th>Campo</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>pos</td>
-<td>API Token del POS</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>No</td>
 </tr>
 <tr>
 <td>caja_id</td>
-<td>ID de integración de la caja del POS (opcional)</td>
+<td>varchar</td>
+<td>16</td>
+<td>ID de integración de la caja del POS (opcional).</td>
+<td>No</td>
 </tr>
 <tr>
 <td>monto</td>
-<td>Valor de la transacción</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor de la transacción.</td>
+<td>Si</td>
 </tr>
 <tr>
-<td>descripción</td>
+<td>descripcion</td>
+<td>varchar</td>
+<td>300</td>
 <td>Descripción de la transacción</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>fecha</td>
+<td>date</td>
+<td>-</td>
 <td>Fecha de la transacción</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>cuenta_id</td>
-<td>ID de integración de la cuenta contable</td>
+<td>varchar</td>
+<td>16</td>
+<td>Indentificador de la cuenta contable en el sistema</td>
+<td>Opcional</td>
 </tr>
 </tbody>
 </table>
-<h3 id="respuesta_1">Respuesta</h3>
-<p>Se retorna el detalle del cruce, con la siguiente forma:</p>
+<p>NOTA: Para los cruces con un servicio de delivery (tabla tipo cruce), el campo de cuenta_id no es necesario, pero el modeloAPI debe tener configurada las respectivas cuentas para dicho delivery en la pagina web de contifico, si no tiene configuradas estas cuentas por favor contactar con soporte contifico.</p>
+<!-- ### Respuesta
+Se retorna el detalle del cruce, con la siguiente forma:
+
+
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
     <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -1053,52 +1005,19 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<table>
-<thead>
-<tr>
-<th>Campo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>transaccion_id</td>
-<td>ID de integración de la transacción</td>
-</tr>
-<tr>
-<td>giftcard_id</td>
-<td>ID de integración de giftcard (en caso de que aplique)</td>
-</tr>
-<tr>
-<td>monto</td>
-<td>Valor del cruce</td>
-</tr>
-<tr>
-<td>fecha</td>
-<td>Fecha del cruce</td>
-</tr>
-<tr>
-<td>documento_id</td>
-<td>ID del documento al que se aplicó el cruce</td>
-</tr>
-<tr>
-<td>caja_id</td>
-<td>ID de integración de la caja del POS (en caso de que aplique)</td>
-</tr>
-<tr>
-<td>descripción</td>
-<td>Descripción de la transacción</td>
-</tr>
-<tr>
-<td>cuenta_id</td>
-<td>ID de integración de la cuenta contable</td>
-</tr>
-<tr>
-<td>id</td>
-<td>ID de integración del cruce</td>
-</tr>
-</tbody>
-</table>
+
+
+Campo | Descripción 
+----- | ---- 
+transaccion_id | ID de integración de la transacción
+giftcard_id | ID de integración de giftcard (en caso de que aplique)
+monto | Valor del cruce
+fecha | Fecha del cruce
+documento_id | ID del documento al que se aplicó el cruce
+caja_id | ID de integración de la caja del POS (en caso de que aplique)
+descripción | Descripción de la transacción
+cuenta_id | ID de integración de la cuenta contable
+id | ID de integración del cruce -->
                 
               
               
@@ -1134,13 +1053,13 @@
       
       
         
-        <a href="../../banco/cuentas/" class="md-footer__link md-footer__link--next" aria-label="Next: Consultar" rel="next">
+        <a href="../proforma/" class="md-footer__link md-footer__link--next" aria-label="Next: Proforma" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Consultar
+              Proforma
             </div>
           </div>
           <div class="md-footer__button md-icon">

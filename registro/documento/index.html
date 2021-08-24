@@ -482,6 +482,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-un-documento" class="md-nav__link">
     Obtener un Documento
@@ -567,6 +580,18 @@
     <li class="md-nav__item">
       <a href="../cruces/" class="md-nav__link">
         Cruces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proforma/" class="md-nav__link">
+        Proforma
       </a>
     </li>
   
@@ -714,6 +739,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    Query Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Parameters">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#obtener-un-documento" class="md-nav__link">
     Obtener un Documento
@@ -778,60 +816,94 @@
 <h3 id="obtener-listado-de-documentos">Obtener Listado de Documentos</h3>
 <p>Para obtener todos los documentos de la cuenta hacemos uso del endpoint:</p>
 <p><code>GET https://api.contifico.com/sistema/api/v1/registro/documento/</code></p>
-<p>podemos filtrar resultados por medio de querystring, enviando los parámetros:</p>
+<h2 id="query-parameters">Query Parameters</h2>
 <table>
 <thead>
 <tr>
 <th>Parámetro</th>
-<th>Valores admitidos</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tipo_registro</td>
-<td>CLI -&gt; Cliente <br> PRO -&gt; Proveedor</td>
+<td>varchar</td>
+<td>3</td>
+<td>CLI -&gt; Cliente <br> PRO -&gt; Proveedor.</td>
 </tr>
 <tr>
 <td>tipo</td>
-<td>tipo de documento a consultar</td>
+<td>varchar</td>
+<td>3</td>
+<td>tipo de documento a consultar (FAC:factura).</td>
 </tr>
 <tr>
 <td>fecha_emision</td>
-<td>fecha de emisión del documento</td>
+<td>date</td>
+<td>-</td>
+<td>fecha de emisión del documento.</td>
 </tr>
 <tr>
 <td>fecha_vencimiento</td>
-<td>fecha de vencimiento del documento</td>
+<td>date</td>
+<td>-</td>
+<td>fecha de vencimiento del documento.</td>
 </tr>
 <tr>
 <td>fecha_creacion</td>
-<td>fecha de creación del documento</td>
+<td>date</td>
+<td>-</td>
+<td>fecha de creación del documento.</td>
 </tr>
 <tr>
 <td>persona_identificacion</td>
-<td>identificación de la persona del documento</td>
+<td>varchar</td>
+<td>200</td>
+<td>identificación de la persona del documento.</td>
 </tr>
 <tr>
 <td>result_size</td>
-<td>cantidad de resultados por consulta</td>
+<td>int</td>
+<td></td>
+<td>cantidad de resultados por consulta.</td>
 </tr>
 <tr>
 <td>result_page</td>
-<td>número de página que se quiere obtener</td>
+<td>int</td>
+<td></td>
+<td>número de página que se quiere obtener.</td>
 </tr>
 <tr>
 <td>fecha_inicial</td>
+<td>date</td>
+<td>-</td>
 <td>Filtro de fecha inicial con respecto a la fecha de emisión.</td>
 </tr>
 <tr>
 <td>fecha_final</td>
+<td>date</td>
+<td>-</td>
 <td>Filtro de fecha final con respecto a la fecha de emisión.</td>
+</tr>
+<tr>
+<td>persona_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Filtro apartir de la persona asociada al documento <code>&lt;ID&gt;</code>.</td>
+</tr>
+<tr>
+<td>bodega_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Filtro apartir de la bodega asociada al documento <code>&lt;ID&gt;</code>.</td>
 </tr>
 </tbody>
 </table>
-<p>por ejemplo:</p>
+<p>Ejemplo:</p>
 <p><code>GET https://api.contifico.com/sistema/api/v1/registro/documento/?tipo_registro=CLI&amp;fecha_emision=24/01/2019</code></p>
-<p>Nos devolverá todos los documentos de tipo cliente emitidos el 24/01/2019</p>
+<p>Nos devolverá todos los documentos de tipo cliente emitidos el 24/01/2019.</p>
 <h3 id="obtener-un-documento">Obtener un Documento</h3>
 <p><code>GET https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;</code></p>
 <p>Devuelve un documento con el <code>&lt;ID&gt;</code> solicitado.</p>
@@ -839,7 +911,7 @@
 <p>Ejemplo:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="s2">&quot;1200.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="s2">&quot;12.00&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tarjeta_consumo_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;vendedor&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -854,31 +926,14 @@
     <span class="nt">&quot;servicio&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
     <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
+            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RZxg87rxLh9Mb1pV&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
             <span class="nt">&quot;porcentaje_iva&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-            <span class="nt">&quot;promocion_integracionId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="s2">&quot;500.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MRYWb4kJoHz0aZ1m&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;formula_asociada&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;peso&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;centro_costo_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;valor_ice&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;nombre_manual&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;formula&quot;</span><span class="p">:</span> <span class="p">[],</span>
-            <span class="nt">&quot;porcentaje_ice&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;personas_asociadas&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;serie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;codigo_bien&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;producto_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Chocolate blanco&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;volumen&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;color_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="kc">null</span>  
+            <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+            <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+            <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+            <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span>  
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="nt">&quot;referencia&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -912,7 +967,6 @@
     <span class="nt">&quot;orden_domicilio_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;fecha_vencimiento&quot;</span><span class="p">:</span> <span class="s2">&quot;17/05/2021&quot;</span><span class="p">,</span>
     <span class="nt">&quot;documento_relacionado_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;reserva_relacionada&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;17/05/2021&quot;</span><span class="p">,</span>
     <span class="nt">&quot;vendedor_identificacion&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;documento&quot;</span><span class="p">:</span> <span class="s2">&quot;001-001-000000251&quot;</span><span class="p">,</span>
@@ -922,37 +976,14 @@
     <span class="nt">&quot;hora_emision&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;url_xml&quot;</span><span class="p">:</span> <span class="s2">&quot;http://capacitacion.desarrollo.contifico.com/sistema/registro/documento/xml/NABjszT3/&quot;</span><span class="p">,</span>   
     <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;adicional1_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;personaasociada_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;AV. AMAZONAS N36227 Y NACIONES UNIDAS&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P3RBe3KA52uReLJr&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_vendedor&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;CORPORACION EL ROSADO S.A.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nombre_comercial&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;es_corporativo&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;origen&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0990004196001&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;banco_codigo_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;agomez@contifico.com&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;adicional3_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_cliente&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;adicional1_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;adicional3_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;aplicar_cupo&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;adicional2_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_empleado&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;es_proveedor&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;0992697553&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;adicional4_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipo_cuenta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;adicional4_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;placa&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;adicional2_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;1716271679&quot;</span>
+        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Nombres del Cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;0988800001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;Direccion cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;cliente@contifico.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">},</span>
     <span class="nt">&quot;saldo&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.00&quot;</span><span class="p">,</span>
     <span class="nt">&quot;entregado&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -974,22 +1005,474 @@
 <table>
 <thead>
 <tr>
-<th>Contenido</th>
-<th>Representacion</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"cobros": [{ .. }]</td>
-<td>Contiene los cobros realizados en el documento.</td>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
 </tr>
 <tr>
-<td>"detalles": [{ .. }]</td>
-<td>Contiene los detalles del documento, bien/servicio agregados al documento.</td>
+<td>tarjeta_consumo_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la tarjeta de consumo en el sistema.</td>
 </tr>
 <tr>
-<td>"cliente": { .. }</td>
-<td>El cliente que esta asignado al documento.</td>
+<td>vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>Objeto de la persona vendedor.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+</tr>
+<tr>
+<td>vendedor_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la persona vendedor en el sistema.</td>
+</tr>
+<tr>
+<td>logistica</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el documento esta marcado para logistica (Modulo Adicional).</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+</tr>
+<tr>
+<td>ice</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del ic del documento.</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del documento en el sistema.</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items a facturar del documento.</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+</tr>
+<tr>
+<td>referencia</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+</tr>
+<tr>
+<td>saldo_anticipo</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor del producto en especifico.</td>
+</tr>
+<tr>
+<td>tipo_domicilio</td>
+<td>varchar</td>
+<td>2</td>
+<td>Campo para asociacion de delivery del documento (UB:uber, GL:glovo) (Modulo Adicional).</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Numero de autorizacion del documento.</td>
+</tr>
+<tr>
+<td>hora_evento</td>
+<td>time</td>
+<td>-</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+</tr>
+<tr>
+<td>fecha_creacion</td>
+<td>date</td>
+<td></td>
+<td>Fecha de creacion del documento.</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los cobros del documento.</td>
+</tr>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+</tr>
+<tr>
+<td>numero_comprobante</td>
+<td>varchar</td>
+<td>15</td>
+<td>Secuencia unica que identifica la transacción.</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+</tr>
+<tr>
+<td>numero_tarjeta</td>
+<td>varchar</td>
+<td>10</td>
+<td>Numero de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha que se realiza la transacción.</td>
+</tr>
+<tr>
+<td>nombre_tarjeta</td>
+<td>varchar</td>
+<td>300</td>
+<td>Nombre de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>tipo_banco</td>
+<td>char</td>
+<td>300</td>
+<td>Nombre del banco supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>cuenta_bancaria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la cuenta bancaria en el sistema.</td>
+</tr>
+<tr>
+<td>bin_tarjeta</td>
+<td>varchar</td>
+<td>10</td>
+<td>Numero de tarjeta bancaria supereasy (Modulo adicional).</td>
+</tr>
+<tr>
+<td>monto_propina</td>
+<td>decimal</td>
+<td>10</td>
+<td>Represeta el valor de la propina por un servicio.</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+</tr>
+<tr>
+<td>fecha_cheque</td>
+<td>Date</td>
+<td>-</td>
+<td>Fecha del cheque.</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+</tr>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del cobro en el sistema.</td>
+</tr>
+<tr>
+<td>tipo_descuento</td>
+<td>varchar</td>
+<td>1</td>
+<td>Identificador del tipo de descuento que tiene asignado el documento (P:porcentual, U:unitario).</td>
+</tr>
+<tr>
+<td>orden_domicilio_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Id de la orden de delivery (Modulo adicional).</td>
+</tr>
+<tr>
+<td>fecha_vencimiento</td>
+<td>Date</td>
+<td>-</td>
+<td>Fecha limite de vigencia del documento.</td>
+</tr>
+<tr>
+<td>documento_relacionado_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del documento relacion al documento actual el sistema.</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+</tr>
+<tr>
+<td>vendedor_identificacion</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula del vendedor asignado al documento.</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+</tr>
+<tr>
+<td>firmado</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indicador si el documento esta firmado.</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+</tr>
+<tr>
+<td>hora_emision</td>
+<td>Time</td>
+<td>-</td>
+<td>Hora de emision del documento.</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+</tr>
+<tr>
+<td>saldo</td>
+<td>decimal</td>
+<td>10</td>
+<td>Identificador del tipo de descuento que tiene asignado el documento (P:porcentual, U:unitario).</td>
+</tr>
+<tr>
+<td>entregado</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indica si el documento ha sido entregado.</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>3</td>
+<td>Indica el tipo de registro del documento (CLI:cliente, PRO:proveedor).</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+</tr>
+<tr>
+<td>persona_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Indentificador de la persona asociada al documento.</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+</tr>
+<tr>
+<td>fecha_evento</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha evento del documento (Modulo Adicional).</td>
+</tr>
+<tr>
+<td>electronico</td>
+<td>boolean</td>
+<td>-</td>
+<td>Indica si el documento es electronico.</td>
+</tr>
+<tr>
+<td>direccion_evento</td>
+<td>varchar</td>
+<td>300</td>
+<td>Direccion del evento del documento (Modulo Adicional).</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>varchar</td>
+<td>13</td>
+<td>Placa de la persona si es de tipo placa.</td>
+</tr>
+<tr>
+<td>pax</td>
+<td>int</td>
+<td></td>
+<td>pax del documento (Modulo Adicional).</td>
+</tr>
+<tr>
+<td>anulado</td>
+<td>boolean</td>
+<td>1</td>
+<td>Indica si el documento esta anulado.</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
 </tr>
 </tbody>
 </table>
@@ -1067,6 +1550,292 @@
 <span class="p">}</span>
 </code></pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Numero de autorizacion del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del vendedor del documento</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items facturados del documento</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los cobros del documento.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
 <h3 id="documento-tipo-proveedor">Documento Tipo Proveedor</h3>
 <p>Este servicio permite agregar un nuevo documento a Contifico.</p>
 <p>Para crear un documento tipo proveedor se debe hacer uso de la url:</p>
@@ -1124,54 +1893,312 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>La estructura del json es parecida al documento tipo cliente sin embargo se tiene que tener en cuenta:</p>
 <table>
 <thead>
 <tr>
 <th>Parámetro</th>
-<th>Valor</th>
+<th>Tipo</th>
+<th>Longitud</th>
 <th>Descripción</th>
+<th>Obligatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"tipo_documento"</td>
-<td>"FAC"</td>
-<td>Sólo se aceptan documentos tipo "Factura"</td>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>No</td>
 </tr>
 <tr>
-<td>"tipo_registro"</td>
-<td>"PRO"</td>
-<td>Especificar el campo "tipo_registro" como "PRO"</td>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>3</td>
+<td>Indica el tipo de registro del documento (CLI:cliente, PRO:proveedor).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Numero de autorizacion del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del vendedor del documento</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items facturados del documento</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los cobros del documento.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+<td>Si</td>
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th>Contenido</th>
-<th>Representacion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>"cliente": { .. }</td>
-<td>El cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
-</tr>
-<tr>
-<td>"vendedor": { .. }</td>
-<td>El vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea.</td>
-</tr>
-<tr>
-<td>"detalles": [{ .. }]</td>
-<td>Contiene los detalles del documento, bien/servicio agregados al documento.</td>
-</tr>
-<tr>
-<td>"cobros": [{ .. }]</td>
-<td>Contiene los cobros realizados en el documento. Se crean los cobros</td>
-</tr>
-</tbody>
-</table>
+<!-- Parámetro | Valor | Descripción |
+--------- | ----- | ----------- |
+"tipo_documento" | "FAC" | Sólo se aceptan documentos tipo "Factura" |
+"tipo_registro" | "PRO" |  Especificar el campo "tipo_registro" como "PRO" |
+
+
+Contenido | Representacion |
+--------- | -------------- |
+"cliente": { .. } | El cliente que esta asignado al documento. Si no existe por ruc/cedula, lo crea. |
+"vendedor": { .. } | El vendedor que esta asignado al documento. Si no existe por ruc/cedula, lo crea. |
+"detalles": [{ .. }] | Contiene los detalles del documento, bien/servicio agregados al documento.  |
+"cobros": [{ .. }] | Contiene los cobros realizados en el documento. Se crean los cobros | -->
+
 <h2 id="actualizacion">Actualización</h2>
 <p>Este servicio permite modificar un documento creado por API en Contífico.</p>
 <p>Para modificar un documento se debe hacer uso de la url:</p>
@@ -1221,24 +2248,319 @@
     <span class="nt">&quot;id_caja&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;subtotal_12&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.0&quot;</span><span class="p">,</span>
     <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;2745486&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0990004196001&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;CORPORACION EL ROSADO S.A.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;GUAYAS / GUAYAQUIL / AV. 9 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;es_cliente&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;es_empleado&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;agomez@contifico.com&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;es_vendedor&quot;</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Nombres del Cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;0988800001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;Direccion cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;cliente@contifico.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Esto modificará el documento con el id "7ujk93jdhsieu839" con los datos enviados en el PUT.</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del documento a modificar</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>3</td>
+<td>Indica el tipo de registro del documento (CLI:cliente, PRO:proveedor).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Numero de autorizacion del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del vendedor del documento</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items facturados del documento</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los cobros del documento.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
+<!-- Esto modificará el documento con el id "7ujk93jdhsieu839" con los datos enviados en el PUT. -->
                 
               
               
