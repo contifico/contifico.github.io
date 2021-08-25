@@ -529,6 +529,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#documento-tipo-prefactura" class="md-nav__link">
+    Documento Tipo Prefactura
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -580,18 +587,6 @@
     <li class="md-nav__item">
       <a href="../cruces/" class="md-nav__link">
         Cruces
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../proforma/" class="md-nav__link">
-        Proforma
       </a>
     </li>
   
@@ -782,6 +777,13 @@
           <li class="md-nav__item">
   <a href="#documento-tipo-proveedor" class="md-nav__link">
     Documento Tipo Proveedor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documento-tipo-prefactura" class="md-nav__link">
+    Documento Tipo Prefactura
   </a>
   
 </li>
@@ -2199,6 +2201,298 @@ Contenido | Representacion |
 "detalles": [{ .. }] | Contiene los detalles del documento, bien/servicio agregados al documento.  |
 "cobros": [{ .. }] | Contiene los cobros realizados en el documento. Se crean los cobros | -->
 
+<h3 id="documento-tipo-prefactura">Documento Tipo Prefactura</h3>
+<p>Este servicio permite agregar una nueva prefactura a Contifico.</p>
+<p>Para crear una Prefactura se debe hacer uso de la url:</p>
+<p><code>POST https://api.contifico.com/sistema/api/v1/documento/</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;ffc3de27-fb4c-48b4-a06e-a129cf37ea99&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;26/01/2016&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;PRE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Andres Gomez&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;vendedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;DETALLE PREFACTURA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;subtotal_0&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+    <span class="nt">&quot;subtotal_12&quot;</span><span class="p">:</span> <span class="mf">125.00</span><span class="p">,</span>
+    <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="mf">20.00</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mf">140.00</span><span class="p">,</span>
+    <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="s2">&quot;165582/165581/165580/165579/165578/&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4LmavQwkcENe3No&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+        <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="mf">125.00</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_iva&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="mf">125.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>varchar</td>
+<td>3</td>
+<td>Indica el tipo de registro del documento (CLI:cliente, PRO:proveedor).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del vendedor del documento</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items facturados del documento</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
+<p>NOTA: El json enviado es similar al de una factura de cliente; Se debe indicar el campo <code>tipo_documento</code> en "PRE", el campo de numero de documento es asignado automaticamente por la secuencia actual de prefacturas registradas en el sistema.</p>
 <h2 id="actualizacion">Actualización</h2>
 <p>Este servicio permite modificar un documento creado por API en Contífico.</p>
 <p>Para modificar un documento se debe hacer uso de la url:</p>
