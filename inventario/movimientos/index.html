@@ -780,7 +780,7 @@
 <h2 id="obtener-listado-de-movimientos-de-inventario">Obtener listado de Movimientos de Inventario</h2>
 <p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
 <p>Devuelve un listado de los movimientos de inventario.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR 202006000017&quot;</span><span class="p">,</span>
         <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MZN5wbo2fKaxEO0g&quot;</span><span class="p">,</span>
@@ -846,7 +846,6 @@
     <span class="err">...</span>
 <span class="p">]</span>
 </code></pre></div>
-
 <table>
 <thead>
 <tr>
@@ -995,7 +994,7 @@
 <h2 id="obtener-un-movimiento-de-inventario">Obtener un Movimiento de Inventario</h2>
 <p><code>GET https://api.contifico.com/sistema/api/v1/movimiento-inventario/&lt;ID&gt;</code></p>
 <p>Devuelve un movimiento de inventario con el <code>&lt;ID&gt;</code> solicitado.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR 202006000017&quot;</span><span class="p">,</span>
     <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MZN5wbo2fKaxEO0g&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
@@ -1027,7 +1026,6 @@
     <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <table>
 <thead>
 <tr>
@@ -1151,7 +1149,7 @@
 <h2 id="creacion">Creación</h2>
 <h3 id="crear-un-ingreso-de-inventario">Crear un Ingreso de Inventario</h3>
 <p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;ING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;01/01/2019&quot;</span><span class="p">,</span>
     <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ljMEegJAHq0dQ5g3&quot;</span><span class="p">,</span>
@@ -1170,10 +1168,9 @@
     <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle ingreso&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="crear-un-egreso-de-inventario">Crear un Egreso de Inventario</h3>
 <p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code>  </p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;EGR&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/02/2017&quot;</span><span class="p">,</span>
     <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;lLPEegJAHq0dQty8&quot;</span><span class="p">,</span>
@@ -1186,10 +1183,9 @@
     <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;detalle egreso&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="crear-un-traslado-de-inventario">Crear un Traslado de Inventario</h3>
 <p><code>POST https://api.contifico.com/sistema/api/v1/movimiento-inventario/</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA 201705000002&quot;</span><span class="p">,</span>
     <span class="nt">&quot;bodega_id&quot;</span><span class="p">:</span> <span class="s2">&quot;O9pgen5AoTXOdNQx&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;TRA&quot;</span><span class="p">,</span>
@@ -1205,7 +1201,6 @@
     <span class="nt">&quot;codigo_interno&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <table>
 <thead>
 <tr>
