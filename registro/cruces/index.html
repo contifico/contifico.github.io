@@ -792,7 +792,7 @@
 <td>varchar</td>
 <td>36</td>
 <td>API Token del POS.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>caja_id</td>
@@ -804,8 +804,8 @@
 <tr>
 <td>monto</td>
 <td>decimal</td>
-<td>13</td>
-<td>Valor de la transacción.</td>
+<td>12</td>
+<td>Valor de la transacción (10 int, 2 decimal)max.</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -848,6 +848,61 @@
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>  
 <span class="p">}</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>ID de integración de la caja del POS (opcional).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>12</td>
+<td>Valor de la transacción (10 int, 2 decimal)max.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>ID de integración del documento con el que se hará el cruce.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>varchar</td>
+<td>300</td>
+<td>Descripción de la transacción</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de la transacción</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
 <p>NOTA: Para el cruce de un documento con una nota de credito, Ambos documento deben haber sido creados mediante API</p>
 <h2 id="cruce-de-un-documento-con-una-cuenta-contable">Cruce de un Documento con una Cuenta Contable</h2>
 <p>Se permite registrar un cruce de un documento con una cuenta contable utilizando el siguiente endpoint:</p>
@@ -933,7 +988,7 @@
 <td>varchar</td>
 <td>36</td>
 <td>API Token del POS.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>caja_id</td>
@@ -945,8 +1000,8 @@
 <tr>
 <td>monto</td>
 <td>decimal</td>
-<td>13</td>
-<td>Valor de la transacción.</td>
+<td>12</td>
+<td>Valor de la transacción (10 int, 2 decimal)max.</td>
 <td>Si</td>
 </tr>
 <tr>

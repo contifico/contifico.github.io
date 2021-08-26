@@ -949,8 +949,8 @@
 <tr>
 <td>cantidad</td>
 <td>decimal</td>
-<td>13</td>
-<td>Cantidad del producto en el detalle de la guia.</td>
+<td>20</td>
+<td>Cantidad del producto en el detalle de la guia (14 int, 6 decimal)max.</td>
 </tr>
 <tr>
 <td>serie</td>
@@ -1173,7 +1173,7 @@
 <td>varchar</td>
 <td>16</td>
 <td>Identificador del documento asociado a la guia en el sistema.</td>
-<td>No</td>
+<td>Opcional</td>
 </tr>
 <tr>
 <td>codigo_destino</td>
@@ -1220,8 +1220,8 @@
 <tr>
 <td>cantidad</td>
 <td>decimal</td>
-<td>13</td>
-<td>Cantidad del producto en el detalle de la guia.</td>
+<td>20</td>
+<td>Cantidad del producto en el detalle de la guia (14 int, 6 decimal)max.</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1261,6 +1261,7 @@
 </tr>
 </tbody>
 </table>
+<p>NOTA: Campos como <code>fecha_inicio</code>, <code>fecha_fin</code>, son obligatorios para la correcta generacion de la guia en la pagina web. El campo <code>documento_id</code> debe enviarse cuando se envian detalles en la guia, los productos de los detalles deben ser los que tenga registrado el documento a asociar. Campos como <code>direccion</code>, <code>ruta</code>, <code>motivo</code>, <code>codigo_destino</code>, <code>direccion_partida</code> aunque no sean obligatorios para la creacion mediante api, son obligatorios para la correcta autorizacion de la guia en la pagina web.</p>
                 
               
               
