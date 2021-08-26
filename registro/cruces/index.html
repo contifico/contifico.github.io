@@ -524,6 +524,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cruce-de-un-documento-con-una-nota-de-credito" class="md-nav__link">
+    Cruce de un Documento con una Nota de credito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cruce-de-un-documento-con-una-cuenta-contable" class="md-nav__link">
     Cruce de un Documento con una Cuenta Contable
   </a>
@@ -706,6 +713,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cruce-de-un-documento-con-una-nota-de-credito" class="md-nav__link">
+    Cruce de un Documento con una Nota de credito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cruce-de-un-documento-con-una-cuenta-contable" class="md-nav__link">
     Cruce de un Documento con una Cuenta Contable
   </a>
@@ -818,40 +832,28 @@
 </tbody>
 </table>
 <p>NOTA: Para poder hacer uso del cruce de un documento mediante api, uno de los dos documentos a cruzar debe haber sido creado mediante API, el <code>&lt;ID&gt;</code> del documento creado desde API es el que se incluira en la url <code>POST</code>.</p>
-<!-- ### Respuesta
-Se retorna el detalle del cruce, con la siguiente forma:
-
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrK&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Cruce de Documento con Cuenta&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="s2">&quot;k0pZeVnxDYsPeGWX&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-Campo | Descripción 
------ | ---- 
-transaccion_id | ID de integración de la transacción
-giftcard_id | ID de integración de giftcard (en caso de que aplique)
-monto | Valor del cruce
-fecha | Fecha del cruce
-documento_id | ID del documento al que se aplicó el cruce
-caja_id | ID de integración de la caja del POS (en caso de que aplique)
-descripción | Descripción de la transacción
-cuenta_id | ID de integración de la cuenta contable
-id | ID de integración del cruce -->
-
-<h2 id="cruce-de-un-documento-con-una-cuenta-contable">Cruce de un Documento con una Cuenta Contable</h2>
+<h2 id="cruce-de-un-documento-con-una-nota-de-credito">Cruce de un Documento con una Nota de credito</h2>
 <p>Se permite registrar un cruce de un documento con una cuenta contable utilizando el siguiente endpoint:</p>
 <div class="codehilite"><pre><span></span><code>`POST https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cruce_cuenta/`
 </code></pre></div>
 
 <p>donde el parámetro <code>&lt;ID&gt;</code> es el ID de integración del documento (devuelto al momento de su creación).</p>
+<p>El campo <code>documento_id</code> debe indicar el ID de integracion de la nota de credito a cruzar</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;e4ee7f87-471c-4110-8c2f-15dae1e44ac4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu830&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;20.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7ujk93jdhsieu831&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descripcion&quot;</span> <span class="p">:</span> <span class="s2">&quot;Cruce de Documento&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>  
+<span class="p">}</span>
+</code></pre></div>
+<p>NOTA: Para el cruce de un documento con una nota de credito, Ambos documento deben haber sido creados mediante API</p>
+<h2 id="cruce-de-un-documento-con-una-cuenta-contable">Cruce de un Documento con una Cuenta Contable</h2>
+<p>Se permite registrar un cruce de un documento con una cuenta contable utilizando el siguiente endpoint:</p>
+<div class="codehilite"><pre><span></span><code>`POST https://api.contifico.com/sistema/api/v1/documento/&lt;ID&gt;/cruce_cuenta/`
+</code></pre></div>
+
 <h4 id="tipo-de-cruce">Tipo de Cruce</h4>
 <p>El tipo de cruce con cuenta contable está determinado por uno de los valores de la siguiente table:</p>
 <table>
@@ -971,33 +973,6 @@ id | ID de integración del cruce -->
 </tbody>
 </table>
 <p>NOTA: Para los cruces con un servicio de delivery (tabla tipo cruce), el campo de cuenta_id no es necesario, pero el modeloAPI debe tener configurada las respectivas cuentas para dicho delivery en la pagina web de contifico, si no tiene configuradas estas cuentas por favor contactar con soporte contifico.</p>
-<!-- ### Respuesta
-Se retorna el detalle del cruce, con la siguiente forma:
-
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;transaccion_id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;giftcard_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;31/07/2020&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrK&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x4Lmavknkcyb3NrL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;Cruce de Documento con Cuenta&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;cuenta_id&quot;</span><span class="p">:</span> <span class="s2">&quot;k0pZeVnxDYsPeGWX&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;291qdG27ZFLbN8jG&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-Campo | Descripción 
------ | ---- 
-transaccion_id | ID de integración de la transacción
-giftcard_id | ID de integración de giftcard (en caso de que aplique)
-monto | Valor del cruce
-fecha | Fecha del cruce
-documento_id | ID del documento al que se aplicó el cruce
-caja_id | ID de integración de la caja del POS (en caso de que aplique)
-descripción | Descripción de la transacción
-cuenta_id | ID de integración de la cuenta contable
-id | ID de integración del cruce -->
                 
               
               

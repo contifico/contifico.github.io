@@ -493,6 +493,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documento-autorizado-externo" class="md-nav__link">
+    Documento Autorizado Externo
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -662,6 +669,13 @@
         <li class="md-nav__item">
   <a href="#enviar-al-sri-documentos-electronicos" class="md-nav__link">
     Enviar al SRI Documentos Electrónicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documento-autorizado-externo" class="md-nav__link">
+    Documento Autorizado Externo
   </a>
   
 </li>
@@ -1062,6 +1076,364 @@
 <p>Este servicio permite enviar documentos electrónicos creados en Contifico de manera manual al SRI.</p>
 <p>Se debe usar el metodo PUT y adjuntar el ID del documento. No se debe enviar el JSON nuevamente.</p>
 <p>Adicional a esto, Contifico posee un script que envia automaticamente los documentos pendientes al SRI cada hora.</p>
+<h2 id="documento-autorizado-externo">Documento Autorizado Externo</h2>
+<p><code>POST https://api.contifico.com/sistema/api/v1/documento/</code></p>
+<p>Este servicio permite registrar un documento autorizado por una entidad ajena a contifico .</p>
+<p>El cuerpo del json debe tener la siguiente forma:</p>
+<p>La <code>autorizacion</code> debe ser la indicada en la autorizacion electronica del documento externo.</p>
+<blockquote>
+<p>Ejemplo:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;pos&quot;</span> <span class="p">:</span> <span class="s2">&quot;ceaa9097-1d76-4eb8-0000-6f412fa0297b&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fecha_emision&quot;</span><span class="p">:</span> <span class="s2">&quot;01/11/2015&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;FAC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;documento&quot;</span><span class="p">:</span> <span class="s2">&quot;001-001-000008089&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;autorizacion&quot;</span><span class="p">:</span> <span class="s2">&quot;0123456789&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0922054366&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Nombres del Cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;0988800001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;Direccion cliente&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;cliente@contifico.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;vendedor&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ruc&quot;</span><span class="p">:</span> <span class="s2">&quot;0904728680001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0904728680&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;razon_social&quot;</span><span class="p">:</span> <span class="s2">&quot;Nombres del Vendedor&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;telefonos&quot;</span><span class="p">:</span> <span class="s2">&quot;5104910&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;direccion&quot;</span><span class="p">:</span> <span class="s2">&quot;direccion del vendedor&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;vendedor@contifico.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;es_extranjero&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;descripcion&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTURA 8040&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;subtotal_0&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+    <span class="nt">&quot;subtotal_12&quot;</span><span class="p">:</span> <span class="mf">1.35</span><span class="p">,</span>
+    <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="mf">0.16</span><span class="p">,</span>
+    <span class="nt">&quot;servicio&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mf">1.51</span><span class="p">,</span>
+    <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;adicional2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;detalles&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;RZxg87rxLh9Mb1pV&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+        <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_iva&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;producto_id&quot;</span><span class="p">:</span> <span class="s2">&quot;YqxgeprxLh9981cU&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cantidad&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+        <span class="nt">&quot;precio&quot;</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_iva&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">,</span>
+        <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;cobros&quot;</span><span class="p">:[{</span>
+      <span class="nt">&quot;forma_cobro&quot;</span> <span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;monto&quot;</span> <span class="p">:</span> <span class="mf">1.51</span><span class="p">,</span>
+      <span class="nt">&quot;numero_cheque&quot;</span> <span class="p">:</span> <span class="s2">&quot;4567897&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;tipo_ping&quot;</span> <span class="p">:</span> <span class="s2">&quot;D&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Longitud</th>
+<th>Descripción</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos</td>
+<td>varchar</td>
+<td>36</td>
+<td>API Token del POS.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>fecha_emision</td>
+<td>date</td>
+<td>-</td>
+<td>Fecha de emision del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>varchar</td>
+<td>3</td>
+<td>Tipo de registro del documento (FAC:factura).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>documento</td>
+<td>varchar</td>
+<td>17</td>
+<td>Numero del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar</td>
+<td>1</td>
+<td>Indicador del estado del documento (P:pendiente, C:cobrado, G:pagado, A:anulado, E:generado, F:facturado).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>autorizacion</td>
+<td>varchar</td>
+<td>49</td>
+<td>Numero de autorizacion del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>caja_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la caja desde la cual se realiza la transaccion.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>cliente</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del cliente del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruc</td>
+<td>varchar</td>
+<td>13</td>
+<td>Ruc de la persona.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>cedula</td>
+<td>varchar</td>
+<td>10</td>
+<td>Cedula de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>razon_social</td>
+<td>varchar</td>
+<td>50</td>
+<td>Razon social de la persona.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>telefonos</td>
+<td>varchar</td>
+<td>50</td>
+<td>Telefono de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>direccion</td>
+<td>varchar</td>
+<td>50</td>
+<td>Direccion de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de persona (N:Natural J:Juridica I:SinId P:Placa).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+<td>50</td>
+<td>Correo de la persona.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>es_extranjero</td>
+<td>bool</td>
+<td></td>
+<td>Verificador de personas extranjeras.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Vendedor</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor del vendedor del documento</td>
+<td>No</td>
+</tr>
+<tr>
+<td>descripcion</td>
+<td>text</td>
+<td>-</td>
+<td>Explicación del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor subtotal</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>subtotal_12</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>servicio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Representa el valor del porcentaje de servicio del documento.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>total</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor total del movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Dato adicional de la factura.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>detalles</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los items facturados del documento</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>producto_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador del producto en el sistema.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cantidad</td>
+<td>decimal</td>
+<td>13</td>
+<td>Indica la cantidad del producto en el movimiento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>precio</td>
+<td>decimal</td>
+<td>13</td>
+<td>Valor del producto en especifico.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>porcentaje_iva</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor de porcentaje de IVA que tiene el producto (0, 12, null).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>porcentaje_descuento</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor Subtotal del iva del documento.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_cero</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 0% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si grava 12% iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>base_no_gravable</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor del producto si no grava iva.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>cobros</td>
+<td>objeto</td>
+<td>-</td>
+<td>objeto contenedor de los cobros del documento.</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>forma_cobro</td>
+<td>varchar</td>
+<td>10</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro).</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>monto</td>
+<td>decimal</td>
+<td>10</td>
+<td>Valor total del documento detalle relacionado.</td>
+<td>Si</td>
+</tr>
+<tr>
+<td>numero_cheque</td>
+<td>varchar</td>
+<td>15</td>
+<td>Numero de cheque en la transacción.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>tipo_ping</td>
+<td>varchar</td>
+<td>1</td>
+<td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
+<td>Si</td>
+</tr>
+</tbody>
+</table>
                 
               
               
