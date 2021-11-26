@@ -756,8 +756,8 @@
 <p>Usando el id devuelto en la creación de documento.</p>
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero_comprobante&quot;</span><span class="p">:</span> <span class="s2">&quot;21312312&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CQ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cheque&quot;</span><span class="p">:</span> <span class="s2">&quot;21312312&quot;</span><span class="p">,</span>
         <span class="nt">&quot;caja_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
         <span class="nt">&quot;numero_tarjeta&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -897,7 +897,7 @@
 <td>Efectivo</td>
 </tr>
 <tr>
-<td>CH</td>
+<td>CQ</td>
 <td>Cheque</td>
 </tr>
 <tr>
@@ -936,7 +936,7 @@ con las distintas formas </li>
 <td>Efectivo</td>
 </tr>
 <tr>
-<td>CH</td>
+<td>CQ</td>
 <td>Cheque</td>
 </tr>
 <tr>
@@ -1041,7 +1041,7 @@ con las distintas formas </li>
 </table>
 <h2 id="registrar-cobro-cheque">Registrar cobro cheque</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;forma_cobro&quot;</span><span class="p">:</span> <span class="s2">&quot;CQ&quot;</span><span class="p">,</span>
     <span class="nt">&quot;numero_cheque&quot;</span> <span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
     <span class="nt">&quot;monto&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;08/11/2017&quot;</span>
@@ -1062,7 +1062,7 @@ con las distintas formas </li>
 <td>forma_cobro</td>
 <td>varchar</td>
 <td>10</td>
-<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro, "CH" para transferencia).</td>
+<td>Tipo de documento a aplicar el cobro o pago de la transacción (Ver lista tipos cobro, "CQ" para transferencia).</td>
 <td>Si</td>
 </tr>
 <tr>
