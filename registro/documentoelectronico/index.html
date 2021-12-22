@@ -875,7 +875,7 @@
 <td>autorizacion</td>
 <td>varchar</td>
 <td>49</td>
-<td>Numero de autorizacion del documento.</td>
+<td>Numero de autorizacion del documento. (Vacio para electronicos)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -890,7 +890,7 @@
 <td>objeto</td>
 <td>-</td>
 <td>objeto contenedor del cliente del documento.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>ruc</td>
@@ -1208,20 +1208,6 @@
 <td>Si</td>
 </tr>
 <tr>
-<td>autorizacion</td>
-<td>varchar</td>
-<td>49</td>
-<td>Numero de autorizacion del documento.</td>
-<td>Si</td>
-</tr>
-<tr>
-<td>documento</td>
-<td>varchar</td>
-<td>17</td>
-<td>Numero del documento.</td>
-<td>Si</td>
-</tr>
-<tr>
 <td>estado</td>
 <td>varchar</td>
 <td>1</td>
@@ -1232,7 +1218,7 @@
 <td>autorizacion</td>
 <td>varchar</td>
 <td>49</td>
-<td>Numero de autorizacion del documento.</td>
+<td>Numero de autorizacion del documento. (Vacio para electronicos)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1247,7 +1233,7 @@
 <td>objeto</td>
 <td>-</td>
 <td>objeto contenedor del cliente del documento.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>ruc</td>
@@ -1556,7 +1542,7 @@
 <td>autorizacion</td>
 <td>varchar</td>
 <td>49</td>
-<td>Numero de autorizacion del documento.</td>
+<td>Numero de autorizacion del documento. (Vacio para electronicos)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1571,7 +1557,7 @@
 <td>objeto</td>
 <td>-</td>
 <td>objeto contenedor del cliente del documento.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>ruc</td>
@@ -1759,7 +1745,7 @@
 </table>
 <p>NOTA: El json enviado es similar al de una factura de cliente electronica; Se debe indicar el campo <code>tipo_documento</code> en "LQC" y "PRO" en el
 campo <code>tipo_registro</code>, el campo <code>tipo_registro</code> es obligatorio solamente en el caso de LQC ya que es el unico documento de proveedor electronico
-actualmente. Este tipo de documento solo se permite para personas naturales o extranjeras con cedula.</p>
+actualmente. Este tipo de documento solo se permite para personas naturales o extranjeras con cedula. Para actualizar los datos de "LQC" se puede hacer uso del metodo <code>PUT</code> detallado en la pestaña de TRANSACCION/DOCUMENTO.</p>
 <h2 id="enviar-al-sri-documentos-electronicos">Enviar al SRI Documentos Electrónicos</h2>
 <p><code>PUT https://api.contifico.com/sistema/api/documento/&lt;ID&gt;/sri/</code></p>
 <p>Este servicio permite enviar documentos electrónicos creados en Contifico de manera manual al SRI.</p>
@@ -1887,7 +1873,7 @@ actualmente. Este tipo de documento solo se permite para personas naturales o ex
 <td>autorizacion</td>
 <td>varchar</td>
 <td>49</td>
-<td>Numero de autorizacion del documento.</td>
+<td>Numero de autorizacion del documento. (Vacio para electronicos)</td>
 <td>Si</td>
 </tr>
 <tr>
@@ -1902,7 +1888,7 @@ actualmente. Este tipo de documento solo se permite para personas naturales o ex
 <td>objeto</td>
 <td>-</td>
 <td>objeto contenedor del cliente del documento.</td>
-<td>No</td>
+<td>Si</td>
 </tr>
 <tr>
 <td>ruc</td>
