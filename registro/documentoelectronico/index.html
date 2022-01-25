@@ -520,6 +520,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#estado-autorizacion-documento-electronico" class="md-nav__link">
+    Estado Autorizacion Documento Electronico
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -716,6 +723,13 @@
         <li class="md-nav__item">
   <a href="#documento-autorizado-externo" class="md-nav__link">
     Documento Autorizado Externo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-autorizacion-documento-electronico" class="md-nav__link">
+    Estado Autorizacion Documento Electronico
   </a>
   
 </li>
@@ -2106,6 +2120,72 @@ actualmente. Este tipo de documento solo se permite para personas naturales o ex
 <td>1</td>
 <td>Tipo de transaccion con TC (D:datafast, M:medianet, E:dataexpress, P:placetopay, A:alignet)</td>
 <td>Si</td>
+</tr>
+</tbody>
+</table>
+<h2 id="estado-autorizacion-documento-electronico">Estado Autorizacion Documento Electronico</h2>
+<p><code>GET https://api.contifico.com/sistema/api/v1/documento/&lt;id&gt;/estado/</code></p>
+<p>Este servicio permite consultar el estado de un documento electronico en contifico.</p>
+<p>Existen 4 tipos de estados:</p>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firmado</td>
+<td>El documento electronico se encuentra firmado.</td>
+</tr>
+<tr>
+<td>Enviado SRI</td>
+<td>El documento electronico esta en espera de la autorizacion por parte del SRI.</td>
+</tr>
+<tr>
+<td>Autorizado</td>
+<td>El documento electronico se encuentra autorizado.</td>
+</tr>
+<tr>
+<td>No Firmado</td>
+<td>El documento electronico no se ha firmado.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ejemplo de json de respuesta:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;MRYWb4j7ViRmeZ1m&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_registro&quot;</span><span class="p">:</span> <span class="s2">&quot;CLI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;FAC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;Autorizado&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documento_id</td>
+<td>Id de integracion del documento a consultar estado.</td>
+</tr>
+<tr>
+<td>tipo_registro</td>
+<td>Tipo de registro de documento del cual se consulta el estado (Cliente/Proveedor)</td>
+</tr>
+<tr>
+<td>tipo_documento</td>
+<td>Tipo de documento del cual se consulta el estado</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>Estado de autorizacion del documento a consultar</td>
 </tr>
 </tbody>
 </table>
