@@ -807,6 +807,7 @@
     <span class="nt">&quot;subtotal_0&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
     <span class="nt">&quot;subtotal_12&quot;</span><span class="p">:</span> <span class="mf">1.35</span><span class="p">,</span>
     <span class="nt">&quot;iva&quot;</span><span class="p">:</span> <span class="mf">0.16</span><span class="p">,</span>
+    <span class="nt">&quot;ice&quot;</span><span class="p">:</span><span class="mf">0.00</span><span class="p">,</span>
     <span class="nt">&quot;servicio&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
     <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mf">1.51</span><span class="p">,</span>
     <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -829,7 +830,9 @@
         <span class="nt">&quot;porcentaje_descuento&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
         <span class="nt">&quot;base_cero&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
         <span class="nt">&quot;base_gravable&quot;</span><span class="p">:</span> <span class="mf">0.35</span><span class="p">,</span>
-        <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span>
+        <span class="nt">&quot;base_no_gravable&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;porcentaje_ice&quot;</span><span class="p">:</span><span class="mf">0.00</span><span class="p">,</span>
+        <span class="nt">&quot;valor_ice&quot;</span><span class="p">:</span><span class="mf">0.00</span>
     <span class="p">}],</span>
     <span class="nt">&quot;cobros&quot;</span><span class="p">:[{</span>
       <span class="nt">&quot;forma_cobro&quot;</span> <span class="p">:</span> <span class="s2">&quot;TC&quot;</span><span class="p">,</span>
@@ -991,6 +994,13 @@
 <td>Si</td>
 </tr>
 <tr>
+<td>ice</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Valor total de ICE que graba el producto con este impuesto (valor o porcentaje ice * cantidad del producto).</td>
+<td>Si</td>
+</tr>
+<tr>
 <td>iva</td>
 <td>SmallIntegerField</td>
 <td>-</td>
@@ -1089,6 +1099,20 @@
 <td>Si</td>
 </tr>
 <tr>
+<td>porcentaje_ice</td>
+<td>SmallIntegerField</td>
+<td>-</td>
+<td>Representa el valor porcentual de ice que grava el producto.</td>
+<td></td>
+</tr>
+<tr>
+<td>valor_ice</td>
+<td>decimal</td>
+<td>10</td>
+<td>Representa el valor entero de ice que grava el producto.</td>
+<td></td>
+</tr>
+<tr>
 <td>cobros</td>
 <td>objeto</td>
 <td>-</td>
@@ -1125,6 +1149,10 @@
 </tr>
 </tbody>
 </table>
+<p>NOTA:<br />
+Para los casos de productos con impuesto ice se debe incluir el campo <code>porcentaje_ice</code> o <code>valor_ice</code> dependiendo de como este configurado el producto; el valor total por ice se debe incluir en el campo <code>ice</code> siguiendo el formato del json de ejemplo.  </p>
+<p>Para el caso de productos con impuesto IRBPNR se debe incluir en el campo <code>total</code> agregado el valor total de irbpnr que genera el producto, es decir; 
+Ejemplo: si tiene un documento con un <code>total</code> de 1.25(incluidos iva e ice) y el irbpnr que graba su producto es de 0.02, el <code>total</code> seria 1.27</p>
 <h3 id="documento-tipo-nota-de-credito">Documento Tipo Nota de Crédito</h3>
 <p>Este servicio permite agregar una nueva nota de credito a Contifico.</p>
 <p>Para crear una Nota de Credito se debe hacer uso de la url:</p>
