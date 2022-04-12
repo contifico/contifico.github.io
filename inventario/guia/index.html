@@ -759,6 +759,8 @@
         <span class="nt">&quot;direccion_partida&quot;</span><span class="p">:</span> <span class="s2">&quot;Fransisco segura y la 40&quot;</span><span class="p">,</span>
         <span class="nt">&quot;estado&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
         <span class="nt">&quot;placa&quot;</span><span class="p">:</span> <span class="s2">&quot;3232&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;adicional1&quot;</span><span class="p">:</span> <span class="s2">&quot;valoradicional&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;adicional2&quot;</span> <span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;destinatario&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;documento_id&quot;</span><span class="p">:</span> <span class="s2">&quot;P9aQWOWYOGHo11dD&quot;</span><span class="p">,</span>
             <span class="nt">&quot;codigo_destino&quot;</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
@@ -899,6 +901,18 @@
 <td>placa del vehiculo asignado a la guia de remision.</td>
 </tr>
 <tr>
+<td>adicional1</td>
+<td>varchar</td>
+<td>300</td>
+<td>Valor del campo adicional1 de la guia de remision.</td>
+</tr>
+<tr>
+<td>adicional2</td>
+<td>varchar</td>
+<td>300</td>
+<td>Valor del campo adicional2 de la guia de remision.</td>
+</tr>
+<tr>
 <td>destinatario</td>
 <td>objeto</td>
 <td>-</td>
@@ -987,7 +1001,7 @@
 <h2 id="creacion">Creación</h2>
 <h3 id="creacion-de-guia-de-remision">Creacion de Guia de Remisión</h3>
 <p>Este servicio permite agregar una nueva Guia de Remisión a Contifico.</p>
-<p>Para crear uns Guia de Remisión se debe hacer uso de la url:</p>
+<p>Para crear una Guia de Remisión se debe hacer uso de la url:</p>
 <p><code>POST https://api.contifico.com/sistema/api/v1/inventario/guia/</code></p>
 <p>por medio del método POST enviando en el cuerpo del requerimiento los datos del documento:</p>
 <blockquote>
