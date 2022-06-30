@@ -799,7 +799,9 @@
         <span class="nt">&quot;adicional4_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="nt">&quot;placa&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;adicional2_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;1802895555&quot;</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;1802895555&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id_categoria&quot;</span><span class="p">:</span> <span class="s2">&quot;ZOjZdy0jgMcydJ4n&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;categoria_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;categoria_persona1&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
         <span class="nt">&quot;adicional1_cliente&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -832,7 +834,9 @@
         <span class="nt">&quot;adicional4_cliente&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;placa&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;adicional2_proveedor&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;1712518024&quot;</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;1712518024&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id_categoria&quot;</span><span class="p">:</span> <span class="s2">&quot;ZOjZdy0jgMcydJ4n&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;categoria_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;categoria_persona2&quot;</span>
     <span class="p">},</span>
     <span class="err">...</span>
 <span class="p">]</span>
@@ -997,6 +1001,18 @@
 <td>10</td>
 <td>Cedula de la persona.</td>
 </tr>
+<tr>
+<td>id_categoria</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria persona en el sistema.</td>
+</tr>
+<tr>
+<td>categoria_nombre</td>
+<td>varchar</td>
+<td>40</td>
+<td>Nombre de la categoria asociada a la persona.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="query-parameters">Query Parameters</h2>
@@ -1058,6 +1074,12 @@
 <td>50</td>
 <td>Filtro para campo adicional 4 de cliente.</td>
 </tr>
+<tr>
+<td>categoria_id</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria persona en el sistema.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="obtener-una-persona">Obtener una Persona</h3>
@@ -1098,7 +1120,9 @@
         <span class="nt">&quot;adicional4_cliente&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="nt">&quot;placa&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;adicional2_proveedor&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0939877993&quot;</span>
+        <span class="nt">&quot;cedula&quot;</span><span class="p">:</span> <span class="s2">&quot;0939877993&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id_categoria&quot;</span><span class="p">:</span> <span class="s2">&quot;ZOjZdy0jgMcydJ4n&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;categoria_nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;categoria_persona2&quot;</span>
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
@@ -1261,6 +1285,18 @@
 <td>varchar</td>
 <td>10</td>
 <td>Cedula de la persona.</td>
+</tr>
+<tr>
+<td>id_categoria</td>
+<td>varchar</td>
+<td>16</td>
+<td>Identificador de la categoria persona en el sistema.</td>
+</tr>
+<tr>
+<td>categoria_nombre</td>
+<td>varchar</td>
+<td>40</td>
+<td>Nombre de la categoria asociada a la persona.</td>
 </tr>
 </tbody>
 </table>
